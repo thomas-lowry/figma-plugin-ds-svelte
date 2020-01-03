@@ -46,5 +46,6 @@
   "bugs": {
     "url": "https://github.com/thomas-lowry/figma-plugin-ds-svelte/issues"
   },
-  "homepage": "https://github.com/thomas-lowry/figma-plugin-ds-svelte#readme"
+  "homepage": "https://github.com/thomas-lowry/figma-plugin-ds-svelte#readme",
+  "main": "./src/index.js"
 }
