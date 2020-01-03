@@ -6,4 +6,7 @@ This is a version of the Figma Plugin DS specifically for use in creating Figma 
 
 A Figma Plugin Svelte boilerplate is in the works.
 
-...more info coming soon.
+## Installation
+
+To install:
+`npm -D figma-plugin-ds-svelte`
