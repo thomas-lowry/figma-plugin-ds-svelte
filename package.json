@@ -1,6 +1,6 @@
 {
   "name": "figma-plugin-ds-svelte",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A collection of Svelte components that match the Figma UI for building plugins.",
   "svelte": "./src/index.js",
   "dependencies": {
@@ -14,14 +14,14 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-livereload": "^1.0.4",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-svelte": "^5.1.1",
     "svelte": "^3.16.7"
   },
   "scripts": {
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
-    "webserver": "sirv public --single --dev",
-    "dev": "run-p webserver autobuild",
+    "dev": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,5 +1,5 @@
 //Global CSS
-import GlobalCSS from './../public/global.css';
+import GlobalCSS from './global.css';
 
 //Components
 import Button from './components/Button/index.svelte';

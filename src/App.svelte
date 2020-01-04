@@ -1,6 +1,8 @@
 <script>
-
     //This is a simple app playground to test components and their markup
+
+    // Global CSS
+    import style from './global.css';
 
     //Components
     import Button from './components/Button/index.svelte';
@@ -20,7 +22,7 @@
     import IconAdjust from './icons/adjust.svg';
     import IconAlert from './icons/alert.svg';
     import IconAngle from './icons/angle.svg';
-    import IconArrowLeftRight from './icons/arrow-left-right.svg';
+    import IconArrowLeftRight from '¡./icons/arrow-left-right.svg';
     import IconUpDown from './icons/arrow-up-down.svg';
     import IconAutoLayoutHorizontal from './icons/auto-layout-horizontal.svg';
     import IconAutoLayoutVertical from './icons/auto-layout-vertical.svg';
