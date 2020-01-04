@@ -12,7 +12,8 @@ To install into your own Svelte project.
 ## Usage
 
 ```javascript
-//import the global css which includes Figma color, spacing, and type vars and a basic set of utility classes
+//import the global css which includes Figma color, spacing, and type vars
+//also includes a basic set of utility classes
 import { GlobalCSS } from 'figma-plugin-ds-svelte';
 
 //import the desired components
