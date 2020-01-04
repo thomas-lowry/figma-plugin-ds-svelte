@@ -1,4 +1,7 @@
 <script>
+
+    //This is a simple app playground to test components and their markup
+
     //Components
     import Button from './components/Button/index.svelte';
     import Checkbox from './components/Checkbox/index.svelte';

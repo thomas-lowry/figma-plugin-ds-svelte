@@ -1,13 +1,5 @@
-/**
- * Export your components to apps.
- * More:
- * - https://github.com/sveltejs/component-template#consuming-components
- * - https://github.com/rollup/rollup-plugin-svelte#pkgsvelte
- * @see {@link ../package.json}
- */
-
 //Global CSS
-import GlobalCSS from './public/global.css';
+import GlobalCSS from './../public/global.css';
 
 //Components
 import Button from './components/Button/index.svelte';
@@ -113,11 +105,5 @@ import IconVisible from './icons/visible.svg';
 import IconWarningLarge from './icons/warning-large.svg';
 import IconWarning from './icons/warning.svg';
 
-//CSS
-export { GlobalCSS };
 
-//Components
-export { Button, Checkbox, Disclosure, DisclosureItem, Icon, Input, Label, OnboardingTip, Section, SelectDivider, SelectItem, SelectMenu, Switch, TextArea };
-
-//Icons
-export { IconAdjust, IconAlert, IconAngle, IconArrowLeftRight, IconUpDown, IconAutoLayoutHorizontal, IconAutoLayoutVertical, IconBack, IconBlendEmpty, IconBlend, IconBreak, IconCaretDown, IconCaretLeft, IconCaretRight, IconCaretUp, IconCheck, IconClose, IconComponent, IconCornerRadius, IconCorners, IconDistributeHorizontalSpacing, IconDistributeVerticalSpacing, IconDraft, IconEffects, IconEllipses, IconEyedropper, IconForward, IconFrame, IconGroup, IconHidden, IconHorizontalPadding, IconHyperlink, IconImage, IconInstance, IconKey, IconLayoutAlignBottom, IconAlignHorizontalCenters, IconAlignLeft, IconAlignRight, IconAlignTop, IconAlignVerticalCenters, IconLayoutGridColumns, IconLayoutGridRows, IconLayoutGridUniform, IconLibrary, IconLinkBroken, IconLinkConnected, IconListDetailed, IconListTile, IconList, IconLockOff, IconLockOn, IconMinus, IconPlay, IconPlus, IconRandom, IconRecent, IconResizeToFit, IconResolveFilled, IconResolve, IconReverse, IconSearchLarge, IconSearch, IconSettings, IconShare, IconSmiley, IconSortAlphaAsc, IconSortAlphaDsc, IconSortTopBottom, IconSpacing, IconSpinner, IconStarOff, IconStarOn, IconStrokeWeight, IconStyles, IconSwap, IconTheme, IconTidyUpGrid, IconTidyUpListHorizontal, IconTidyUpListVertical, IconTimer, IconTrash, IconVerticalPadding, IconVisible, IconWarningLarge, IconWarning };
+export { GlobalCSS, Button, Checkbox, Disclosure, DisclosureItem, Icon, Input, Label, OnboardingTip, Section, SelectDivider, SelectItem, SelectMenu, Switch, TextArea, IconAdjust, IconAlert, IconAngle, IconArrowLeftRight, IconUpDown, IconAutoLayoutHorizontal, IconAutoLayoutVertical, IconBack, IconBlendEmpty, IconBlend, IconBreak, IconCaretDown, IconCaretLeft, IconCaretRight, IconCaretUp, IconCheck, IconClose, IconComponent, IconCornerRadius, IconCorners, IconDistributeHorizontalSpacing, IconDistributeVerticalSpacing, IconDraft, IconEffects, IconEllipses, IconEyedropper, IconForward, IconFrame, IconGroup, IconHidden, IconHorizontalPadding, IconHyperlink, IconImage, IconInstance, IconKey, IconLayoutAlignBottom, IconAlignHorizontalCenters, IconAlignLeft, IconAlignRight, IconAlignTop, IconAlignVerticalCenters, IconLayoutGridColumns, IconLayoutGridRows, IconLayoutGridUniform, IconLibrary, IconLinkBroken, IconLinkConnected, IconListDetailed, IconListTile, IconList, IconLockOff, IconLockOn, IconMinus, IconPlay, IconPlus, IconRandom, IconRecent, IconResizeToFit, IconResolveFilled, IconResolve, IconReverse, IconSearchLarge, IconSearch, IconSettings, IconShare, IconSmiley, IconSortAlphaAsc, IconSortAlphaDsc, IconSortTopBottom, IconSpacing, IconSpinner, IconStarOff, IconStarOn, IconStrokeWeight, IconStyles, IconSwap, IconTheme, IconTidyUpGrid, IconTidyUpListHorizontal, IconTidyUpListVertical, IconTimer, IconTrash, IconVerticalPadding, IconVisible, IconWarningLarge, IconWarning };
