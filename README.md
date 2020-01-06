@@ -81,10 +81,11 @@ import { Disclosure, DisclosureItem } from 'figma-plugin-ds-svelte';
 ```
 **Props**
 
-| Prop    | Type    | Options/notes                                                     |
-|:--------|:--------|:------------------------------------------------------------------|
-| `title` | String  | Title of disclosure item                                          |
-| `open`  | Boolean | Default: `false`; Only one disclosure item can be opened at once. |
+| Prop       | Type    | Options/notes                                                     |
+|:-----------|:--------|:------------------------------------------------------------------|
+| `title`    | String  | Title of disclosure item                                          |
+| `open`     | Boolean | Default: `false`; Only one disclosure item can be opened at once  |
+| `section`  | Boolean | Default: `false`; Bold section header for disclosure title        |
 
 ---
 
@@ -251,7 +252,7 @@ var selectedItem;
 |-------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------|
 | `on:change`       | Func    | Function to execute on change. Ex: `on:change={funcName}`                                                                                |
 | `menuItems`       | Var     | Pass in array of menu item objects. See example above for format.  If you want to use option groups, update the group keys to a string.  |
-| `value`           | Var     | Bind the value of the selected item to a var. Example: `bind:value={selectedItem}`                                                       |
+| `value`           | Var     | Bind the value of the selected item to a var. Ex: `bind:value={selectedItem}`                                                       |
 | `placeholder`     | String  | Override default placeholder text with a string when there is no item selected.                                                          |
 | `showGroupLabels` | Boolean | Default: `false`; If you are using option groups, this will show the group labels.                                                       |
 | `disabled`        | Boolean | Default: `false`                                                                                                                         |
@@ -323,6 +324,36 @@ import { Type } from 'figma-plugin-ds-svelte';
 ## Tokens
 
 **Color**
+
+| Name          | Var               | Type             | Notes                                                         |
+|---------------|-------------------|------------------|---------------------------------------------------------------|
+| blue          | `--blue`          | Accent           | Ex: primary button, hyperlinks, focus/selected states         |
+| purple        | `--purple`        | Accent           | Ex: components/instances                                      |
+| hot-pink      | `--hot-pink`      | Accent           | Ex: smart selection handles                                   |
+| green         | `--green`         | Accent           | Ex: Toolbar selections                                        |
+| red           | `--red`           | Accent           | Ex: Error                                                     |
+| yellow        | `--yellow`        | Accent           | Ex: Caution/warning                                           |
+| black         | `--black`         | Basic foreground | Ex: active states                                             |
+| black8        | `--black8`        | Basic foreground | 80% black, ex: most common black used in UI text and icons    |
+| black8-opaque | `black8-opaque`   | Basic foreground | Opaque version of black8                                      |
+| black3        | `--black3`        | Basic foreground | 30% black, ex: lower priority messages, disabled states       |
+| black3-opaque | `--black3-opaque` | Basic foreground | Opaque version of black3                                      |
+| white         | `--white`         | Basic foreground | Used in same way as black8, but on dark backgrounds           |
+| white8        | `--white8`        | Basic foreground | Rarely used, only in toolbar                                  |
+| white4        | `--white4`        | Basic foreground | Used in same way as black3, Ex: option group headers in menus |
+| white         | `--white`         | Basic background | (Duplicate) White is also the most common background color    |
+| grey          | `--grey`          | Basic background | Used behind controls in active state                          |
+| silver        | `--silver`        | Basic background | Ex: horizontal separators, default canvas background          |
+| hud           | `--hud`           | Basic background | Ex: background for menus                                      |
+| toolbar       | `--toolbar`       | Basic background | Ex: background for the toolbar                                |
+| black1        | `--black1`        | Special          | Ex: input placeholder underline, textarea border              |
+| blue3         | `--blue3`         | Special          | Ex: text range selection in inputs                            |
+| purple4       | `--purple4`       | Special          | Ex: disabled components/instances                             |
+| hover-fill    | `--hover-fill`    | Special          | Hover state for items without borders, ex: icon button        |
+| selection-a   | `--selection-a`   | Special          | Selected cells, ex: selected top level layer                  |
+| selection-b   | `--selection-b`   | Special          | Selected cells, ex: selected child layers                     |
+| white3        | `--white3`        | Special          | Ex: menu separators                                           |
+
 
 **Type**
 
