@@ -50,13 +50,13 @@
     .primary:enabled:active, .primary:enabled:focus {
         border: 2px solid var(--black3);
     }
-    .primary:disabled, a.primary.disabled {
+    .primary:disabled {
         background-color: var(--black3);
     }
     .primary.destructive {
         background-color: var(--red);
     }
-    .primary.destructive:disabled, a.primary.destructive.disabled  {
+    .primary.destructive:disabled  {
         opacity: 0.4;
     }
 
