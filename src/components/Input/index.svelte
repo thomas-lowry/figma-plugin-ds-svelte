@@ -3,7 +3,7 @@
     import Icon from './../Icon/index.svelte';
 
     export let id = null;
-    export let value = '';
+    export let value = null;
     export let name = null;
     export let iconText = null;
     export let borders = false;

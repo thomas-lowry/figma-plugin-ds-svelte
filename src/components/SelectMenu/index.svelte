@@ -8,8 +8,6 @@
 
     export let iconName = null;
     export let iconText = null;
-    export let id = null;
-    export let name ='';
     export let disabled = false;
     export let macOSBlink = false;
     export let menuItems = []; //pass data in via this prop to generate menu items
@@ -205,7 +203,7 @@
         class="wrapper {className}"
         >
 
-        <button id={id} name={name} bind:this={menuButton} on:click={menuClick} disabled={disabled}>
+        <button bind:this={menuButton} on:click={menuClick} disabled={disabled}>
             {#if iconName}
                 <span class="icon"><Icon iconName={iconName} color="black3"/></span>
             {:else if iconText}

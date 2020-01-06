@@ -1,5 +1,4 @@
 <script>
-    import { onMount } from 'svelte';
 
     export let group = null;
     export let value = null;

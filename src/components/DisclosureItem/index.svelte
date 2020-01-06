@@ -15,7 +15,6 @@
     export let section = false;
     export let open = false;
 
-    let className = '';
     const { clickHandler, selected } = getContext(disclosure);
 
     $: expanded = $selected === uniqueId;
@@ -26,7 +25,7 @@
 
 </script>
 
-<li {open} {title} id={uniqueId} class={className} class:expanded={expanded}>
+<li {open} {title} id={uniqueId} class:expanded={expanded}>
     <div on:click={clickHandler.bind(null, uniqueId)} class="header" class:section={section}>
         <div class="icon">
             {#if expanded}

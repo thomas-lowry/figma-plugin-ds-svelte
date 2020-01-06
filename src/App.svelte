@@ -11,6 +11,7 @@
     import Disclosure from './components/Disclosure/index.svelte';
     import DisclosureItem from './components/DisclosureItem/index.svelte';
     import Icon from './components/Icon/index.svelte';
+    import IconButton from './components/IconButton/index.svelte';
     import Input from './components/Input/index.svelte';
     import Label from './components/Label/index.svelte';
     import OnboardingTip from './components/OnboardingTip/index.svelte';
@@ -109,10 +110,7 @@
     import IconWarning from './icons/warning.svg';
 
     //var to store the selected value of our radio button group
-    var Radios = 'a';
-    function radioValue() {
-        console.log("value:",Radios);
-    }
+    var radioValue = 'a';
 
     //Arrays for select menu
     //example without a selected item
@@ -207,9 +205,9 @@
 
     <section>
         <h2>Radio buttons</h2>
-        <Radio on:click={radioValue} bind:group={Radios} value="a">Label</Radio>
-        <Radio on:click={radioValue} bind:group={Radios} value="b">Label</Radio>
-        <Radio on:click={radioValue} bind:group={Radios} value="c" disabled>Label</Radio>
+        <Radio bind:group={radioValue} value="a">Label</Radio>
+        <Radio bind:group={radioValue} value="b">Label</Radio>
+        <Radio bind:group={radioValue} value="c" disabled>Label</Radio>
 
     </section>
 
@@ -334,6 +332,15 @@
     </section>
 
     <section>
+        <h2>Icon Button</h2>
+        <div class="flex row">
+            <IconButton iconName={IconVisible} class="mr-xxsmall"/>
+            <IconButton iconName={IconVisible} selected class="mr-xxsmall"/>
+            <IconButton iconText="@"/>
+        </div>
+    </section>
+
+    <section>
         <h2>Input</h2>
         <Input placeholder="This is an example with a placeholder" class="mb-xsmall"/>
         <Input value="This is an example with a value" class="mb-xsmall"/>
@@ -365,9 +372,9 @@
 
     <section>
         <h2>Textarea</h2>
-        <Textarea placeholder="Enter some text" class="mb-xsmall"></Textarea>
-        <Textarea class="mb-xsmall" value="Initial value"></Textarea>
-        <Textarea value="Text area with a value that is disabled" disabled></Textarea>
+        <Textarea placeholder="Enter some text" class="mb-xsmall" />
+        <Textarea class="mb-xsmall" value="Initial value" />
+        <Textarea value="Text area with a value that is disabled" disabled />
     </section>
 
     <section>
