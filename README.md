@@ -1,6 +1,6 @@
 # Figma Plugin DS Svelte
 
-WORK IN PROGRESS—This is a version of the Figma Plugin DS specifically for use in creating Figma Plugins. I decided to create this because Svelte seems like a great lightweight approach well suited for creating Figma plugins, and also simplifies the developer experience over using the vanilla JS Figma Plugin DS that I created with easier markup.
+WORK IN PROGRESS—This is a Svelte version of the Figma Plugin DS specifically for use in creating Figma Plugins. I decided to create this because Svelte seems like a great lightweight approach well suited for creating Figma plugins, and also improves the developer experience when compared to my vanilla JS Figma Plugin DS due to simplified markup.
 
 You can also get started with [Figsvelte](https://github.com/thomas-lowry/figsvelte), a boilerplate for Figma plugins that already has this library setup as a dependency.
 
@@ -9,7 +9,7 @@ You can also get started with [Figsvelte](https://github.com/thomas-lowry/figsve
 To install into your own Svelte project.
 `npm -D figma-plugin-ds-svelte`
 
-## Usage
+## To use
 
 ```javascript
 //import the global css which includes Figma color, spacing, and type vars
@@ -24,6 +24,9 @@ import { Button, Input, SelectMenu } from 'figma-plugin-ds-svelte';
 
 ## Components
 _All components can accept class props to add global or utility classes to each component_
+
+* [Button](#Button)
+* [Checkbox](#Checkbox)
 
 ---
 
