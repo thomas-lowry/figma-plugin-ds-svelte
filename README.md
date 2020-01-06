@@ -20,6 +20,7 @@ import { GlobalCSS } from 'figma-plugin-ds-svelte';
 import { Button, Input, SelectMenu } from 'figma-plugin-ds-svelte';
 ```
 
+---
 
 ## Components
 _All components can accept class props to add global or utility classes to each component_
@@ -38,12 +39,12 @@ import { Button } from 'figma-plugin-ds-svelte';
 ```
 **Props**
 
-| Prop           | Type    | Options/notes                                               |
-|:---------------|:--------|:------------------------------------------------------------|
-| `on:click`     | Func    | Assign a function to run on click. Ex: `on:click={funcName}`|
-| `variant`      | String  | Default: `"primary"`, Options: `"secondary"`, `"tertiary"`  |
-| `disabled`     | Boolean | Default: `false`                                            |
-| `desctructive` | Boolean | Default: `false`                                            |
+| Prop           | Type    | Options/notes                                                   |
+|:---------------|:--------|:----------------------------------------------------------------|
+| `on:click`     | Func    | Assign a function to execute on click. Ex: `on:click={funcName}`|
+| `variant`      | String  | Default: `"primary"`, Options: `"secondary"`, `"tertiary"`      |
+| `disabled`     | Boolean | Default: `false`                                                |
+| `desctructive` | Boolean | Default: `false`                                                |
 
 ---
 
@@ -112,6 +113,28 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 | `iconText` | String  | Pass a text character to use instead of an icon. Ex: width and height inputs `iconText="W"`  |
 | `color`    | String  | Pass the name of any Figma color var to this prop. `color="blue"`                            |
 | `spin`     | Boolean | Default: `false`; This will rotate the icon in an endless loop.                              |
+
+---
+
+### Icon Button
+```javascript
+//use this component as you would an Icon, it accepts the same props (except color)
+import { IconButton } from 'figma-plugin-ds-svelte';
+```
+```html
+<IconButton on:click={funcName} iconName={IconVisible}/>
+<IconButton on:click={funcName} iconName={IconVisible} selected/>
+<IconButton on:click={funcName} iconText="@"/>
+```
+**Props**
+
+| Prop       | Type    | Options/notes                                                    |
+|------------|---------|------------------------------------------------------------------|
+| `on:click` | String  | Assign a function to execute on click. Ex: `on:click={funcName}` |
+| `selected` | Boolean | Default: `false`                                                 |
+| `iconName` | String  | _See Icon component for usage._                                  |
+| `IconText` | String  | _See Icon component for usage._                                  |
+| `spin`     | Boolean | _See Icon component for usage._                                  |
 
 ---
 
