@@ -132,8 +132,9 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 
 **Icons**
 
+
 | Icon                                                                                   | Var                               |
-|.---------------------------------------------------------------------------------------|.----------------------------------|
+|----------------------------------------------------------------------------------------|-----------------------------------|
 | ![IconAdjust](src/icons/adjust.svg "icon")                                             | `IconAdjust`                      |
 | ![IconAlert](src/icons/alert.svg "icon")                                               | `IconAlert`                       |
 | ![IconAngle](src/icons/angle.svg "icon")                                               | `IconAngle`                       |
@@ -220,6 +221,7 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 | ![IconVisible](src/icons/visible.svg "icon")                                           | `IconVisible`                     |
 | ![IconWarningLarge](src/icons/warning-large.svg "icon")                                | `IconWarningLarge`                |
 | ![IconWarning](src/icons/warning.svg "icon")                                           | `IconWarning`                     |
+
 
 ---
 
