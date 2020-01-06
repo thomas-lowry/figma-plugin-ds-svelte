@@ -27,6 +27,18 @@ _All components can accept class props to add global or utility classes to each 
 
 * [Button](#Button)
 * [Checkbox](#Checkbox)
+* [Disclosure panel](#Disclosure)
+* [Icon](#Icon)
+* [Icon button](#Icon-button)
+* [Input](#Input)
+* [Labels and sections](#Labels-and-sections)
+* [Onboarding tip](#Onboarding-tip)
+* [Radio button](#Radio-button)
+* [Select menu](#Select-menu)
+* [Switch](#Switch)
+* [Textarea](#Textarea)
+* [Type](#Type)
+* [Tokens](#Tokens)
 
 ---
 
@@ -120,7 +132,7 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 
 ---
 
-### Icon Button
+### Icon button
 ```javascript
 //use this component as you would an Icon, it accepts the same props (except color)
 import { IconButton } from 'figma-plugin-ds-svelte';
@@ -176,7 +188,7 @@ var inputValue = 'Default value';
 
 ---
 
-### Label + Section
+### Labels and sections
 ```javascript
 import { Label, SectionHeader } from 'figma-plugin-ds-svelte';
 ```
@@ -187,7 +199,7 @@ import { Label, SectionHeader } from 'figma-plugin-ds-svelte';
 
 ---
 
-### Onboarding Tip
+### Onboarding tip
 ```javascript
 import { OnboardingTip } from 'figma-plugin-ds-svelte';
 ```
@@ -206,7 +218,7 @@ import { OnboardingTip } from 'figma-plugin-ds-svelte';
 
 ---
 
-### Radio Button
+### Radio button
 ```javascript
 import { Radio } from 'figma-plugin-ds-svelte';
 
@@ -229,7 +241,7 @@ var radioValue;
 
 ---
 
-### Select Menu
+### Select menu
 ```javascript
 import { SelectMenu } from 'figma-plugin-ds-svelte';
 
