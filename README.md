@@ -55,5 +55,5 @@ import { Checkbox } from 'figma-plugin-ds-svelte';
 | Prop       | Type    | Options/notes                                                                               |
 |:-----------|:--------|:--------------------------------------------------------------------------------------------|
 | `value`    | String  | Define checkbox value here.                                                                 |
-| `checked`  | Boolean | Default: `false`; You can bind the value when checked to a var.<br>`bind:checked={varName}` |
+| `checked`  | Boolean | Default: `false`; You can bind the value when checked to a var.`bind:checked={varName}`     |
 | `disabled` | Boolean | Default: `false`                                                                            |
