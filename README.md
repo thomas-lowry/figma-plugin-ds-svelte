@@ -131,9 +131,10 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 | `spin`     | Boolean | Default: `false`; This will rotate the icon in an endless loop.                              |
 
 **Icons**
-| Icon                                                | Name         |
-|-----------------------------------------------------|--------------|
-| ![IconAdjust](src/icons/adjust.svg?raw=true "icon") | `IconAdjust` |
+
+| Icon                                                                                                          | Name         |
+|---------------------------------------------------------------------------------------------------------------|--------------|
+| ![IconAdjust](https://github.com/thomas-lowry/figma-plugin-ds-svelte/blob/master/src/icons/adjust.svg "icon") | `IconAdjust` |
 
 ---
 
