@@ -56,7 +56,7 @@
     input {
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-neg-small);
+        letter-spacing: var( --font-letter-spacing-neg-xsmall);
         line-height: var(--line-height);
         position: relative;
         display: flex;

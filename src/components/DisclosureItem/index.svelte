@@ -63,7 +63,7 @@
         height: var(--size-medium);
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-pos-small);
+        letter-spacing: var( --font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
         color: var(--black8);
     }
@@ -91,7 +91,7 @@
     .content {
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-pos-small);
+        letter-spacing: var( --font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
         color: var(--black8);
         padding: var(--size-xxsmall) var(--size-xxsmall) var(--size-xxsmall) var(--size-small);

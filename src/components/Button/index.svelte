@@ -32,7 +32,7 @@
         font-family: var(--font-stack);
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-medium);
-        letter-spacing: var(--font-letter-spacing-neg-medium);
+        letter-spacing: var(--font-letter-spacing-neg-small);
         line-height: var(--font-line-height);
         height: var(--size-medium);
         padding: 0 var(--size-xsmall) 0 var(--size-xsmall);
@@ -66,7 +66,7 @@
         border: 1px solid var(--black8);
         color: var(--black8);
         padding: 0 calc(var(--size-xsmall) + 1px) 0 calc(var(--size-xsmall) + 1px);
-        letter-spacing: var(--font-letter-spacing-pos-medium);
+        letter-spacing: var(--font-letter-spacing-pos-small);
     }
     .secondary:enabled:active, .secondary:enabled:focus {
         border: 2px solid var(--blue);
@@ -94,7 +94,7 @@
         color: var(--blue);
         padding: 0;
         font-weight: var(--font-weight-normal);
-        letter-spacing: var(--font-letter-spacing-pos-medium);
+        letter-spacing: var(--font-letter-spacing-pos-small);
         cursor: pointer;
     }
     .tertiary:enabled:focus {

@@ -15,7 +15,7 @@
     .label {
         font-size: var(--font-size-small);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-neg-medium);
+        letter-spacing: var( --font-letter-spacing-neg-small);
         line-height: var(--line-height);
         display: flex;
         align-items: center;

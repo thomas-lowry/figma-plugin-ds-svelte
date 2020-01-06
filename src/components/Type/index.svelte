@@ -28,13 +28,13 @@
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
         line-height: var(--font-line-height);
-        letter-spacing: var(--font-letter-spacing-pos-small);
+        letter-spacing: var(--font-letter-spacing-pos-xsmall);
     }
 
     /* sizes */
     .small {
         font-size: var(--font-size-small);
-        letter-spacing: var(--font-letter-spacing-pos-medium);
+        letter-spacing: var(--font-letter-spacing-pos-small);
     }
     .large {
         font-size: var(--font-size-large);
@@ -57,10 +57,10 @@
 
     /* letter spacing adjustments based pos/neg application */
     .inverse {
-        letter-spacing: var(--font-letter-spacing-neg-small);
+        letter-spacing: var(--font-letter-spacing-neg-xsmall);
     }
     .inverse.small {
-        letter-spacing: var(--font-letter-spacing-neg-medium);
+        letter-spacing: var(--font-letter-spacing-neg-small);
     }
     .inverse.large {
         letter-spacing: var(--font-letter-spacing-neg-large);

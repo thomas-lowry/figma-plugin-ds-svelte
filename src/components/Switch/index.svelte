@@ -67,7 +67,7 @@
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
         height: 100%;
-        letter-spacing: var(--font-letter-spacing-pos-small);
+        letter-spacing: var(--font-letter-spacing-pos-xsmall);
         line-height: var(--font-line-height);
         margin-left: -16px;
         padding: 0 var(--size-xsmall) 0 calc(var(--size-xlarge) - 2px);

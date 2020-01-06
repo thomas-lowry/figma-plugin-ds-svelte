@@ -35,15 +35,6 @@
     --selection-b: #edf5fa;
     --white2: rgba(255, 255, 255, .2); 
 
-    /* Multiplayer */
-    --mp-y: #FFC700;
-    --mp-g: #1BC47D;
-    --mp-r: #EF5533;
-    --mp-b: #18A0FB;
-    --mp-p: #907CFF;
-    --mp-t: #00B5CE;
-    --mp-s: #EE46D3;
-
 
     /* TYPOGRAPHY */
     /* Pos = positive applications (black on white) */
@@ -64,14 +55,14 @@
     --font-weight-bold: 600;
 
     /* Lineheight */
-    --font-line-height: 16px; /* Use For small, medium font sizes */
+    --font-line-height: 16px; /* Use For xsmall, small font sizes */
     --font-line-height-large: 24px; /* Use For large, xlarge font sizes */
     
     /* Letterspacing */
-    --font-letter-spacing-pos-small: .005em;
-    --font-letter-spacing-neg-small: .01em;
-    --font-letter-spacing-pos-medium: 0;
-    --font-letter-spacing-neg-medium: .005em;
+    --font-letter-spacing-pos-xsmall: .005em;
+    --font-letter-spacing-neg-xsmall: .01em;
+    --font-letter-spacing-pos-small: 0;
+    --font-letter-spacing-neg-small: .005em;
     --font-letter-spacing-pos-large: -.0025em;
     --font-letter-spacing-neg-large: .0025em;
     --font-letter-spacing-pos-xlarge: -.001em;

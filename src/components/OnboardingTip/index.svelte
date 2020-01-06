@@ -38,7 +38,7 @@
         padding: var(--size-xxsmall) 0 var(--size-xxsmall) 0;
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-pos-small);
+        letter-spacing: var( --font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
         color: var(--black8);
         margin: 0;

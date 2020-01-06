@@ -303,7 +303,7 @@
     .label, .placeholder {
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-neg-small);
+        letter-spacing: var( --font-letter-spacing-neg-xsmall);
         line-height: var(--line-height);
         color: var(--black8);
         margin-right: 6px;

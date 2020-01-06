@@ -24,7 +24,7 @@
         font-family: var(--font-stack);
         font-size: var(--font-size-small);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var(--font-letter-spacing-neg-small);
+        letter-spacing: var(--font-letter-spacing-neg-xsmall);
         line-height: var(--font-line-height);
         height: var(--size-small);
         padding: 0px var(--size-xsmall) 0px var(--size-xxsmall);
