@@ -52,8 +52,9 @@ import { Checkbox } from 'figma-plugin-ds-svelte';
 <Checkbox disabled>Label</Checkbox>
 ```
 **Props**
-| Prop       | Type    | Options/notes                                                                               |
-|:-----------|:--------|:--------------------------------------------------------------------------------------------|
-| `value`    | String  | Define checkbox value here.                                                                 |
-| `checked`  | Boolean | Default: `false`; You can bind the value when checked to a var.`bind:checked={varName}`     |
-| `disabled` | Boolean | Default: `false`                                                                            |
+
+| Prop       | Type    | Options/notes                                                                            |
+|:-----------|:--------|:-----------------------------------------------------------------------------------------|
+| `value`    | String  | Define checkbox value here.                                                              |
+| `checked`  | Boolean | Default: `false`; You can bind the value when checked to a var. `bind:checked={varName}` |
+| `disabled` | Boolean | Default: `false`  
