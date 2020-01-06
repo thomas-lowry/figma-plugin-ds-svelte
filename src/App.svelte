@@ -209,7 +209,7 @@
         <h2>Radio buttons</h2>
         <Radio on:click={radioValue} bind:group={Radios} value="a">Label</Radio>
         <Radio on:click={radioValue} bind:group={Radios} value="b">Label</Radio>
-        <Radio on:click={radioValue} bind:group={Radios} value="c">Label</Radio>
+        <Radio on:click={radioValue} bind:group={Radios} value="c" disabled>Label</Radio>
 
     </section>
 
@@ -375,44 +375,44 @@
         <div class="flex row">
             <div class="p-xsmall mr-xxsmall" style="border: 1px solid var(--black1)">
                 <div class="mb-xxsmall">
-                    <Type>UI11 &mdash; xsmall, weight, normal, inverse: false</Type>
-                    <Type size="small">UI12 &mdash; small, weight, normal, inverse: false</Type>
-                    <Type size="large">UI13 &mdash; large, weight, normal, inverse: false</Type>
-                    <Type size="xlarge">UI14 &mdash; xlarge, weight, normal, inverse: false</Type>
+                    <Type>UI11 &mdash; size: xsmall, weight: normal, inverse: false</Type>
+                    <Type size="small">UI12 &mdash; size: small, weight: normal, inverse: false</Type>
+                    <Type size="large">UI13 &mdash; size: large, weight: normal, inverse: false</Type>
+                    <Type size="xlarge">UI14 &mdash; size: xlarge, weight: normal, inverse: false</Type>
                 </div>
 
                 <div class="mb-xxsmall">
-                    <Type weight="medium">UI1 &mdash; xsmall, weight, normal, inverse: false</Type>
-                    <Type size="small" weight="medium">UI2 &mdash; small, weight, normal, inverse: false</Type>
-                    <Type size="large" weight="medium">UI3 &mdash; large, weight, normal, inverse: false</Type>
-                    <Type size="xlarge" weight="medium">UI4 &mdash; xlarge, weight, normal, inverse: false</Type>
+                    <Type weight="medium">UI1 &mdash; size: xsmall, weight: medium, inverse: false</Type>
+                    <Type size="small" weight="medium">UI2 &mdash; size: small, weight: medium, inverse: false</Type>
+                    <Type size="large" weight="medium">UI3 &mdash; size: large, weight: medium, inverse: false</Type>
+                    <Type size="xlarge" weight="medium">UI4 &mdash; size: xlarge, weight: medium, inverse: false</Type>
                 </div>
 
-                <Type weight="bold">UI1 &mdash; xsmall, weight, normal, inverse: false</Type>
-                <Type size="small" weight="bold">UI2 &mdash; small, weight, normal, inverse: false</Type>
-                <Type size="large" weight="bold">UI3 &mdash; large, weight, normal, inverse: false</Type>
-                <Type size="xlarge" weight="bold">UI4 &mdash; xlarge, weight, normal, inverse: false</Type>
+                <Type weight="bold">UI1 &mdash; size: xsmall, weight: bold, inverse: false</Type>
+                <Type size="small" weight="bold">UI2 &mdash; size: small, weight: bold, inverse: false</Type>
+                <Type size="large" weight="bold">UI3 &mdash; size: large, weight: bold, inverse: false</Type>
+                <Type size="xlarge" weight="bold">UI4 &mdash; size: xlarge, weight: bold, inverse: false</Type>
             </div>
 
             <div class="p-xsmall" style="background-color: var(--black)">
                 <div class="mb-xxsmall">
-                    <Type inverse>UI1 &mdash; xsmall, weight, normal, inverse: false</Type>
-                    <Type size="small" inverse>UI2 &mdash; small, weight, normal, inverse: false</Type>
-                    <Type size="large" inverse>UI3 &mdash; large, weight, normal, inverse: false</Type>
-                    <Type size="xlarge" inverse>UI4 &mdash; xlarge, weight, normal, inverse: false</Type>
+                    <Type inverse>UI1 &mdash; size: xsmall, weight: normal, inverse: true</Type>
+                    <Type size="small" inverse>UI2 &mdash; size: small, weight: normal, inverse: true</Type>
+                    <Type size="large" inverse>UI3 &mdash; size: large, weight: normal, inverse: true</Type>
+                    <Type size="xlarge" inverse>UI4 &mdash; size: xlarge, weight: normal, inverse: true</Type>
                 </div>
 
                 <div class="mb-xxsmall">
-                    <Type weight="medium" inverse>UI1 &mdash; xsmall, weight, normal, inverse: false</Type>
-                    <Type size="small" weight="medium" inverse>UI2 &mdash; small, weight, normal, inverse: false</Type>
-                    <Type size="large" weight="medium" inverse>UI3 &mdash; large, weight, normal, inverse: false</Type>
-                    <Type size="xlarge" weight="medium" inverse>UI4 &mdash; xlarge, weight, normal, inverse: false</Type>
+                    <Type weight="medium" inverse>UI1 &mdash; size: xsmall, weight: medium, inverse: true</Type>
+                    <Type size="small" weight="medium" inverse>UI2 &mdash; size: small, weight: medium, inverse: true</Type>
+                    <Type size="large" weight="medium" inverse>UI3 &mdash; size: large, weight: medium, inverse: true</Type>
+                    <Type size="xlarge" weight="medium" inverse>UI4 &mdash; size: xlarge, weight: medium, inverse: true</Type>
                 </div>
 
-                <Type weight="bold" inverse>UI1 &mdash; xsmall, weight, normal, inverse: false</Type>
-                <Type size="small" weight="bold" inverse>UI2 &mdash; small, weight, normal, inverse: false</Type>
-                <Type size="large" weight="bold" inverse>UI3 &mdash; large, weight, normal, inverse: false</Type>
-                <Type size="xlarge" weight="bold" inverse>UI4 &mdash; xlarge, weight, normal, inverse: false</Type>
+                <Type weight="bold" inverse>UI1 &mdash; size: xsmall, weight: bold, inverse: true</Type>
+                <Type size="small" weight="bold" inverse>UI2 &mdash; size: small, weight: bold, inverse: true</Type>
+                <Type size="large" weight="bold" inverse>UI3 &mdash; size: large, weight: bold, inverse: true</Type>
+                <Type size="xlarge" weight="bold" inverse>UI4 &mdash; size: xlarge, weight: bold, inverse: true</Type>
             </div>
         </div>
     </section>
