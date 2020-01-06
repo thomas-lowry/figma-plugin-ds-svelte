@@ -37,13 +37,7 @@ import { Button } from 'figma-plugin-ds-svelte';
 **Props**
 
 | Prop           | Type    | Options/notes                                               |
-|----------------|:-------:|:-----------------------------------------------------------:|
+|----------------|:--------|:------------------------------------------------------------|
 | `variant`      | String  | Default: `"primary"`, Options: `"secondary"`, `"tertiary"`  |
 | `disabled`     | Boolean | Default: `false`                                            |
 | `desctructive` | Boolean | Default: `false`                                            |
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
