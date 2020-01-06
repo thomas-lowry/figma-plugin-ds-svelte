@@ -326,7 +326,7 @@ import { Type } from 'figma-plugin-ds-svelte';
 **Color**
 
 | Name          | Var               | Type             | Notes                                                         |
-|---------------|-------------------|------------------|---------------------------------------------------------------|
+|:--------------|:------------------|:-----------------|:--------------------------------------------------------------|
 | blue          | `--blue`          | Accent           | Ex: primary button, hyperlinks, focus/selected states         |
 | purple        | `--purple`        | Accent           | Ex: components/instances                                      |
 | hot-pink      | `--hot-pink`      | Accent           | Ex: smart selection handles                                   |
@@ -357,8 +357,51 @@ import { Type } from 'figma-plugin-ds-svelte';
 
 **Type**
 
-**Shadows**
+| Property         | Var                                | Value               | Notes                                                        |
+|:-----------------|:-----------------------------------|:--------------------|:-------------------------------------------------------------|
+| `font-family`    | `--font-stack`                     | 'Inter', sans-serif | Default font everywhere                                      |
+| `font-size`      | `--font-size-xsmall`               | 11px                | Most common font size                                        |
+| `font-size`      | `--font-size-small`                | 12px                | Used in menus                                                |
+| `font-size`      | `--font-size-large`                | 13px                | Rarely used in editor                                        |
+| `font-size`      | `--font-size-xlarge`               | 14px                | Rarely used in editor                                        |
+| `font-weight`    | `--font-weight-normal`             | 400                 |                                                              |
+| `font-weight`    | `--font-weight-medium`             | 500                 |                                                              |
+| `font-weight`    | `--font-weight-bold`               | 600                 |                                                              |
+| `line-height`    | `--font-line-height`               | 16px                | For use with xsmall and small font sizes                     |
+| `line-height`    | `--font-line-height-large`         | 24px                | For use with large and xlarge font sizes                     |
+| `letter-spacing` | `--font-letter-spacing-pos-xsmall` | .005em              | Optimized letter spacing for xsmall text on light background |
+| `letter-spacing` | `--font-letter-spacing-neg-xsmall` | .01em               | Optimized letter spacing for xsmall text on dark background  |
+| `letter-spacing` | `--font-letter-spacing-pos-small`  | 0                   | Optimized letter spacing for small text on light background  |
+| `letter-spacing` | `--font-letter-spacing-neg-small`  | .005em              | Optimized letter spacing for small text on dark background   |
+| `letter-spacing` | `--font-letter-spacing-pos-large`  | -0.0025em           | Optimized letter spacing for large text on light background  |
+| `letter-spacing` | `--font-letter-spacing-neg-large`  | .0025em             | Optimized letter spacing for large text on dark background   |
+| `letter-spacing` | `--font-letter-spacing-pos-xlarge` | -.001em             | Optimized letter spacing for xlarge text on light background |
+| `letter-spacing` | `--font-letter-spacing-neg-xlarge` | -.001em             | Optimized letter spacing for xlarge text on dark background  |
 
 **Border Radius**
 
+| Var                     | Value | Notes                                 |
+|:------------------------|:------|:--------------------------------------|
+| `--border-radius-small` | 2px   | Ex: menus, input borders, icon button |
+| `--border-radius-med`   | 5px   | Ex: visual bell, toasts               |
+| `--border-radius-large` | 6px   | Ex: buttons                           |
+
+**Shadows**
+
+| Var                       | Notes                       |
+|:--------------------------|:----------------------------|
+| --shadow-hud              | Ex: menus, tooltips, toasts |
+| --shadow-floating-window: | Ex: modal, dialog           |
+
 **Sizes**
+
+| Var              | Value |
+|:-----------------|:------|
+| `--size-xxsmall` | 8px   |
+| `--size-xsmall`  | 16px  |
+| `--size-small`   | 24px  |
+| `--size-medium`  | 32px  |
+| `--size-large`   | 40px  |
+| `--size-xlarge`  | 48px  |
+| `--size-xxlarge` | 64px  |
+| `--size-huge`    | 80px  |
