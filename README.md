@@ -23,3 +23,20 @@ import { Button, Input, SelectMenu } from 'figma-plugin-ds-svelte';
 
 ## Components
 
+### Button
+
+```javascript
+import { Button } from 'figma-plugin-ds-svelte';
+```
+```html
+<Button on:click={function}>Label</Button>
+<Button on:click={function} variant="secondary">Label</Button>
+<Button on:click={function} disabled>Label</Button>
+```
+
+**Props**
+| Prop           | Type    | Options/notes                                                |
+|----------------|---------|--------------------------------------------------------------|
+| `variant`      | String  | Default: `"primary"` | Options: `"secondary"`, `"tertiary"`  |
+| `disabled`     | Boolean | Default: `false`                                             |
+| `desctructive` | Boolean | Default: `false`                                             |
