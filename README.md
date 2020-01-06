@@ -56,11 +56,12 @@ import { Checkbox } from 'figma-plugin-ds-svelte';
 <Checkbox checked>Label</Checkbox>
 <Checkbox disabled>Label</Checkbox>
 ```
-**Props**
+**Props**]
 
 | Prop       | Type    | Options/notes                                                                            |
 |:-----------|:--------|:-----------------------------------------------------------------------------------------|
-| `value`    | String  | Define checkbox value here.                                                              |
+| `on:change`| Func    | Funtion to execute on change. Ex: `on:change={funcName}`                                 |
+| `value`    | Boolean | Default: `false`;                                                                        |
 | `checked`  | Boolean | Default: `false`; You can bind the value when checked to a var. `bind:checked={varName}` |
 | `disabled` | Boolean | Default: `false`                                                                         |
 
@@ -117,10 +118,13 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 ### Input
 ```javascript
 import { Input } from 'figma-plugin-ds-svelte';
+
+//var to define and store value
+var inputValue = 'Default value'; 
 ```
 ```html
-<Input value="Value"/>
-<Input value="Value" disabled/>
+<Input bind:value={inputValue}/>
+<Input bind:value={inputValue} disabled/>
 <Input placeholder="Enter some info..."/>
 
 <!-- You can also pass Icon props to use the icon component inside the input -->
@@ -135,7 +139,7 @@ import { Input } from 'figma-plugin-ds-svelte';
 | Prop          | Type    | Options/notes                                                      |
 |:--------------|:--------|:-------------------------------------------------------------------|
 | `on:change`   | Func    | Funtion to execute on change. Ex: `on:change={funcName}`           |
-| `value`       | String  | Value that will get populated by user or specify predefined value. |
+| `value`       | String  | Value that will get populated by user or specify predefined value. You can also bind this to a variable. |
 | `placeholder` | String  | Placeholder text.                                                  |
 | `borders`     | Boolean | Default: `false`; Force a border on the input field.               |
 | `disabled`    | Boolean | Default: `false`                                                   |
@@ -214,6 +218,9 @@ var selectedItem;
 ```
 ```html
 <SelectMenu bind:menuItems={menuItemArray} bind:value={selectedItem}/>
+<SelectMenu bind:menuItems={menuItemArray} bind:value={selectedItem} showGroupLabels/>
+<SelectMenu bind:menuItems={menuItemArray} bind:value={selectedItem} iconName={IconBlend}/>
+<SelectMenu bind:menuItems={menuItemArray} bind:value={selectedItem} disabled/>
 ```
 **Props**
 
@@ -228,6 +235,65 @@ var selectedItem;
 | `macOSBlink`      | Boolean | Default: `false`; Easter egg, old school Mac OS triple blink on select.                                                                  |
 | `iconName`        | Var     | _See Icon component for usage._                                                                                                          |
 | `iconText`        | String  | _See Icon component for usage._                                                                                                          |
+
+---
+
+### Switch
+```javascript
+import { Switch } from 'figma-plugin-ds-svelte';
+
+//use bind:group, with a var to create a radio group and store the value of selected item
+//set value if this var to same value as radio item to set initial selection
+var switchValue;
+```
+```html
+<Switch value="value" bind:checked={switchValue}>Label</Switch>
+```
+**Props**
+
+| Prop       | Type    | Options/notes                                                                            |
+|:-----------|:--------|:-----------------------------------------------------------------------------------------|
+| `on:change`| Func    | Funtion to execute on change. Ex: `on:change={funcName}`                                 |
+| `value`    | Boolean | Default: `false`;                                                                        |
+| `checked`  | Boolean | Default: `false`; You can bind the value when checked to a var. `bind:checked={varName}` |
+| `disabled` | Boolean | Default: `false`                                                                         |
+
+---
+
+### Textarea
+```javascript
+import { Textarea } from 'figma-plugin-ds-svelte';
+```
+```html
+<Textarea placeholder="Enter some text"></Textarea>
+```
+**Props**
+
+| Prop          | Type    | Options/notes                                                         |
+|:--------------|:--------|:----------------------------------------------------------------------|
+| `on:change`   | Func    | Function to execute on change. Ex: `on:change={funcName}`             |
+| `value`       | String  | Value of textarea. Can bind to a variable. Ex: `bind:value={someVar}` |
+| `placeholder` | String  | Override default placeholder text with a string.                      |
+| `rows`        | Int     | Default: `2`; Number of rows (height) to display.                     |
+| `disabled`    | Boolean | Default: `false`                                                      |
+
+---
+
+### Type
+```javascript
+import { Type } from 'figma-plugin-ds-svelte';
+```
+```html
+<Type size="large" weight="bold">Content here</Type>
+```
+**Props**
+
+| Prop      | Type    | Options/notes                                                                          |
+|:----------|:--------|:---------------------------------------------------------------------------------------|
+| `size`    | String  | Default: `"small"`; Also accepts `"xsmall"`,`"large"`, `"xlarge"`                      |
+| `weight`  | String  | Default: `"normal"`; Also accepts `"medium"`,`"bold"`                                  |
+| `color`   | String  | Default: `"black8"`; Pass the name of any Figma color var to this prop. `color="blue"`, Default color is white when inverse is `true` and no value specified |
+| `inverse` | Boolean | Default: `false`; Optimizes letter-spacing for light on dark applications.             |
 
 ---
 
