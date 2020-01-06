@@ -132,9 +132,94 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 
 **Icons**
 
-| Icon                                                                                                          | Name         |
-|---------------------------------------------------------------------------------------------------------------|--------------|
-| ![IconAdjust](src/icons/adjust.svg "icon") | `IconAdjust` |
+| Icon                                                                                   | Var                               |
+|.---------------------------------------------------------------------------------------|.----------------------------------|
+| ![IconAdjust](src/icons/adjust.svg "icon")                                             | `IconAdjust`                      |
+| ![IconAlert](src/icons/alert.svg "icon")                                               | `IconAlert`                       |
+| ![IconAngle](src/icons/angle.svg "icon")                                               | `IconAngle`                       |
+| ![IconArrowLeftRight](src/icons/arrow-left-right.svg "icon")                           | `IconArrowLeftRight`              |
+| ![IconUpDown](src/icons/arrow-up-down.svg "icon")                                      | `IconUpDown`                      |
+| ![IconAutoLayoutHorizontal](src/icons/auto-layout-horizontal.svg "icon")               | `IconAutoLayoutHorizontal`        |
+| ![IconAutoLayoutVertical](src/icons/auto-layout-vertical.svg "icon")                   | `IconAutoLayoutVertical`          |
+| ![IconBack](src/icons/back.svg "icon")                                                 | `IconBack`                        |
+| ![IconBlendEmpty](src/icons/blend-empty.svg "icon")                                    | `IconBlendEmpty`                  |
+| ![IconBlend](src/icons/blend.svg "icon")                                               | `IconBlend`                       |
+| ![IconBreak](src/icons/break.svg "icon")                                               | `IconBreak`                       |
+| ![IconCaretDown](src/icons/caret-down.svg "icon")                                      | `IconCaretDown`                   |
+| ![IconCaretLeft](src/icons/caret-left.svg "icon")                                      | `IconCaretLeft`                   |
+| ![IconCaretRight](src/icons/caret-right.svg "icon")                                    | `IconCaretRight`                  |
+| ![IconCaretUp](src/icons/caret-up.svg "icon")                                          | `IconCaretUp`                     |
+| ![IconCheck](src/icons/check.svg "icon")                                               | `IconCheck`                       |
+| ![IconClose](src/icons/close.svg "icon")                                               | `IconClose`                       |
+| ![IconComponent](src/icons/component.svg "icon")                                       | `IconComponent`                   |
+| ![IconCornerRadius](src/icons/corner-radius.svg "icon")                                | `IconCornerRadius`                |
+| ![IconCorners](src/icons/corners.svg "icon")                                           | `IconCorners`                     |
+| ![IconDistributeHorizontalSpacing](src/icons/distribute-horizontal-spacing.svg "icon") | `IconDistributeHorizontalSpacing` |
+| ![IconDistributeVerticalSpacing](src/icons/distribute-vertical-spacing.svg "icon")     | `IconDistributeVerticalSpacing`   |
+| ![IconDraft](src/icons/draft.svg "icon")                                               | `IconDraft`                       |
+| ![IconEffects](src/icons/effects.svg "icon")                                           | `IconEffects`                     |
+| ![IconEllipses](src/icons/ellipses.svg "icon")                                         | `IconEllipses`                    |
+| ![IconEyedropper](src/icons/eyedropper.svg "icon")                                     | `IconEyedropper`                  |
+| ![IconForward](src/icons/forward.svg "icon")                                           | `IconForward`                     |
+| ![IconFrame](src/icons/frame.svg "icon")                                               | `IconFrame`                       |
+| ![IconGroup](src/icons/group.svg "icon")                                               | `IconGroup`                       |
+| ![IconHidden](src/icons/hidden.svg "icon")                                             | `IconHidden`                      |
+| ![IconHorizontalPadding](src/icons/horizontal-padding.svg "icon")                      | `IconHorizontalPadding`           |
+| ![IconHyperlink](src/icons/hyperlink.svg "icon")                                       | `IconHyperlink`                   |
+| ![IconImage](src/icons/image.svg "icon")                                               | `IconImage`                       |
+| ![IconInstance](src/icons/instance.svg "icon")                                         | `IconInstance`                    |
+| ![IconKey](src/icons/key.svg "icon")                                                   | `IconKey`                         |
+| ![IconLayoutAlignBottom](src/icons/layout-align-bottom.svg "icon")                     | `IconLayoutAlignBottom`           |
+| ![IconAlignHorizontalCenters](src/icons/layout-align-horizontal-centers.svg "icon")    | `IconAlignHorizontalCenters`      |
+| ![IconAlignLeft](src/icons/layout-align-left.svg "icon")                               | `IconAlignLeft`                   |
+| ![IconAlignRight](src/icons/layout-align-right.svg "icon")                             | `IconAlignRight`                  |
+| ![IconAlignTop](src/icons/layout-align-top.svg "icon")                                 | `IconAlignTop`                    |
+| ![IconAlignVerticalCenters](src/icons/layout-align-vertical-centers.svg "icon")        | `IconAlignVerticalCenters`        |
+| ![IconLayoutGridColumns](src/icons/layout-grid-columns.svg "icon")                     | `IconLayoutGridColumns`           |
+| ![IconLayoutGridRows](src/icons/layout-grid-rows.svg "icon")                           | `IconLayoutGridRows`              |
+| ![IconLayoutGridUniform](src/icons/layout-grid-uniform.svg "icon")                     | `IconLayoutGridUniform`           |
+| ![IconLibrary](src/icons/library.svg "icon")                                           | `IconLibrary`                     |
+| ![IconLinkBroken](src/icons/link-broken.svg "icon")                                    | `IconLinkBroken`                  |
+| ![IconLinkConnected](src/icons/link-connected.svg "icon")                              | `IconLinkConnected`               |
+| ![IconListDetailed](src/icons/list-detailed.svg "icon")                                | `IconListDetailed`                |
+| ![IconListTile](src/icons/list-tile.svg "icon")                                        | `IconListTile`                    |
+| ![IconList](src/icons/list.svg "icon")                                                 | `IconList`                        |
+| ![IconLockOff](src/icons/lock-off.svg "icon")                                          | `IconLockOff`                     |
+| ![IconLockOn](src/icons/lock-on.svg "icon")                                            | `IconLockOn`                      |
+| ![IconMinus](src/icons/minus.svg "icon")                                               | `IconMinus`                       |
+| ![IconPlay](src/icons/play.svg "icon")                                                 | `IconPlay`                        |
+| ![IconPlus](src/icons/plus.svg "icon")                                                 | `IconPlus`                        |
+| ![IconRandom](src/icons/random.svg "icon")                                             | `IconRandom`                      |
+| ![IconRecent](src/icons/recent.svg "icon")                                             | `IconRecent`                      |
+| ![IconResizeToFit](src/icons/resize-to-fit.svg "icon")                                 | `IconResizeToFit`                 |
+| ![IconResolveFilled](src/icons/resolve-filled.svg "icon")                              | `IconResolveFilled`               |
+| ![IconResolve](src/icons/resolve.svg "icon")                                           | `IconResolve`                     |
+| ![IconReverse](src/icons/reverse.svg "icon")                                           | `IconReverse`                     |
+| ![IconSearchLarge](src/icons/search-large.svg "icon")                                  | `IconSearchLarge`                 |
+| ![IconSearch](src/icons/search.svg "icon")                                             | `IconSearch`                      |
+| ![IconSettings](src/icons/settings.svg "icon")                                         | `IconSettings`                    |
+| ![IconShare](src/icons/share.svg "icon")                                               | `IconShare`                       |
+| ![IconSmiley](src/icons/smiley.svg "icon")                                             | `IconSmiley`                      |
+| ![IconSortAlphaAsc](src/icons/sort-alpha-asc.svg "icon")                               | `IconSortAlphaAsc`                |
+| ![IconSortAlphaDsc](src/icons/sort-alpha-dsc.svg "icon")                               | `IconSortAlphaDsc`                |
+| ![IconSortTopBottom](src/icons/sort-top-bottom.svg "icon")                             | `IconSortTopBottom`               |
+| ![IconSpacing](src/icons/spacing.svg "icon")                                           | `IconSpacing`                     |
+| ![IconSpinner](src/icons/spinner.svg "icon")                                           | `IconSpinner`                     |
+| ![IconStarOff](src/icons/star-off.svg "icon")                                          | `IconStarOff`                     |
+| ![IconStarOn](src/icons/star-on.svg "icon")                                            | `IconStarOn`                      |
+| ![IconStrokeWeight](src/icons/stroke-weight.svg "icon")                                | `IconStrokeWeight`                |
+| ![IconStyles](src/icons/styles.svg "icon")                                             | `IconStyles`                      |
+| ![IconSwap](src/icons/swap.svg "icon")                                                 | `IconSwap`                        |
+| ![IconTheme](src/icons/theme.svg "icon")                                               | `IconTheme`                       |
+| ![IconTidyUpGrid](src/icons/tidy-up-grid.svg "icon")                                   | `IconTidyUpGrid`                  |
+| ![IconTidyUpListHorizontal](src/icons/tidy-up-list-horizontal.svg "icon")              | `IconTidyUpListHorizontal`        |
+| ![IconTidyUpListVertical](src/icons/tidy-up-list-vertical.svg "icon")                  | `IconTidyUpListVertical`          |
+| ![IconTimer](src/icons/timer.svg "icon")                                               | `IconTimer`                       |
+| ![IconTrash](src/icons/trash.svg "icon")                                               | `IconTrash`                       |
+| ![IconVerticalPadding](src/icons/vertical-padding.svg "icon")                          | `IconVerticalPadding`             |
+| ![IconVisible](src/icons/visible.svg "icon")                                           | `IconVisible`                     |
+| ![IconWarningLarge](src/icons/warning-large.svg "icon")                                | `IconWarningLarge`                |
+| ![IconWarning](src/icons/warning.svg "icon")                                           | `IconWarning`                     |
 
 ---
 
