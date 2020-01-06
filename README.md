@@ -130,6 +130,11 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 | `color`    | String  | Pass the name of any Figma color var to this prop. `color="blue"`                            |
 | `spin`     | Boolean | Default: `false`; This will rotate the icon in an endless loop.                              |
 
+**Icons**
+| Icon                                                | Name         |
+|-----------------------------------------------------|--------------|
+| ![IconAdjust](src/icons/adjust.svg?raw=true "icon") | `IconAdjust` |
+
 ---
 
 ### Icon button
