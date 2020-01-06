@@ -24,16 +24,15 @@ import { Button, Input, SelectMenu } from 'figma-plugin-ds-svelte';
 ## Components
 
 ### Button
-
 ```javascript
 import { Button } from 'figma-plugin-ds-svelte';
 ```
 ```html
-<Button on:click={function}>Label</Button>
-<Button on:click={function} variant="secondary">Label</Button>
-<Button on:click={function} disabled>Label</Button>
+<Button on:click={funcName}>Label</Button>
+<Button on:click={funcName} variant="secondary">Label</Button>
+<Button on:click={funcName} variant="secondary" destructive>Label</Button>
+<Button on:click={funcName} disabled>Label</Button>
 ```
-
 **Props**
 
 | Prop           | Type    | Options/notes                                               |
@@ -41,3 +40,20 @@ import { Button } from 'figma-plugin-ds-svelte';
 | `variant`      | String  | Default: `"primary"`, Options: `"secondary"`, `"tertiary"`  |
 | `disabled`     | Boolean | Default: `false`                                            |
 | `desctructive` | Boolean | Default: `false`                                            |
+
+
+### Checkbox
+```javascript
+import { Checkbox } from 'figma-plugin-ds-svelte';
+```
+```html
+<Checkbox>Label</Checkbox>
+<Checkbox checked>Label</Checkbox>
+<Checkbox disabled>Label</Checkbox>
+```
+**Props**
+| Prop       | Type    | Options/notes                                                                               |
+|:-----------|:--------|:--------------------------------------------------------------------------------------------|
+| `value`    | String  | Define checkbox value here.                                                                 |
+| `checked`  | Boolean | Default: `false`; You can bind the value when checked to a var.<br>`bind:checked={varName}` |
+| `disabled` | Boolean | Default: `false`                                                                            |
