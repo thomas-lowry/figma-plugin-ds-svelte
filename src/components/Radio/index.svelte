@@ -1,10 +1,5 @@
-
-
 <script>
     import { onMount } from 'svelte';
-
-    let uniqueId = 'radio--' + ((Math.random() * 10000000).toFixed(0)).toString();
-    let className = '';
 
     export let group = null;
     export let value = null;
@@ -12,9 +7,10 @@
     export let tabindex = 0;
     export { className as class };
 
+    let uniqueId = 'radio--' + ((Math.random() * 10000000).toFixed(0)).toString();
+    let className = '';
     $: checked = group === value;
 
-    
 </script>
 
 <div class={className}>

@@ -3,9 +3,10 @@
 
     export let size = 'xsmall';
     export let weight = 'normal';
-    export let inverse = false;
+    export let inverse = false; //this prop uses different letterspacing values for inversed type (light on dark)
     export let color = 'black8';
     export let inline = false;
+    
     let className = '';
 
     onMount(async () => {

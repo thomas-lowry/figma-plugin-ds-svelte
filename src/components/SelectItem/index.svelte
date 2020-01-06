@@ -1,9 +1,10 @@
 <script>
     
-    let className = '';
     export let itemId;
     export let selected = false;
     export { className as class };
+
+    let className = '';
 
 </script>
 

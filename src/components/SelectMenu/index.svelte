@@ -19,7 +19,6 @@
     export { className as class };
 
     const dispatch = createEventDispatcher();
-    //let scroll;
     let className = '';
     let groups = checkGroups();
     let menuWrapper, menuButton, menuList;
@@ -101,7 +100,6 @@
                 let itemTop = selectedItem.getBoundingClientRect().top;
                 let topPos = (itemTop - parentTop) - 3;
                 menuList.style.top = -Math.abs(topPos) + 'px';
-                //window.scrollTo(0, scroll);
 
                 //update size and position based on plugin UI
                 resizeAndPosition();

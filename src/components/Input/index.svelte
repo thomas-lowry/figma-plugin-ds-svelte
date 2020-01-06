@@ -1,4 +1,5 @@
 <script>
+
     import Icon from './../Icon/index.svelte';
 
     export let id = null;

@@ -1,13 +1,13 @@
 <script>
+
     import { createEventDispatcher, setContext, onMount } from 'svelte';
     import { writable } from 'svelte/store';
     import DisclosureItem, { disclosure } from "./../DisclosureItem/index.svelte";
     
     const dispatch = createEventDispatcher();
+    const selected = writable(null);
     let className = '';
     let disclosureWrapper;
-
-    const selected = writable(null);
 
     const clickHandler = function(itemId) {
         let currentVal = getValue(selected);
@@ -18,12 +18,9 @@
             selected.set(null);
             dispatch("change", null);
         }
-  };
+    };
 
-    setContext(disclosure, {
-        clickHandler,
-        selected
-    });
+    setContext(disclosure, { clickHandler, selected});
 
     function getValue(store) {
         let $val;

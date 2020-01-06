@@ -3,6 +3,7 @@
 </script>
 
 <script>
+
     import { getContext, onMount } from 'svelte';
     import Icon from './../Icon/index.svelte';
     import CaretRight from './../../icons/caret-right.svg';

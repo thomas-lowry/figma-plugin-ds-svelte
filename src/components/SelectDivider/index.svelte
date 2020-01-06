@@ -1,5 +1,7 @@
 <script>
+
     export let label = false;
+    
 </script>
 
 {#if label===true}

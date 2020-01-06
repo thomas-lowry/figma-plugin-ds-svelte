@@ -1,12 +1,13 @@
 <script>
-    let uniqueId = 'switch--' + ((Math.random() * 10000000).toFixed(0)).toString();
-    let className = '';
     
     export let checked = false;
     export let value = '';
     export let disabled = false;
     export let tabindex = 0;
     export { className as class };
+
+    let uniqueId = 'switch--' + ((Math.random() * 10000000).toFixed(0)).toString();
+    let className = '';
     
 </script>
 
