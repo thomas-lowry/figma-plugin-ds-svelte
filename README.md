@@ -37,7 +37,7 @@ import { Button } from 'figma-plugin-ds-svelte';
 **Props**
 
 | Prop           | Type    | Options/notes                                               |
-|----------------|:--------|:------------------------------------------------------------|
+|:---------------|:--------|:------------------------------------------------------------|
 | `variant`      | String  | Default: `"primary"`, Options: `"secondary"`, `"tertiary"`  |
 | `disabled`     | Boolean | Default: `false`                                            |
 | `desctructive` | Boolean | Default: `false`                                            |
