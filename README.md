@@ -134,7 +134,7 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 
 
 | Icon                                                                                   | Var                               |
-|----------------------------------------------------------------------------------------|.----------------------------------|
+|----------------------------------------------------------------------------------------|-----------------------------------|
 | ![IconAdjust](src/icons/adjust.svg "icon")                                             | `IconAdjust`                      |
 | ![IconAlert](src/icons/alert.svg "icon")                                               | `IconAlert`                       |
 | ![IconAngle](src/icons/angle.svg "icon")                                               | `IconAngle`                       |
