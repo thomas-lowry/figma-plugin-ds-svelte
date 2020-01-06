@@ -20,6 +20,7 @@ import { GlobalCSS } from 'figma-plugin-ds-svelte';
 import { Button, Input, SelectMenu } from 'figma-plugin-ds-svelte';
 ```
 
+---
 
 ## Components
 _All components can accept class props to add global or utility classes to each component_
@@ -38,12 +39,12 @@ import { Button } from 'figma-plugin-ds-svelte';
 ```
 **Props**
 
-| Prop           | Type    | Options/notes                                               |
-|:---------------|:--------|:------------------------------------------------------------|
-| `on:click`     | Func    | Assign a function to run on click. Ex: `on:click={funcName}`|
-| `variant`      | String  | Default: `"primary"`, Options: `"secondary"`, `"tertiary"`  |
-| `disabled`     | Boolean | Default: `false`                                            |
-| `desctructive` | Boolean | Default: `false`                                            |
+| Prop           | Type    | Options/notes                                                   |
+|:---------------|:--------|:----------------------------------------------------------------|
+| `on:click`     | Func    | Assign a function to execute on click. Ex: `on:click={funcName}`|
+| `variant`      | String  | Default: `"primary"`, Options: `"secondary"`, `"tertiary"`      |
+| `disabled`     | Boolean | Default: `false`                                                |
+| `desctructive` | Boolean | Default: `false`                                                |
 
 ---
 
@@ -80,10 +81,11 @@ import { Disclosure, DisclosureItem } from 'figma-plugin-ds-svelte';
 ```
 **Props**
 
-| Prop    | Type    | Options/notes                                                     |
-|:--------|:--------|:------------------------------------------------------------------|
-| `title` | String  | Title of disclosure item                                          |
-| `open`  | Boolean | Default: `false`; Only one disclosure item can be opened at once. |
+| Prop       | Type    | Options/notes                                                     |
+|:-----------|:--------|:------------------------------------------------------------------|
+| `title`    | String  | Title of disclosure item                                          |
+| `open`     | Boolean | Default: `false`; Only one disclosure item can be opened at once  |
+| `section`  | Boolean | Default: `false`; Bold section header for disclosure title        |
 
 ---
 
@@ -112,6 +114,28 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 | `iconText` | String  | Pass a text character to use instead of an icon. Ex: width and height inputs `iconText="W"`  |
 | `color`    | String  | Pass the name of any Figma color var to this prop. `color="blue"`                            |
 | `spin`     | Boolean | Default: `false`; This will rotate the icon in an endless loop.                              |
+
+---
+
+### Icon Button
+```javascript
+//use this component as you would an Icon, it accepts the same props (except color)
+import { IconButton } from 'figma-plugin-ds-svelte';
+```
+```html
+<IconButton on:click={funcName} iconName={IconVisible}/>
+<IconButton on:click={funcName} iconName={IconVisible} selected/>
+<IconButton on:click={funcName} iconText="@"/>
+```
+**Props**
+
+| Prop       | Type    | Options/notes                                                    |
+|------------|---------|------------------------------------------------------------------|
+| `on:click` | String  | Assign a function to execute on click. Ex: `on:click={funcName}` |
+| `selected` | Boolean | Default: `false`                                                 |
+| `iconName` | String  | _See Icon component for usage._                                  |
+| `IconText` | String  | _See Icon component for usage._                                  |
+| `spin`     | Boolean | _See Icon component for usage._                                  |
 
 ---
 
@@ -228,7 +252,7 @@ var selectedItem;
 |-------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------|
 | `on:change`       | Func    | Function to execute on change. Ex: `on:change={funcName}`                                                                                |
 | `menuItems`       | Var     | Pass in array of menu item objects. See example above for format.  If you want to use option groups, update the group keys to a string.  |
-| `value`           | Var     | Bind the value of the selected item to a var. Example: `bind:value={selectedItem}`                                                       |
+| `value`           | Var     | Bind the value of the selected item to a var. Ex: `bind:value={selectedItem}`                                                       |
 | `placeholder`     | String  | Override default placeholder text with a string when there is no item selected.                                                          |
 | `showGroupLabels` | Boolean | Default: `false`; If you are using option groups, this will show the group labels.                                                       |
 | `disabled`        | Boolean | Default: `false`                                                                                                                         |
@@ -301,10 +325,83 @@ import { Type } from 'figma-plugin-ds-svelte';
 
 **Color**
 
+| Name          | Var               | Type             | Notes                                                         |
+|:--------------|:------------------|:-----------------|:--------------------------------------------------------------|
+| blue          | `--blue`          | Accent           | Ex: primary button, hyperlinks, focus/selected states         |
+| purple        | `--purple`        | Accent           | Ex: components/instances                                      |
+| hot-pink      | `--hot-pink`      | Accent           | Ex: smart selection handles                                   |
+| green         | `--green`         | Accent           | Ex: Toolbar selections                                        |
+| red           | `--red`           | Accent           | Ex: Error                                                     |
+| yellow        | `--yellow`        | Accent           | Ex: Caution/warning                                           |
+| black         | `--black`         | Basic foreground | Ex: active states                                             |
+| black8        | `--black8`        | Basic foreground | 80% black, ex: most common black used in UI text and icons    |
+| black8-opaque | `black8-opaque`   | Basic foreground | Opaque version of black8                                      |
+| black3        | `--black3`        | Basic foreground | 30% black, ex: lower priority messages, disabled states       |
+| black3-opaque | `--black3-opaque` | Basic foreground | Opaque version of black3                                      |
+| white         | `--white`         | Basic foreground | Used in same way as black8, but on dark backgrounds           |
+| white8        | `--white8`        | Basic foreground | Rarely used, only in toolbar                                  |
+| white4        | `--white4`        | Basic foreground | Used in same way as black3, Ex: option group headers in menus |
+| white         | `--white`         | Basic background | (Duplicate) White is also the most common background color    |
+| grey          | `--grey`          | Basic background | Used behind controls in active state                          |
+| silver        | `--silver`        | Basic background | Ex: horizontal separators, default canvas background          |
+| hud           | `--hud`           | Basic background | Ex: background for menus                                      |
+| toolbar       | `--toolbar`       | Basic background | Ex: background for the toolbar                                |
+| black1        | `--black1`        | Special          | Ex: input placeholder underline, textarea border              |
+| blue3         | `--blue3`         | Special          | Ex: text range selection in inputs                            |
+| purple4       | `--purple4`       | Special          | Ex: disabled components/instances                             |
+| hover-fill    | `--hover-fill`    | Special          | Hover state for items without borders, ex: icon button        |
+| selection-a   | `--selection-a`   | Special          | Selected cells, ex: selected top level layer                  |
+| selection-b   | `--selection-b`   | Special          | Selected cells, ex: selected child layers                     |
+| white3        | `--white3`        | Special          | Ex: menu separators                                           |
+
+
 **Type**
 
-**Shadows**
+| Property         | Var                                | Value               | Notes                                                        |
+|:-----------------|:-----------------------------------|:--------------------|:-------------------------------------------------------------|
+| `font-family`    | `--font-stack`                     | 'Inter', sans-serif | Default font everywhere                                      |
+| `font-size`      | `--font-size-xsmall`               | 11px                | Most common font size                                        |
+| `font-size`      | `--font-size-small`                | 12px                | Used in menus                                                |
+| `font-size`      | `--font-size-large`                | 13px                | Rarely used in editor                                        |
+| `font-size`      | `--font-size-xlarge`               | 14px                | Rarely used in editor                                        |
+| `font-weight`    | `--font-weight-normal`             | 400                 |                                                              |
+| `font-weight`    | `--font-weight-medium`             | 500                 |                                                              |
+| `font-weight`    | `--font-weight-bold`               | 600                 |                                                              |
+| `line-height`    | `--font-line-height`               | 16px                | For use with xsmall and small font sizes                     |
+| `line-height`    | `--font-line-height-large`         | 24px                | For use with large and xlarge font sizes                     |
+| `letter-spacing` | `--font-letter-spacing-pos-xsmall` | .005em              | Optimized letter spacing for xsmall text on light background |
+| `letter-spacing` | `--font-letter-spacing-neg-xsmall` | .01em               | Optimized letter spacing for xsmall text on dark background  |
+| `letter-spacing` | `--font-letter-spacing-pos-small`  | 0                   | Optimized letter spacing for small text on light background  |
+| `letter-spacing` | `--font-letter-spacing-neg-small`  | .005em              | Optimized letter spacing for small text on dark background   |
+| `letter-spacing` | `--font-letter-spacing-pos-large`  | -0.0025em           | Optimized letter spacing for large text on light background  |
+| `letter-spacing` | `--font-letter-spacing-neg-large`  | .0025em             | Optimized letter spacing for large text on dark background   |
+| `letter-spacing` | `--font-letter-spacing-pos-xlarge` | -.001em             | Optimized letter spacing for xlarge text on light background |
+| `letter-spacing` | `--font-letter-spacing-neg-xlarge` | -.001em             | Optimized letter spacing for xlarge text on dark background  |
 
 **Border Radius**
 
+| Var                     | Value | Notes                                 |
+|:------------------------|:------|:--------------------------------------|
+| `--border-radius-small` | 2px   | Ex: menus, input borders, icon button |
+| `--border-radius-med`   | 5px   | Ex: visual bell, toasts               |
+| `--border-radius-large` | 6px   | Ex: buttons                           |
+
+**Shadows**
+
+| Var                       | Notes                       |
+|:--------------------------|:----------------------------|
+| --shadow-hud              | Ex: menus, tooltips, toasts |
+| --shadow-floating-window: | Ex: modal, dialog           |
+
 **Sizes**
+
+| Var              | Value |
+|:-----------------|:------|
+| `--size-xxsmall` | 8px   |
+| `--size-xsmall`  | 16px  |
+| `--size-small`   | 24px  |
+| `--size-medium`  | 32px  |
+| `--size-large`   | 40px  |
+| `--size-xlarge`  | 48px  |
+| `--size-xxlarge` | 64px  |
+| `--size-huge`    | 80px  |
