@@ -41,7 +41,7 @@ import { Button } from 'figma-plugin-ds-svelte';
 | `disabled`     | Boolean | Default: `false`                                            |
 | `desctructive` | Boolean | Default: `false`                                            |
 
---
+---
 
 ### Checkbox
 ```javascript
