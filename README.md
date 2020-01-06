@@ -388,10 +388,10 @@ import { Type } from 'figma-plugin-ds-svelte';
 
 **Shadows**
 
-| Var                       | Notes                       |
-|:--------------------------|:----------------------------|
-| --shadow-hud              | Ex: menus, tooltips, toasts |
-| --shadow-floating-window: | Ex: modal, dialog           |
+| Var                         | Notes                       |
+|:----------------------------|:----------------------------|
+| `--shadow-hud`              | Ex: menus, tooltips, toasts |
+| `--shadow-floating-window:` | Ex: modal, dialog           |
 
 **Sizes**
 
