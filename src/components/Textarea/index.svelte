@@ -14,6 +14,7 @@
 <div class="textarea {className}">
     <textarea 
         type="input"
+        on:change
         {id}
         {name}
         {rows}

@@ -22,6 +22,7 @@
         align-items: center;
         cursor: default;
         user-select: none;
+        padding: 0 calc(var(--size-xxsmall) / 2) 0 var(--size-xxsmall);
     }
 
 </style>

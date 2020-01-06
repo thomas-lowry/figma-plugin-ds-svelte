@@ -14,15 +14,17 @@
     import Input from './components/Input/index.svelte';
     import Label from './components/Label/index.svelte';
     import OnboardingTip from './components/OnboardingTip/index.svelte';
+    import Radio from './components/Radio/index.svelte';
     import Section from './components/Section/index.svelte';
     import SelectMenu from './components/SelectMenu/index.svelte';
     import Textarea from './components/Textarea/index.svelte';
+    import Type from './components/Type/index.svelte';
 
     //Icons
     import IconAdjust from './icons/adjust.svg';
     import IconAlert from './icons/alert.svg';
     import IconAngle from './icons/angle.svg';
-    import IconArrowLeftRight from '¡./icons/arrow-left-right.svg';
+    import IconArrowLeftRight from './icons/arrow-left-right.svg';
     import IconUpDown from './icons/arrow-up-down.svg';
     import IconAutoLayoutHorizontal from './icons/auto-layout-horizontal.svg';
     import IconAutoLayoutVertical from './icons/auto-layout-vertical.svg';
@@ -106,6 +108,12 @@
     import IconWarningLarge from './icons/warning-large.svg';
     import IconWarning from './icons/warning.svg';
 
+    //var to store the selected value of our radio button group
+    var Radios = 'a';
+    function radioValue() {
+        console.log("value:",Radios);
+    }
+
     //Arrays for select menu
     //example without a selected item
     let menuItemsExample1 = [
@@ -135,7 +143,9 @@
         { 'value': 'item3', 'label': 'Darken', 'group': 'group2', 'selected': false },
         { 'value': 'item4', 'label': 'Multiply', 'group': 'group2', 'selected': false },
         { 'value': 'item4', 'label': 'Color Burn', 'group': 'group2', 'selected': false }
-	];
+    ];
+    
+
 
 </script>
 
@@ -149,18 +159,32 @@
 
         <div class="mb-xsmall">
             <h3>Primary</h3>
-            <Button primary>Label</Button>
-            <Button primary disabled>Label</Button>
-            <Button primary destructive>Label</Button>
-            <Button primary destructive disabled>Label</Button>
+            <div class="flex row">
+                <Button class="mr-xxsmall">Label</Button>
+                <Button disabled class="mr-xxsmall">Label</Button>
+                <Button destructive class="mr-xxsmall">Label</Button>
+                <Button destructive disabled>Label</Button>
+            </div>
+        </div>
+
+        <div class="mb-xsmall">
+            <h3>Secondary</h3>
+            <div class="flex row">
+                <Button variant="secondary" class="mr-xxsmall">Label</Button>
+                <Button variant="secondary" disabled class="mr-xxsmall">Label</Button>
+                <Button variant="secondary" destructive class="mr-xxsmall">Label</Button>
+                <Button variant="secondary" destructive disabled class="mr-xxsmall">Label</Button>
+            </div>
         </div>
 
         <div>
-            <h3>Secondary</h3>
-            <Button secondary>Label</Button>
-            <Button secondary disabled>Label</Button>
-            <Button secondary destructive>Label</Button>
-            <Button secondary destructive disabled>Label</Button>
+            <h3>Teritary</h3>
+            <div class="flex row">
+                <Button variant="tertiary" class="mr-xxsmall">Label</Button>
+                <Button variant="tertiary" disabled class="mr-xxsmall">Label</Button>
+                <Button variant="tertiary" destructive class="mr-xxsmall">Label</Button>
+                <Button variant="tertiary" destructive disabled class="mr-xxsmall">Label</Button>
+            </div>
         </div>
 
     </section>
@@ -179,6 +203,14 @@
         <Switch checked>Label</Switch>
         <Switch disabled>Label</Switch>
         <Switch checked disabled>Label</Switch>
+    </section>
+
+    <section>
+        <h2>Radio buttons</h2>
+        <Radio on:click={radioValue} bind:group={Radios} value="a">Label</Radio>
+        <Radio on:click={radioValue} bind:group={Radios} value="b">Label</Radio>
+        <Radio on:click={radioValue} bind:group={Radios} value="c">Label</Radio>
+
     </section>
 
     <section>
@@ -338,6 +370,53 @@
         <Textarea value="Text area with a value that is disabled" disabled></Textarea>
     </section>
 
+    <section>
+        <h2>Type</h2>
+        <div class="flex row">
+            <div class="p-xsmall mr-xxsmall" style="border: 1px solid var(--black1)">
+                <div class="mb-xxsmall">
+                    <Type>UI11 &mdash; xsmall, weight, normal, inverse: false</Type>
+                    <Type size="small">UI12 &mdash; small, weight, normal, inverse: false</Type>
+                    <Type size="large">UI13 &mdash; large, weight, normal, inverse: false</Type>
+                    <Type size="xlarge">UI14 &mdash; xlarge, weight, normal, inverse: false</Type>
+                </div>
+
+                <div class="mb-xxsmall">
+                    <Type weight="medium">UI1 &mdash; xsmall, weight, normal, inverse: false</Type>
+                    <Type size="small" weight="medium">UI2 &mdash; small, weight, normal, inverse: false</Type>
+                    <Type size="large" weight="medium">UI3 &mdash; large, weight, normal, inverse: false</Type>
+                    <Type size="xlarge" weight="medium">UI4 &mdash; xlarge, weight, normal, inverse: false</Type>
+                </div>
+
+                <Type weight="bold">UI1 &mdash; xsmall, weight, normal, inverse: false</Type>
+                <Type size="small" weight="bold">UI2 &mdash; small, weight, normal, inverse: false</Type>
+                <Type size="large" weight="bold">UI3 &mdash; large, weight, normal, inverse: false</Type>
+                <Type size="xlarge" weight="bold">UI4 &mdash; xlarge, weight, normal, inverse: false</Type>
+            </div>
+
+            <div class="p-xsmall" style="background-color: var(--black)">
+                <div class="mb-xxsmall">
+                    <Type inverse>UI1 &mdash; xsmall, weight, normal, inverse: false</Type>
+                    <Type size="small" inverse>UI2 &mdash; small, weight, normal, inverse: false</Type>
+                    <Type size="large" inverse>UI3 &mdash; large, weight, normal, inverse: false</Type>
+                    <Type size="xlarge" inverse>UI4 &mdash; xlarge, weight, normal, inverse: false</Type>
+                </div>
+
+                <div class="mb-xxsmall">
+                    <Type weight="medium" inverse>UI1 &mdash; xsmall, weight, normal, inverse: false</Type>
+                    <Type size="small" weight="medium" inverse>UI2 &mdash; small, weight, normal, inverse: false</Type>
+                    <Type size="large" weight="medium" inverse>UI3 &mdash; large, weight, normal, inverse: false</Type>
+                    <Type size="xlarge" weight="medium" inverse>UI4 &mdash; xlarge, weight, normal, inverse: false</Type>
+                </div>
+
+                <Type weight="bold" inverse>UI1 &mdash; xsmall, weight, normal, inverse: false</Type>
+                <Type size="small" weight="bold" inverse>UI2 &mdash; small, weight, normal, inverse: false</Type>
+                <Type size="large" weight="bold" inverse>UI3 &mdash; large, weight, normal, inverse: false</Type>
+                <Type size="xlarge" weight="bold" inverse>UI4 &mdash; xlarge, weight, normal, inverse: false</Type>
+            </div>
+        </div>
+    </section>
+
 </div>
 
 
@@ -360,8 +439,8 @@
     }
 
     h3 {
-        font-size: 12px;
         font-weight: normal;
+        font-size: 12px;
         padding: 0;
         margin: 0 0 8px 0;
     }
@@ -374,9 +453,13 @@
     }
     
     section {
-        border: 1px solid var(--black1);
-        padding: 16px;
-        margin-bottom: 24px;
+        border-bottom: 1px solid var(--black);
+        padding-bottom: var(--size-medium);
+        margin-bottom: var(--size-medium);
+    }
+    section:last-child {
+        border-bottom: 1px solid transparent;
+        margin-bottom: 0px;
     }
 
 </style>
