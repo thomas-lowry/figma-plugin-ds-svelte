@@ -134,7 +134,7 @@ import { Icon, IconVisible, IconSpinner } from 'figma-plugin-ds-svelte';
 
 | Icon                                                                                                          | Name         |
 |---------------------------------------------------------------------------------------------------------------|--------------|
-| ![IconAdjust](https://github.com/thomas-lowry/figma-plugin-ds-svelte/blob/master/src/icons/adjust.svg "icon") | `IconAdjust` |
+| ![IconAdjust](src/icons/adjust.svg "icon") | `IconAdjust` |
 
 ---
 
