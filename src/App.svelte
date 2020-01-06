@@ -241,7 +241,7 @@
             <Icon iconName={IconSpinner} spin/>
         </div>
         <h3>Icons</h3>
-        <div class="flex row flexwrap">
+        <div class="flex row flex-wrap">
             <Icon iconName={IconAdjust}/>
             <Icon iconName={IconAlert}/>
             <Icon iconName={IconAngle}/>
