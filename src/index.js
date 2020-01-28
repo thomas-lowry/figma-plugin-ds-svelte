@@ -17,7 +17,7 @@ import SelectDivider from './components/SelectDivider/index.svelte';
 import SelectItem from './components/SelectItem/index.svelte';
 import SelectMenu from './components/SelectMenu/index.svelte';
 import Switch from './components/Switch/index.svelte';
-import TextArea from './components/TextArea/index.svelte';
+import TextArea from './components/Textarea/index.svelte';
 import Type from './components/Type/index.svelte';
 
 //Icons
