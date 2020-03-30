@@ -6,6 +6,7 @@
     export let inverse = false; //this prop uses different letterspacing values for inversed type (light on dark)
     export let color = 'black8';
     export let inline = false;
+    export { className as class };
     
     let className = '';
 
