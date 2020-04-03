@@ -92,6 +92,7 @@
     .tertiary {
         border: 1px solid transparent;
         color: var(--blue);
+        background: initial;
         padding: 0;
         font-weight: var(--font-weight-normal);
         letter-spacing: var(--font-letter-spacing-pos-small);
