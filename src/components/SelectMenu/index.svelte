@@ -164,9 +164,8 @@
         }
 
         //lets adjust the position of the menu if its cut off from viewport
-        var bounding = menuList.getBoundingClientRect();
-        var parentBounding = menuButton.getBoundingClientRect();
-        var topLimit = parentBounding.top - 8;
+        let bounding = menuList.getBoundingClientRect();
+        let parentBounding = menuButton.getBoundingClientRect();
 
         if (bounding.top < 0) {
             menuList.style.top = -Math.abs(parentBounding.top - 8) + 'px';
