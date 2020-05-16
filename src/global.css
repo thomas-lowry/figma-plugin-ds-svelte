@@ -81,6 +81,7 @@
 
 
     /* SPACING + SIZING */
+    --size-xxxsmall: 4px;
     --size-xxsmall: 8px;
     --size-xsmall: 16px;
     --size-small: 24px;

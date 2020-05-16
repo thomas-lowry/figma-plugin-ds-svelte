@@ -1,6 +1,6 @@
 {
   "name": "figma-plugin-ds-svelte",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A collection of Svelte components that match the Figma UI for building plugins.",
   "svelte": "./src/index.js",
   "dependencies": {

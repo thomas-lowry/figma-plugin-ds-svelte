@@ -80,7 +80,7 @@
         display: block;
         width: 10px;
         height: 10px;
-        margin: 2px 10px 0 -8px;
+        margin: -1px 10px 0 -8px;
     }
 
     input:enabled:checked:focus + label:before {
