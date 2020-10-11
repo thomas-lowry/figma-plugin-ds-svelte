@@ -1,7 +1,7 @@
 <script>
     import Icon from './../Icon/index.svelte';
 
-    export let iconName;
+    export let iconName = '';
     export let iconText = null;
     export let selected = false;
     export let spin = false;

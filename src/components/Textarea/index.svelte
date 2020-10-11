@@ -30,6 +30,7 @@
     }
 
     textarea {
+        font-family: var(--font-stack);
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
         letter-spacing: var( --font-letter-spacing-neg-xsmall);

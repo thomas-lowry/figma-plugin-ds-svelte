@@ -261,6 +261,7 @@
         padding: 0px var(--size-xxsmall) 0px var(--size-xxsmall);   
         overflow-y: hidden;
         border-radius: var(--border-radius-small);
+        background-color: var(--white);
     }
     button:hover {
         border-color: var(--black1);

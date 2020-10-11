@@ -16,9 +16,12 @@
         }
     });
 
+    let cssColorVar = 'var(--' + color + ')';
+    console.log(color);
+
 </script>
 
-<div class="type {className} {size} {weight}" class:inverse={inverse} class:inline={inline} style="color: var(--{color})">
+<div class="type {className} {size} {weight}" class:inverse={inverse} class:inline={inline} style="color: {cssColorVar}">
     <slot/>
 </div>
 
