@@ -7,7 +7,7 @@ You can also get started with [Figsvelte](https://github.com/thomas-lowry/figsve
 ## Installation
 
 To install into your own Svelte project.
-`npm -D figma-plugin-ds-svelte`
+`npm i -D figma-plugin-ds-svelte`
 
 ## To use
 
@@ -59,7 +59,7 @@ import { Button } from 'figma-plugin-ds-svelte';
 | `on:click`     | Func    | Assign a function to execute on click. Ex: `on:click={funcName}`|
 | `variant`      | String  | Default: `"primary"`, Options: `"secondary"`, `"tertiary"`      |
 | `disabled`     | Boolean | Default: `false`                                                |
-| `desctructive` | Boolean | Default: `false`                                                |
+| `destructive` | Boolean | Default: `false`                                                |
 
 ---
 
@@ -72,7 +72,7 @@ import { Checkbox } from 'figma-plugin-ds-svelte';
 <Checkbox checked>Label</Checkbox>
 <Checkbox disabled>Label</Checkbox>
 ```
-**Props**]
+**Props**
 
 | Prop       | Type    | Options/notes                                                                            |
 |:-----------|:--------|:-----------------------------------------------------------------------------------------|
@@ -239,7 +239,7 @@ import { IconButton } from 'figma-plugin-ds-svelte';
 
 | Prop       | Type    | Options/notes                                                    |
 |------------|---------|------------------------------------------------------------------|
-| `on:click` | String  | Assign a function to execute on click. Ex: `on:click={funcName}` |
+| `on:click` | Func    | Assign a function to execute on click. Ex: `on:click={funcName}` |
 | `selected` | Boolean | Default: `false`                                                 |
 | `iconName` | String  | _See Icon component for usage._                                  |
 | `IconText` | String  | _See Icon component for usage._                                  |
@@ -443,7 +443,7 @@ import { Type } from 'figma-plugin-ds-svelte';
 | yellow        | `--yellow`        | Accent           | Ex: Caution/warning                                           |
 | black         | `--black`         | Basic foreground | Ex: active states                                             |
 | black8        | `--black8`        | Basic foreground | 80% black, ex: most common black used in UI text and icons    |
-| black8-opaque | `black8-opaque`   | Basic foreground | Opaque version of black8                                      |
+| black8-opaque | `--black8-opaque` | Basic foreground | Opaque version of black8                                      |
 | black3        | `--black3`        | Basic foreground | 30% black, ex: lower priority messages, disabled states       |
 | black3-opaque | `--black3-opaque` | Basic foreground | Opaque version of black3                                      |
 | white         | `--white`         | Basic foreground | Used in same way as black8, but on dark backgrounds           |
@@ -460,7 +460,7 @@ import { Type } from 'figma-plugin-ds-svelte';
 | hover-fill    | `--hover-fill`    | Special          | Hover state for items without borders, ex: icon button        |
 | selection-a   | `--selection-a`   | Special          | Selected cells, ex: selected top level layer                  |
 | selection-b   | `--selection-b`   | Special          | Selected cells, ex: selected child layers                     |
-| white3        | `--white3`        | Special          | Ex: menu separators                                           |
+| white2        | `--white2`        | Special          | Ex: menu separators                                           |
 
 
 **Type**
@@ -481,7 +481,7 @@ import { Type } from 'figma-plugin-ds-svelte';
 | `letter-spacing` | `--font-letter-spacing-neg-xsmall` | .01em               | Optimized letter spacing for xsmall text on dark background  |
 | `letter-spacing` | `--font-letter-spacing-pos-small`  | 0                   | Optimized letter spacing for small text on light background  |
 | `letter-spacing` | `--font-letter-spacing-neg-small`  | .005em              | Optimized letter spacing for small text on dark background   |
-| `letter-spacing` | `--font-letter-spacing-pos-large`  | -0.0025em           | Optimized letter spacing for large text on light background  |
+| `letter-spacing` | `--font-letter-spacing-pos-large`  | -.0025em            | Optimized letter spacing for large text on light background  |
 | `letter-spacing` | `--font-letter-spacing-neg-large`  | .0025em             | Optimized letter spacing for large text on dark background   |
 | `letter-spacing` | `--font-letter-spacing-pos-xlarge` | -.001em             | Optimized letter spacing for xlarge text on light background |
 | `letter-spacing` | `--font-letter-spacing-neg-xlarge` | -.001em             | Optimized letter spacing for xlarge text on dark background  |
@@ -503,13 +503,14 @@ import { Type } from 'figma-plugin-ds-svelte';
 
 **Sizes**
 
-| Var              | Value |
-|:-----------------|:------|
-| `--size-xxsmall` | 8px   |
-| `--size-xsmall`  | 16px  |
-| `--size-small`   | 24px  |
-| `--size-medium`  | 32px  |
-| `--size-large`   | 40px  |
-| `--size-xlarge`  | 48px  |
-| `--size-xxlarge` | 64px  |
-| `--size-huge`    | 80px  |
+| Var               | Value |
+|:------------------|:------|
+| `--size-xxxsmall` | 4px   |
+| `--size-xxsmall`  | 8px   |
+| `--size-xsmall`   | 16px  |
+| `--size-small`    | 24px  |
+| `--size-medium`   | 32px  |
+| `--size-large`    | 40px  |
+| `--size-xlarge`   | 48px  |
+| `--size-xxlarge`  | 64px  |
+| `--size-huge`     | 80px  |
