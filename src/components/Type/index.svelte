@@ -17,7 +17,6 @@
     });
 
     let cssColorVar = 'var(--' + color + ')';
-    console.log(color);
 
 </script>
 
