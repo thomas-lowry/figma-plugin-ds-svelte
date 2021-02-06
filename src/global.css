@@ -277,8 +277,11 @@ a:focus {
 .flex-wrap-reverse { flex-wrap: wrap-reverse; }
 .flex-no-wrap { flex-wrap: nowrap }
 
+.flex-shrink { flex-shrink: 1; }
 .flex-no-shrink { flex-shrink: 0; }
+.flex-grow { flex-grow: 1; }
 .flex-no-grow { flex-grow: 0; }
+  
 
 .justify-content-start { justify-content: flex-start; }
 .justify-content-end { justify-content: flex-end; }
