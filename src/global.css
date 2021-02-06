@@ -173,6 +173,7 @@ a:focus {
 .pt-huge { padding-top: var(--size-huge); }
 
 /* padding right */
+.pr-xxxsmall { padding-right: var(--size-xxxsmall); }
 .pr-xxsmall { padding-right: var(--size-xxsmall); }
 .pr-xsmall { padding-right: var(--size-xsmall); }
 .pr-small { padding-right: var(--size-small); }
