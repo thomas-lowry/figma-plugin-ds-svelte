@@ -346,6 +346,7 @@
         <Input value="This is an example with a value" class="mb-xsmall"/>
         <Input value="This is an example with a value but also disabled" disabled class="mb-xsmall"/>
         <Input value="This is an example with a forced border" borders class="mb-xsmall"/>
+        <Input value="This is an invalid example" class="mb-xsmall" invalid=true/>
         <Input iconName={IconVisible} value="This is an example with a value and an icon" class="mb-xsmall"/>
         <Input iconText="W" value="This is an example with a value and a text icon, for example a width input"/>
     </section>

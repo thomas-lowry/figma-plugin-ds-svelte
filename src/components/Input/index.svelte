@@ -10,6 +10,8 @@
     export let disabled = false;
     export let iconName = null;
     export let spin = false;
+    export let invalid = false;
+    export let errorMessage = 'Error message';
     export let placeholder = 'Input something here...';
     export { className as class };
 
@@ -29,9 +31,16 @@
             {name}
             {disabled}
             {placeholder}
+            {errorMessage}
             class="indent"
             class:borders={borders}
+            class:invalid={invalid}
         >
+        {#if invalid}
+            <div class="error">
+                {errorMessage}
+            </div>
+        {/if}
     </div>
 {:else}
     <div class="input {className}">
@@ -42,15 +51,22 @@
             {name}
             {disabled}
             {placeholder}
+            {errorMessage}
             class:borders={borders}
+            class:invalid={invalid}
         >
+        {#if invalid}
+            <div class="error">
+                {errorMessage}
+            </div>
+        {/if}
     </div>
 {/if}
-
 <style>
 
     .input {
         position: relative;
+        transition: height 0s 0.2s; 
     }
 
     input {
@@ -139,6 +155,12 @@
         padding-left: 32px;
     }
 
+    .invalid, .invalid:hover, .invalid:focus {
+        border: 1px solid var(--red);
+        outline: 1px solid var(--red);
+        outline-offset: -2px;
+    }
+
     .icon {
         position: absolute;
 		top: -1px;
@@ -146,6 +168,16 @@
         width: var(--size-medium);
         height: var(--size-medium);
         z-index: 1;
+    }
+
+    .error {
+        color: var(--red);
+        font-size: var(--font-size-xsmall);
+        font-weight: var(--font-weight-normal);
+        letter-spacing: var( --font-letter-spacing-neg-xsmall);
+        line-height: var(--line-height);
+        padding-top: var(--size-xxxsmall);
+        padding-left: var(--size-xxsmall);
     }
 
 </style>
