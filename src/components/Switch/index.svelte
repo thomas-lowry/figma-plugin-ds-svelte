@@ -67,7 +67,7 @@
         letter-spacing: var(--font-letter-spacing-pos-xsmall);
         line-height: var(--font-line-height);
         margin-left: -16px;
-        padding: var(--size-xxxsmall) var(--size-xsmall) var(--size-xxxsmall) calc(var(--size-xlarge) - 2px);
+        padding: var(--size-xxsmall) var(--size-xsmall) var(--size-xxsmall) calc(var(--size-xlarge) - 2px);
         user-select: none;
     }
     /* track */
@@ -80,8 +80,8 @@
         height: 10px;
         left: 8px;
         position: absolute;
-        top: 6px;
-        transition: background-color 0s 0.2s;
+        top: 10px;
+        transition: background-color 0.2s 0.1s;
         width: 22px;
     }
     /* slider */
@@ -94,7 +94,7 @@
         height: 10px;
         left: 8px;
         position: absolute;
-        top: 6px;
+        top: 10px;
         transition: transform 0.2s;
         width: 10px;
 
