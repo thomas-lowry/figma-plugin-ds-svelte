@@ -26,6 +26,8 @@
         </div>
         <input 
             type="input"
+            on:input
+            on:change
             bind:value={value}
             {id}
             {name}
@@ -46,6 +48,8 @@
     <div class="input {className}">
         <input 
             type="input"
+            on:input
+            on:change
             bind:value={value}
             {id}
             {name}
