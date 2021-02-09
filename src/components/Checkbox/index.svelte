@@ -32,7 +32,6 @@
         align-items: center;
         cursor: default;
         display: flex;
-        height: var(--size-medium);
         position: relative;
     }
 
@@ -42,6 +41,7 @@
         height: 10px;
         margin: 0;
         padding: 0;
+        flex-shrink: 0;
     }
     input:checked + label:before {
         border: 1px solid var(--blue);
@@ -60,7 +60,6 @@
     }
 
     label {
-        align-items: center;
         color: var(--black8);
         display: flex;
         font-family: var(--font-stack);
@@ -69,8 +68,7 @@
         line-height: var(--font-line-height);
         letter-spacing: var(--font-letter-spacing-pos-xsmall);
         margin-left: -16px;
-        padding: 0 var(--size-xsmall) 0 var(--size-small);
-        height: 100%;
+        padding: var(--size-xxsmall) var(--size-xsmall) var(--size-xxsmall) var(--size-small);
         user-select: none;
     }
     label:before {
@@ -80,7 +78,8 @@
         display: block;
         width: 10px;
         height: 10px;
-        margin: -1px 10px 0 -8px;
+        margin: 2px 10px 0 -8px;
+        flex-shrink: 0;
     }
 
     input:enabled:checked:focus + label:before {

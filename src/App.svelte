@@ -190,7 +190,7 @@
     <section>
         <h2>Checkboxes</h2>
         <Checkbox>Label</Checkbox>
-        <Checkbox checked>Label</Checkbox>
+        <Checkbox checked>Label with really long text content Label with really really really really long text content Label with really long text content Label with really long text content </Checkbox>
         <Checkbox disabled>Label</Checkbox>
         <Checkbox checked disabled>Label</Checkbox>
     </section>

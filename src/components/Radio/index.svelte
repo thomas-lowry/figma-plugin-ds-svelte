@@ -80,6 +80,7 @@
         height: 10px;
         margin: 2px 10px 0 -8px;
         border-radius: 50%;
+        flex-shrink: 0;
     }
 
     input:enabled:checked:focus + label:before {
