@@ -34,7 +34,6 @@
         align-items: center;
         cursor: default;
         display: flex;
-        height: var(--size-medium);
         position: relative;
     }
 
@@ -44,6 +43,7 @@
         height: 10px;
         margin: 0;
         padding: 0;
+        flex-shrink: 0;
     }
     input:checked + label:before {
         background-image: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="6" height="6" rx="3" fill="black" fill-opacity="0.8"/%3E%3C/svg%3E%0A');
@@ -58,7 +58,6 @@
     }
 
     label {
-        align-items: center;
         color: var(--black8);
         display: flex;
         font-family: var(--font-stack);
@@ -67,8 +66,7 @@
         line-height: var(--font-line-height);
         letter-spacing: var(--font-letter-spacing-pos-xsmall);
         margin-left: -16px;
-        padding: 0 var(--size-xsmall) 0 var(--size-small);
-        height: 100%;
+        padding: var(--size-xxsmall) var(--size-xsmall) var(--size-xxsmall) var(--size-small);
         user-select: none;
     }
     label:before {

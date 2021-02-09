@@ -32,7 +32,6 @@
         align-items: center;
         cursor: default;
         display: flex;
-        height: var(--size-medium);
         position: relative;
     }
 
@@ -60,17 +59,15 @@
     }
 
     label {
-        align-items: center;
         color: var(--black8);
         display: flex;
         font-family: var(--font-stack);
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        height: 100%;
         letter-spacing: var(--font-letter-spacing-pos-xsmall);
         line-height: var(--font-line-height);
         margin-left: -16px;
-        padding: 0 var(--size-xsmall) 0 calc(var(--size-xlarge) - 2px);
+        padding: var(--size-xxxsmall) var(--size-xsmall) var(--size-xxxsmall) calc(var(--size-xlarge) - 2px);
         user-select: none;
     }
     /* track */
@@ -83,8 +80,8 @@
         height: 10px;
         left: 8px;
         position: absolute;
-        top: 10px;
-        transition: background-color 0 0.2s;
+        top: 6px;
+        transition: background-color 0s 0.2s;
         width: 22px;
     }
     /* slider */
@@ -97,7 +94,7 @@
         height: 10px;
         left: 8px;
         position: absolute;
-        top: 10px;
+        top: 6px;
         transition: transform 0.2s;
         width: 10px;
 
