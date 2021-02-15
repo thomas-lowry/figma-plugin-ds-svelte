@@ -70,7 +70,7 @@
 
     .input {
         position: relative;
-        transition: height 0s 0.2s; 
+        transition: flex 0s 0.2s; 
     }
 
     input {
