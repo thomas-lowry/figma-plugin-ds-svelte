@@ -300,6 +300,6 @@ a:focus {
 .align-content-stretch { align-content: stretch; }
 
 .align-self-start { align-self: flex-start; }
-.align-self-end { align-items: flex-end; }
+.align-self-end { align-self: flex-end; }
 .align-self-center { align-self: center; }
 .align-self-stretch { align-self: stretch; }
