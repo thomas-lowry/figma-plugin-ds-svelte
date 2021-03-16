@@ -28,6 +28,7 @@
             type="input"
             on:input
             on:change
+            on:keydown
             bind:value={value}
             {id}
             {name}
@@ -50,6 +51,7 @@
             type="input"
             on:input
             on:change
+            on:keydown
             bind:value={value}
             {id}
             {name}

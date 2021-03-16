@@ -38,14 +38,16 @@
     // this function runs everytime the menuItems array os updated
     // it will auto assign ids and keep the value var updated
     function updateSelectedAndIds() {
-        menuItems.forEach((item, index) => {
-            //update id
-            item['id'] = index;
-            //update selection
-            if (item.selected === true) {
-                value =  item;
-            }
-        });
+        if (menuItems) {
+            menuItems.forEach((item, index) => {
+                //update id
+                item['id'] = index;
+                //update selection
+                if (item.selected === true) {
+                    value =  item;
+                }
+            });
+        }
     }
 
     //determine if option groups are present
@@ -223,7 +225,7 @@
         </button>
 
         <ul class="menu hidden" bind:this={menuList}>
-        {#if menuItems.length > 0}
+        {#if menuItems && menuItems.length > 0}
             {#each menuItems as item, i}
                 {#if i === 0}
                     {#if item.group && showGroupLabels}

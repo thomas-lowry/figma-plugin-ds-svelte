@@ -13,7 +13,8 @@
     {iconText}
     {iconName} 
     class="icon-component {className}"
-    style="color: var(--{color}); fill: var(--{color})">
+    style="color: var(--{color}); fill: var(--{color})"
+    on:click>
     {#if iconText}
         {iconText}
     {:else}
