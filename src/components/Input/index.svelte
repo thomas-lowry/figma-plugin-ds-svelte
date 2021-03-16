@@ -29,6 +29,8 @@
             on:input
             on:change
             on:keydown
+            on:focus
+            on:blur
             bind:value={value}
             {id}
             {name}
@@ -52,6 +54,8 @@
             on:input
             on:change
             on:keydown
+            on:focus
+            on:blur
             bind:value={value}
             {id}
             {name}
