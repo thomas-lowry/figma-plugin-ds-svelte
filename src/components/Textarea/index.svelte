@@ -15,6 +15,7 @@
     <textarea 
         type="input"
         on:change
+        bind:value={value}
         {id}
         {name}
         {rows}
