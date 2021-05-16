@@ -114,6 +114,16 @@
 
     //Arrays for select menu
     //example without a selected item
+    let menuItemsExample0;
+
+    //this function dynamically updates the first empty select menu example with data
+    function populateMenu() {
+        menuItemsExample0 = [
+            { 'value': 'item1', 'label': 'Menu item 1', 'group': null, 'selected': true },
+            { 'value': 'item2', 'label': 'Menu item 2 ', 'group': null, 'selected': false },
+        ]
+    }
+
     let menuItemsExample1 = [
         { 'value': 'item1', 'label': 'Menu item 1', 'group': null, 'selected': false },
         { 'value': 'item2', 'label': 'Menu item 2 ', 'group': null, 'selected': false },
@@ -364,8 +374,12 @@
 
     <section>
         <h2>Select Menu</h2>
-        <SelectMenu class="mb-xsmall"/>
-        <SelectMenu placeholder="Please make a choice" bind:menuItems={menuItemsExample1} class="mb-xsmall"/>
+        <div class="flex row">
+        <SelectMenu bind:menuItems={menuItemsExample0} class="mb-xsmall"/>
+        <Button variant="secondary" class="mr-xxsmall mb-xsmall" on:click={populateMenu}>Populate menu</Button>
+        </div>
+
+        <SelectMenu placeholder="Please make a selection" bind:menuItems={menuItemsExample1} class="mb-xsmall"/>
         <SelectMenu bind:menuItems={menuItemsExample2} class="mb-xsmall"/>
         <SelectMenu bind:menuItems={menuItemsExample3} showGroupLabels class="mb-xsmall"/>
         <SelectMenu bind:menuItems={menuItemsExample4} iconName={IconBlend}/>

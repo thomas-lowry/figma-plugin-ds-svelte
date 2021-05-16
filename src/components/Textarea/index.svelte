@@ -14,7 +14,11 @@
 <div class="textarea {className}">
     <textarea 
         type="input"
+        on:input
         on:change
+        on:keydown
+        on:focus
+        on:blur
         {id}
         {name}
         {rows}

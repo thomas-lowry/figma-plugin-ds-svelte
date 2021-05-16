@@ -24,12 +24,6 @@
 
     //FUNCTIONS
 
-    //set placeholder
-    if (menuItems.length <= 0) {
-        placeholder = 'There are no items to select';
-        disabled = true;
-    }
-
     //assign id's to the input array
     onMount(async () => {
         updateSelectedAndIds();
@@ -47,6 +41,14 @@
                     value =  item;
                 }
             });
+        }
+        //set placeholder
+        if (menuItems.length <= 0) {
+            placeholder = 'There are no items to select';
+            disabled = true;
+        } else {
+            placeholder = 'Please make a selection';
+            disabled = false;
         }
     }
 
@@ -196,6 +198,8 @@
 <ClickOutside on:clickoutside={menuClick}>
     <div 
         on:change
+        on:focus
+        on:blur
         bind:this={menuWrapper}
         {disabled}
         {placeholder}
