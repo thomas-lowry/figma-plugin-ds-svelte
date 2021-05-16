@@ -20,7 +20,9 @@
         {disabled}  
         {tabindex}
         onclick="this.blur();"
-        on:change>
+        on:change
+        on:focus
+        on:blur>
     <label for={uniqueId}>
         <slot />
     </label>

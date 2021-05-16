@@ -22,7 +22,9 @@
         id={uniqueId}
         bind:group={group}
         onclick="this.blur();"
-        on:change>
+        on:change
+        on:focus
+        on:blur>
     <label for={uniqueId}>
         <slot />
     </label>
