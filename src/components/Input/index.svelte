@@ -12,64 +12,48 @@
     export let invalid = false;
     export let errorMessage = 'Error message';
     export let placeholder = 'Input something here...';
+    export let autofocus = false;
+    // Causes warning, but helpful for search fields
     export { className as class };
+
+    let indent;
+    if (iconName || iconText) {
+        indent = true;
+    }
 
     let className = '';
 </script>
 
-{#if iconName || iconText}
-    <div class="input {className}">
+<div class="input {className}">
+    {#if iconName || iconText}
         <div class="icon">
             <Icon {iconName} {iconText} {spin} color="black3" />
         </div>
-        <input
-            type="input"
-            on:input
-            on:change
-            on:keydown
-            on:focus
-            on:blur
-            bind:value
-            {id}
-            {name}
-            {disabled}
-            {placeholder}
+    {/if}
+    <input
+        type="input"
+        on:input
+        on:change
+        on:keydown
+        on:focus
+        on:blur
+        bind:value
+        {id}
+        {name}
+        {disabled}
+        {placeholder}
+        {errorMessage}
+        {autofocus}
+        class:indent
+        class:borders
+        class:invalid
+    />
+    {#if invalid}
+        <div class="error">
             {errorMessage}
-            class="indent"
-            class:borders
-            class:invalid
-        />
-        {#if invalid}
-            <div class="error">
-                {errorMessage}
-            </div>
-        {/if}
-    </div>
-{:else}
-    <div class="input {className}">
-        <input
-            type="input"
-            on:input
-            on:change
-            on:keydown
-            on:focus
-            on:blur
-            bind:value
-            {id}
-            {name}
-            {disabled}
-            {placeholder}
-            {errorMessage}
-            class:borders
-            class:invalid
-        />
-        {#if invalid}
-            <div class="error">
-                {errorMessage}
-            </div>
-        {/if}
-    </div>
-{/if}
+        </div>
+    {/if}
+</div>
 
 <style>
     .input {
@@ -89,7 +73,8 @@
         width: 100%;
         height: 30px;
         margin: 1px 0 1px 0;
-        padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall) var(--size-xxsmall);
+        padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall)
+            var(--size-xxsmall);
         color: var(--black8);
         border: 1px solid transparent;
         border-radius: var(--border-radius-small);
