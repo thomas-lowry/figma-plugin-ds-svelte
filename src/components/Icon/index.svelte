@@ -3,6 +3,8 @@
     export let spin = false;
     export let iconText = null;
     export let color = 'black8';
+    export let size = 32;
+
     export { className as class };
 
     let className = '';
@@ -10,10 +12,8 @@
 
 <div
     class:spin
-    {iconText}
-    {iconName}
     class="icon-component {className}"
-    style="color: var(--{color}); fill: var(--{color})"
+    style="color: var(--{color}); fill: var(--{color}); width: {size}px; height: {size}px"
     on:click
 >
     {#if iconText}
