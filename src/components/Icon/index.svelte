@@ -2,19 +2,20 @@
     export let iconName = null; //pass svg data into this var by importing an svg in parent
     export let spin = false;
     export let iconText = null;
-    export let color = "black8";
+    export let color = 'black8';
     export { className as class };
 
     let className = '';
 </script>
 
-<div 
-    class:spin={spin}
+<div
+    class:spin
     {iconText}
-    {iconName} 
+    {iconName}
     class="icon-component {className}"
     style="color: var(--{color}); fill: var(--{color})"
-    on:click>
+    on:click
+>
     {#if iconText}
         {iconText}
     {:else}
@@ -23,7 +24,6 @@
 </div>
 
 <style>
-
     .icon-component {
         display: flex;
         align-items: center;
@@ -37,7 +37,7 @@
     }
 
     .spin {
-        animation: rotating 1.0s linear infinite;
+        animation: rotating 1s linear infinite;
     }
 
     @keyframes rotating {
@@ -53,5 +53,4 @@
         fill: inherit;
         color: inherit;
     }
-
 </style>

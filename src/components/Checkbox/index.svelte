@@ -1,35 +1,34 @@
 <script>
-
     export let checked = false;
     export let value = '';
     export let disabled = false;
     export let tabindex = 0;
     export { className as class };
 
-    let uniqueId = 'checkbox--' + ((Math.random() * 10000000).toFixed(0)).toString();
+    let uniqueId =
+        'checkbox--' + (Math.random() * 10000000).toFixed(0).toString();
     let className = '';
-    
 </script>
 
 <div class={className}>
-    <input 
+    <input
         type="checkbox"
         id={uniqueId}
-        bind:checked={checked}
-        bind:value={value}
-        {disabled} 
+        bind:checked
+        bind:value
+        {disabled}
         {tabindex}
         onclick="this.blur();"
         on:change
         on:focus
-        on:blur>
+        on:blur
+    />
     <label for={uniqueId}>
         <slot />
     </label>
-</div>	
+</div>
 
 <style>
-
     div {
         align-items: center;
         cursor: default;
@@ -58,7 +57,7 @@
     }
     input:checked:disabled + label:before {
         border: 1px solid transparent;
-		background-color: var(--black8);
+        background-color: var(--black8);
     }
 
     label {
@@ -70,12 +69,13 @@
         line-height: var(--font-line-height);
         letter-spacing: var(--font-letter-spacing-pos-xsmall);
         margin-left: -16px;
-        padding: var(--size-xxsmall) var(--size-xsmall) var(--size-xxsmall) var(--size-small);
+        padding: var(--size-xxsmall) var(--size-xsmall) var(--size-xxsmall)
+            var(--size-small);
         user-select: none;
     }
     label:before {
         border: 1px solid var(--black8);
-		border-radius: var(--border-radius-small);
+        border-radius: var(--border-radius-small);
         content: '';
         display: block;
         width: 10px;
@@ -94,5 +94,4 @@
         border: 1px solid var(--blue);
         box-shadow: 0 0 0 1px var(--blue);
     }
-
 </style>

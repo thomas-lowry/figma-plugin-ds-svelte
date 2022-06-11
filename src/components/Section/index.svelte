@@ -1,19 +1,18 @@
 <script>
+    export { className as class };
 
     let className = '';
-
 </script>
 
-<div>
-    <slot></slot>
+<div class={className}>
+    <slot />
 </div>
 
 <style>
-
     div {
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-bold);
-        letter-spacing: var( --font-letter-spacing-pos-xsmall);
+        letter-spacing: var(--font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
         color: var(--black8);
         height: var(--size-medium);
@@ -24,5 +23,4 @@
         user-select: none;
         padding: 0 calc(var(--size-xxsmall) / 2) 0 var(--size-xxsmall);
     }
-
 </style>

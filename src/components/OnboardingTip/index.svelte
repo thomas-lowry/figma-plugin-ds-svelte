@@ -2,26 +2,24 @@
     import Icon from './../Icon/index.svelte';
 
     export let spin = false;
-    export let color = "black8";
+    export let color = 'black8';
     export let iconName = null;
     export let iconText = null;
     export { className as class };
 
     let className = '';
-
 </script>
 
 <div class="onboarding-tip {className}">
     <div class="icon">
-        <Icon {iconName} {iconText} {color} {spin}/>
+        <Icon {iconName} {iconText} {color} {spin} />
     </div>
     <p>
-        <slot></slot>
+        <slot />
     </p>
 </div>
 
 <style>
-
     .onboarding-tip {
         display: flex;
         align-items: top;
@@ -34,14 +32,13 @@
         margin-right: var(--size-xxsmall);
     }
 
-    p   {
+    p {
         padding: var(--size-xxsmall) 0 var(--size-xxsmall) 0;
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-pos-xsmall);
+        letter-spacing: var(--font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
         color: var(--black8);
         margin: 0;
     }
-
 </style>

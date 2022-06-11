@@ -7,25 +7,28 @@
     export let color = 'black8';
     export let inline = false;
     export { className as class };
-    
+
     let className = '';
 
     onMount(async () => {
-        if (color = 'black8' && inverse) {
+        if ((color = 'black8' && inverse)) {
             color = 'white';
         }
     });
 
     let cssColorVar = 'var(--' + color + ')';
-
 </script>
 
-<div class="type {className} {size} {weight}" class:inverse={inverse} class:inline={inline} style="color: {cssColorVar}">
-    <slot/>
+<div
+    class="type {className} {size} {weight}"
+    class:inverse
+    class:inline
+    style="color: {cssColorVar}"
+>
+    <slot />
 </div>
 
 <style>
-
     .type {
         font-family: var(--font-stack);
         font-size: var(--font-size-xsmall);
@@ -75,5 +78,4 @@
     .inline {
         display: inline-block;
     }
-
 </style>

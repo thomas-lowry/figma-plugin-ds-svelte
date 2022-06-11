@@ -1,35 +1,33 @@
 <script>
-    
     export let checked = false;
     export let value = '';
     export let disabled = false;
     export let tabindex = 0;
     export { className as class };
 
-    let uniqueId = 'switch--' + ((Math.random() * 10000000).toFixed(0)).toString();
+    let uniqueId = 'switch--' + (Math.random() * 10000000).toFixed(0).toString();
     let className = '';
-    
 </script>
 
 <div class={className}>
-    <input 
-        type="checkbox" 
-        id={uniqueId} 
-        bind:checked={checked} 
-        bind:value={value} 
-        {disabled}  
+    <input
+        type="checkbox"
+        id={uniqueId}
+        bind:checked
+        bind:value
+        {disabled}
         {tabindex}
         onclick="this.blur();"
         on:change
         on:focus
-        on:blur>
+        on:blur
+    />
     <label for={uniqueId}>
         <slot />
     </label>
 </div>
 
 <style>
-
     div {
         align-items: center;
         cursor: default;
@@ -69,7 +67,8 @@
         letter-spacing: var(--font-letter-spacing-pos-xsmall);
         line-height: var(--font-line-height);
         margin-left: -16px;
-        padding: var(--size-xxsmall) var(--size-xsmall) var(--size-xxsmall) calc(var(--size-xlarge) - 2px);
+        padding: var(--size-xxsmall) var(--size-xsmall) var(--size-xxsmall)
+            calc(var(--size-xlarge) - 2px);
         user-select: none;
     }
     /* track */
@@ -99,7 +98,5 @@
         top: 10px;
         transition: transform 0.2s;
         width: 10px;
-
     }
-
 </style>

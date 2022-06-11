@@ -1,37 +1,35 @@
 <script>
-
     export let group = null;
     export let value = null;
     export let disabled = false;
     export let tabindex = 0;
     export { className as class };
 
-    let uniqueId = 'radio--' + ((Math.random() * 10000000).toFixed(0)).toString();
+    let uniqueId = 'radio--' + (Math.random() * 10000000).toFixed(0).toString();
     let className = '';
     $: checked = group === value;
-
 </script>
 
 <div class={className}>
-    <input 
+    <input
         type="radio"
         {value}
         {checked}
-        {disabled} 
+        {disabled}
         {tabindex}
         id={uniqueId}
-        bind:group={group}
+        bind:group
         onclick="this.blur();"
         on:change
         on:focus
-        on:blur>
+        on:blur
+    />
     <label for={uniqueId}>
         <slot />
     </label>
 </div>
 
 <style>
-
     div {
         align-items: center;
         cursor: default;
@@ -73,7 +71,7 @@
     }
     label:before {
         border: 1px solid var(--black8);
-		border-radius: var(--border-radius-small);
+        border-radius: var(--border-radius-small);
         content: '';
         display: block;
         width: 10px;
@@ -94,5 +92,4 @@
         border: 1px solid var(--blue);
         box-shadow: 0 0 0 1px var(--blue);
     }
-
 </style>

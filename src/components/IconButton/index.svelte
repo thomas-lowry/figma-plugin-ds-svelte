@@ -6,22 +6,30 @@
     export let selected = false;
     export let spin = false;
     export let tabindex = 0;
+    export let disabled = false;
     export { className as class };
 
     let className = '';
-
 </script>
 
-<div on:click onclick="this.blur();" class:selected={selected} class="{className}" tabindex={tabindex}>
+<div
+    on:click
+    onclick="this.blur();"
+    class:selected
+    class={className}
+    {tabindex}
+    {disabled}
+>
     {#if selected === true}
-        <Icon {iconName} {iconText} {spin} color="white"/>
+        <Icon {iconName} {iconText} {spin} color="white" />
+    {:else if disabled == true}
+        <Icon {iconName} {iconText} {spin} color="black3-opaque" />
     {:else}
-        <Icon {iconName} {iconText} {spin} color="black8"/>
+        <Icon {iconName} {iconText} {spin} color="black8" />
     {/if}
 </div>
 
 <style>
-
     div {
         display: flex;
         align-items: center;
@@ -35,7 +43,8 @@
     div:hover {
         background: var(--hover-fill);
     }
-    div:active, div:focus {
+    div:active,
+    div:focus {
         border: 2px solid var(--blue);
         outline: none;
     }
@@ -46,8 +55,12 @@
     .selected:hover {
         background-color: var(--blue);
     }
-    .selected:active, .selected:focus {
+    .selected:active,
+    .selected:focus {
         border: 2px solid var(--black3);
     }
 
+    div:disabled {
+        opacity: 0.4;
+    }
 </style>

@@ -7,7 +7,6 @@
     export { className as class };
 
     let className = '';
-
 </script>
 
 <button
@@ -16,13 +15,13 @@
     onclick="this.blur();"
     {variant}
     {disabled}
-    class:destructive={destructive}
-    class="{variant} {className}">
-        <slot />
+    class:destructive
+    class="{variant} {className}"
+>
+    <slot />
 </button>
 
 <style>
-
     button {
         display: flex;
         align-items: center;
@@ -47,7 +46,8 @@
         background-color: var(--blue);
         color: var(--white);
     }
-    .primary:enabled:active, .primary:enabled:focus {
+    .primary:enabled:active,
+    .primary:enabled:focus {
         border: 2px solid var(--black3);
     }
     .primary:disabled {
@@ -56,7 +56,7 @@
     .primary.destructive {
         background-color: var(--red);
     }
-    .primary.destructive:disabled  {
+    .primary.destructive:disabled {
         opacity: 0.4;
     }
 
@@ -65,10 +65,12 @@
         background-color: var(--white);
         border: 1px solid var(--black8);
         color: var(--black8);
-        padding: 0 calc(var(--size-xsmall) + 1px) 0 calc(var(--size-xsmall) + 1px);
+        padding: 0 calc(var(--size-xsmall) + 1px) 0
+            calc(var(--size-xsmall) + 1px);
         letter-spacing: var(--font-letter-spacing-pos-small);
     }
-    .secondary:enabled:active, .secondary:enabled:focus {
+    .secondary:enabled:active,
+    .secondary:enabled:focus {
         border: 2px solid var(--blue);
         padding: 0 var(--size-xsmall) 0 var(--size-xsmall);
     }
@@ -77,11 +79,12 @@
         color: var(--black3);
     }
     .secondary.destructive {
-       border-color: var(--red);
-       color: var(--red);
+        border-color: var(--red);
+        color: var(--red);
     }
-    .secondary.destructive:enabled:active, .secondary.destructive:enabled:focus {
-       border: 2px solid var(--red);
+    .secondary.destructive:enabled:active,
+    .secondary.destructive:enabled:focus {
+        border: 2px solid var(--red);
         padding: 0 var(--size-xsmall) 0 var(--size-xsmall);
     }
     .secondary.destructive:disabled {
@@ -105,13 +108,12 @@
         color: var(--black3);
     }
     .tertiary.destructive {
-       color: var(--red);
+        color: var(--red);
     }
     .tertiary.destructive:enabled:focus {
         text-decoration: underline;
     }
     .tertiary.destructive:disabled {
-       opacity: 0.4;
+        opacity: 0.4;
     }
-
 </style>

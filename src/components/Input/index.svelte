@@ -1,5 +1,4 @@
 <script>
-
     import Icon from './../Icon/index.svelte';
 
     export let id = null;
@@ -16,31 +15,30 @@
     export { className as class };
 
     let className = '';
-
 </script>
 
 {#if iconName || iconText}
     <div class="input {className}">
         <div class="icon">
-            <Icon {iconName} {iconText} {spin} color="black3"/>
+            <Icon {iconName} {iconText} {spin} color="black3" />
         </div>
-        <input 
+        <input
             type="input"
             on:input
             on:change
             on:keydown
             on:focus
             on:blur
-            bind:value={value}
+            bind:value
             {id}
             {name}
             {disabled}
             {placeholder}
             {errorMessage}
             class="indent"
-            class:borders={borders}
-            class:invalid={invalid}
-        >
+            class:borders
+            class:invalid
+        />
         {#if invalid}
             <div class="error">
                 {errorMessage}
@@ -49,22 +47,22 @@
     </div>
 {:else}
     <div class="input {className}">
-        <input 
+        <input
             type="input"
             on:input
             on:change
             on:keydown
             on:focus
             on:blur
-            bind:value={value}
+            bind:value
             {id}
             {name}
             {disabled}
             {placeholder}
             {errorMessage}
-            class:borders={borders}
-            class:invalid={invalid}
-        >
+            class:borders
+            class:invalid
+        />
         {#if invalid}
             <div class="error">
                 {errorMessage}
@@ -72,17 +70,17 @@
         {/if}
     </div>
 {/if}
-<style>
 
+<style>
     .input {
         position: relative;
-        transition: flex 0s 0.2s; 
+        transition: flex 0s 0.2s;
     }
 
     input {
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-neg-xsmall);
+        letter-spacing: var(--font-letter-spacing-neg-xsmall);
         line-height: var(--line-height);
         position: relative;
         display: flex;
@@ -98,45 +96,46 @@
         outline: none;
         background-color: var(--white);
     }
-    input:hover, input:placeholder-shown:hover {
-		color: var(--black8);
-		border: 1px solid var(--black1);
-        background-image: none;
-	}
-	input::selection {
-		color: var(--black);
-		background-color: var(--blue3);
-	}
-	input::placeholder {
-		color: var(--black3);
-		border: 1px solid transparent;
-	}
-	input:placeholder-shown {
-		color: var(--black8);
+    input:hover,
+    input:placeholder-shown:hover {
+        color: var(--black8);
         border: 1px solid var(--black1);
         background-image: none;
-	}
+    }
+    input::selection {
+        color: var(--black);
+        background-color: var(--blue3);
+    }
+    input::placeholder {
+        color: var(--black3);
+        border: 1px solid transparent;
+    }
+    input:placeholder-shown {
+        color: var(--black8);
+        border: 1px solid var(--black1);
+        background-image: none;
+    }
     input:focus:placeholder-shown {
         border: 1px solid var(--blue);
         outline: 1px solid var(--blue);
         outline-offset: -2px;
     }
-	input:disabled:hover {
-		border: 1px solid transparent;
-	}
-	input:active, input:focus {
-
-		color: var(--black);
+    input:disabled:hover {
+        border: 1px solid transparent;
+    }
+    input:active,
+    input:focus {
+        color: var(--black);
         border: 1px solid var(--blue);
         outline: 1px solid var(--blue);
         outline-offset: -2px;
-	}
-	input:disabled {
-		position: relative;
-		color: var(--black3);
+    }
+    input:disabled {
+        position: relative;
+        color: var(--black3);
         background-image: none;
-	}
-	input:disabled:active {
+    }
+    input:disabled:active {
         outline: none;
     }
 
@@ -160,12 +159,14 @@
         border: 1px solid var(--black1);
         background-image: none;
     }
-    
+
     .indent {
         padding-left: 32px;
     }
 
-    .invalid, .invalid:hover, .invalid:focus {
+    .invalid,
+    .invalid:hover,
+    .invalid:focus {
         border: 1px solid var(--red);
         outline: 1px solid var(--red);
         outline-offset: -2px;
@@ -173,8 +174,8 @@
 
     .icon {
         position: absolute;
-		top: -1px;
-		left: 0;
+        top: -1px;
+        left: 0;
         width: var(--size-medium);
         height: var(--size-medium);
         z-index: 1;
@@ -184,10 +185,9 @@
         color: var(--red);
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-neg-xsmall);
+        letter-spacing: var(--font-letter-spacing-neg-xsmall);
         line-height: var(--line-height);
         padding-top: var(--size-xxxsmall);
         padding-left: var(--size-xxsmall);
     }
-
 </style>

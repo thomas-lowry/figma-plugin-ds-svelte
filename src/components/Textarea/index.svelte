@@ -8,11 +8,10 @@
     export { className as class };
 
     let className = '';
-
 </script>
 
 <div class="textarea {className}">
-    <textarea 
+    <textarea
         type="input"
         on:input
         on:change
@@ -24,11 +23,11 @@
         {rows}
         {disabled}
         {placeholder}
-        >{value}</textarea>
+        bind:value
+    />
 </div>
 
 <style>
-
     .textarea {
         position: relative;
     }
@@ -37,7 +36,7 @@
         font-family: var(--font-stack);
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-neg-xsmall);
+        letter-spacing: var(--font-letter-spacing-neg-xsmall);
         line-height: var(--line-height);
         position: relative;
         display: flex;
@@ -55,40 +54,42 @@
         resize: none;
         overflow-y: auto;
     }
-    textarea:hover, textarea:placeholder-shown:hover {
-		color: var(--black8);
-		border: 1px solid var(--black1);
+    textarea:hover,
+    textarea:placeholder-shown:hover {
+        color: var(--black8);
+        border: 1px solid var(--black1);
         background-image: none;
-	}
-	textarea::selection {
-		color: var(--black);
-		background-color: var(--blue3);
-	}
-	textarea::placeholder {
-		color: var(--black3);
-		border: 1px solid transparent;
-	}
+    }
+    textarea::selection {
+        color: var(--black);
+        background-color: var(--blue3);
+    }
+    textarea::placeholder {
+        color: var(--black3);
+        border: 1px solid transparent;
+    }
     textarea:focus:placeholder-shown {
         border: 1px solid var(--blue);
         outline: 1px solid var(--blue);
         outline-offset: -2px;
     }
-	textarea:active, textarea:focus {
-		padding: 7px 4px 9px 7px;
+    textarea:active,
+    textarea:focus {
+        padding: 7px 4px 9px 7px;
 
-		color: var(--black);
+        color: var(--black);
         border: 1px solid var(--blue);
         outline: 1px solid var(--blue);
         outline-offset: -2px;
-	}
-	textarea:disabled, textarea:disabled:hover {
-		position: relative;
+    }
+    textarea:disabled,
+    textarea:disabled:hover {
+        position: relative;
         color: var(--black3);
         border: 1px solid transparent;
-	}
-	textarea:disabled:active {
-		padding: 7px 4px 9px 7px;
+    }
+    textarea:disabled:active {
+        padding: 7px 4px 9px 7px;
         outline: none;
     }
-
 </style>

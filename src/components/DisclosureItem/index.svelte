@@ -3,13 +3,13 @@
 </script>
 
 <script>
-
     import { getContext, onMount } from 'svelte';
     import Icon from './../Icon/index.svelte';
     import CaretRight from './../../icons/caret-right.svg';
     import CaretDown from './../../icons/caret-down.svg';
 
-    export let uniqueId = 'disclosureItem--' + ((Math.random() * 10000000).toFixed(0)).toString();
+    export let uniqueId =
+        'disclosureItem--' + (Math.random() * 10000000).toFixed(0).toString();
     export let title = null;
     export let expanded = false;
     export let section = false;
@@ -18,15 +18,18 @@
     const { clickHandler, selected } = getContext(disclosure);
 
     $: expanded = $selected === uniqueId;
-    
+
     if (open) {
         selected.set(uniqueId);
     }
-
 </script>
 
-<li {open} {title} id={uniqueId} class:expanded={expanded}>
-    <div on:click={clickHandler.bind(null, uniqueId)} class="header" class:section={section}>
+<li {open} {title} id={uniqueId} class:expanded>
+    <div
+        on:click={clickHandler.bind(null, uniqueId)}
+        class="header"
+        class:section
+    >
         <div class="icon">
             {#if expanded}
                 <Icon iconName={CaretDown} color="black" />
@@ -42,7 +45,6 @@
 </li>
 
 <style>
-
     li {
         display: flex;
         flex-direction: column;
@@ -63,7 +65,7 @@
         height: var(--size-medium);
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-pos-xsmall);
+        letter-spacing: var(--font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
         color: var(--black8);
     }
@@ -91,17 +93,17 @@
     .content {
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
-        letter-spacing: var( --font-letter-spacing-pos-xsmall);
+        letter-spacing: var(--font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
         color: var(--black8);
-        padding: var(--size-xxsmall) var(--size-xxsmall) var(--size-xxsmall) var(--size-small);
+        padding: var(--size-xxsmall) var(--size-xxsmall) var(--size-xxsmall)
+            var(--size-small);
         display: none;
         user-select: none;
         pointer-events: none;
     }
-    
+
     .expanded .content {
         display: block;
     }
-
 </style>
