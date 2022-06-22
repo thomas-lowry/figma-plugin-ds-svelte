@@ -7,6 +7,7 @@
     //Components
     import Button from './components/Button/index.svelte';
     import Checkbox from './components/Checkbox/index.svelte';
+    import ContextMenu from './components/ContextMenu/index.svelte';
     import Switch from './components/Switch/index.svelte';
     import Disclosure from './components/Disclosure/index.svelte';
     import DisclosureItem from './components/DisclosureItem/index.svelte';
@@ -119,48 +120,43 @@
     //this function dynamically updates the first empty select menu example with data
     function populateMenu() {
         menuItemsExample0 = [
-            { 'value': 'item1', 'label': 'Menu item 1', 'group': null, 'selected': true },
-            { 'value': 'item2', 'label': 'Menu item 2 ', 'group': null, 'selected': false },
-        ]
+            { value: 'item1', label: 'Menu item 1', group: null, selected: true },
+            { value: 'item2', label: 'Menu item 2 ', group: null, selected: false },
+        ];
     }
 
     let menuItemsExample1 = [
-        { 'value': 'item1', 'label': 'Menu item 1', 'group': null, 'selected': false },
-        { 'value': 'item2', 'label': 'Menu item 2 ', 'group': null, 'selected': false },
-        { 'value': 'item3', 'label': 'Menu item 3', 'group': null, 'selected': false },
-        { 'value': 'item4', 'label': 'Menu item 4', 'group': null, 'selected': false }
+        { value: 'item1', label: 'Menu item 1', group: null, selected: false },
+        { value: 'item2', label: 'Menu item 2 ', group: null, selected: false },
+        { value: 'item3', label: 'Menu item 3', group: null, selected: false },
+        { value: 'item4', label: 'Menu item 4', group: null, selected: false },
     ];
     //example with an initial selection
     let menuItemsExample2 = [
-        { 'value': 'item1', 'label': 'Menu item 1', 'group': null, 'selected': false },
-        { 'value': 'item2', 'label': 'Menu item 2 ', 'group': null, 'selected': true },
-        { 'value': 'item3', 'label': 'Menu item 3', 'group': null, 'selected': false },
-        { 'value': 'item4', 'label': 'Menu item 4', 'group': null, 'selected': false }
+        { value: 'item1', label: 'Menu item 1', group: null, selected: false },
+        { value: 'item2', label: 'Menu item 2 ', group: null, selected: true },
+        { value: 'item3', label: 'Menu item 3', group: null, selected: false },
+        { value: 'item4', label: 'Menu item 4', group: null, selected: false },
     ];
     //example with option groups (we will show the labels with a prop)
     let menuItemsExample3 = [
-        { 'value': 'item1', 'label': 'Granny Smith', 'group': 'Apples', 'selected': false },
-        { 'value': 'item2', 'label': 'Honey Crisp ', 'group': 'Apples', 'selected': true },
-        { 'value': 'item3', 'label': 'Blood', 'group': 'Oranges', 'selected': false },
-        { 'value': 'item4', 'label': 'Valencia', 'group': 'Oranges', 'selected': false }
+        { value: 'item1', label: 'Granny Smith', group: 'Apples', selected: false },
+        { value: 'item2', label: 'Honey Crisp ', group: 'Apples', selected: true },
+        { value: 'item3', label: 'Blood', group: 'Oranges', selected: false },
+        { value: 'item4', label: 'Valencia', group: 'Oranges', selected: false },
     ];
-    //example with an initial selection and option groups 
+    //example with an initial selection and option groups
     let menuItemsExample4 = [
-        { 'value': 'item1', 'label': 'Passthrough', 'group': 'group1', 'selected': true },
-        { 'value': 'item2', 'label': 'Normal ', 'group': 'group1', 'selected': false },
-        { 'value': 'item3', 'label': 'Darken', 'group': 'group2', 'selected': false },
-        { 'value': 'item4', 'label': 'Multiply', 'group': 'group2', 'selected': false },
-        { 'value': 'item4', 'label': 'Color Burn', 'group': 'group2', 'selected': false }
+        { value: 'item1', label: 'Passthrough', group: 'group1', selected: true },
+        { value: 'item2', label: 'Normal ', group: 'group1', selected: false },
+        { value: 'item3', label: 'Darken', group: 'group2', selected: false },
+        { value: 'item4', label: 'Multiply', group: 'group2', selected: false },
+        { value: 'item4', label: 'Color Burn', group: 'group2', selected: false },
     ];
-    
-
-
 </script>
 
-
 <div class="wrapper">
-
-<h1>Figma Plugin UI Svelte</h1>
+    <h1>Figma Plugin UI Svelte</h1>
 
     <section>
         <h2>Buttons</h2>
@@ -194,7 +190,6 @@
                 <Button variant="tertiary" destructive disabled class="mr-xxsmall">Label</Button>
             </div>
         </div>
-
     </section>
 
     <section>
@@ -215,10 +210,12 @@
 
     <section>
         <h2>Radio buttons</h2>
-        <Radio bind:group={radioValue} value="a">Label Label with really long text content Label with really really really really long text content Label with really long text content Label with really long text content</Radio>
+        <Radio bind:group={radioValue} value="a"
+            >Label Label with really long text content Label with really really really really long text content Label
+            with really long text content Label with really long text content</Radio
+        >
         <Radio bind:group={radioValue} value="b">Label</Radio>
         <Radio bind:group={radioValue} value="c" disabled>Label</Radio>
-
     </section>
 
     <section>
@@ -233,132 +230,145 @@
     <section>
         <h2>Icon</h2>
         <h3>Icons and props</h3>
-        <caption class="mb-xsmall">You can import and pass an SVG string to the iconName prop, or you can display text inside an icon by passing a string including a character to the iconText prop. You can pass the name of any color from the Figma DS to the color prop (ex: color="red", color="purple4"). Icons can also accept the spin prop. The IconButton, Input, and OnboardingTip all make use of the Icon component and can accept its props.</caption>
+        <caption class="mb-xsmall"
+            >You can import and pass an SVG string to the iconName prop, or you can display text inside an icon by
+            passing a string including a character to the iconText prop. You can pass the name of any color from the
+            Figma DS to the color prop (ex: color="red", color="purple4"). Icons can also accept the spin prop. The
+            IconButton, Input, and OnboardingTip all make use of the Icon component and can accept its props.</caption
+        >
         <div class="flex row mb-xsmall">
-            <Icon iconName={IconVisible} color="black"/>
-            <Icon iconName={IconVisible} color="black8"/>
-            <Icon iconName={IconVisible} color="black3"/>
-            <Icon iconName={IconVisible} color="blue"/>
-            <Icon iconName={IconVisible} color="purple"/>
-            <Icon iconName={IconVisible} color="yellow"/>
-            <Icon iconName={IconVisible} color="red"/>
-            <Icon iconName={IconVisible} color="green"/>
-            <Icon iconText="W"/>
-            <Icon iconText="H" color="black3"/>
-            <Icon iconText="#" color="blue"/>
-            <Icon iconText="@" color="red"/>
-            <Icon iconText="→" color="blue" spin/>
-            <Icon iconName={IconSpinner} spin/>
+            <Icon iconName={IconVisible} color="black" />
+            <Icon iconName={IconVisible} color="black8" />
+            <Icon iconName={IconVisible} color="black3" />
+            <Icon iconName={IconVisible} color="blue" />
+            <Icon iconName={IconVisible} color="purple" />
+            <Icon iconName={IconVisible} color="yellow" />
+            <Icon iconName={IconVisible} color="red" />
+            <Icon iconName={IconVisible} color="green" />
+            <Icon iconText="W" />
+            <Icon iconText="H" color="black3" />
+            <Icon iconText="#" color="blue" />
+            <Icon iconText="@" color="red" />
+            <Icon iconText="→" color="blue" spin />
+            <Icon iconName={IconSpinner} spin />
         </div>
         <h3>Icons</h3>
         <div class="flex row flex-wrap">
-            <Icon iconName={IconAdjust}/>
-            <Icon iconName={IconAlert}/>
-            <Icon iconName={IconAngle}/>
-            <Icon iconName={IconArrowLeftRight}/>
-            <Icon iconName={IconUpDown}/>
-            <Icon iconName={IconAutoLayoutHorizontal}/>
-            <Icon iconName={IconAutoLayoutVertical}/>
-            <Icon iconName={IconBack}/>
-            <Icon iconName={IconBlendEmpty}/>
-            <Icon iconName={IconBlend}/>
-            <Icon iconName={IconBreak}/>
-            <Icon iconName={IconCaretDown}/>
-            <Icon iconName={IconCaretLeft}/>
-            <Icon iconName={IconCaretRight}/>
-            <Icon iconName={IconCaretUp}/>
-            <Icon iconName={IconCheck}/>
-            <Icon iconName={IconClose}/>
-            <Icon iconName={IconComponent}/>
-            <Icon iconName={IconCornerRadius}/>
-            <Icon iconName={IconCorners}/>
-            <Icon iconName={IconDistributeHorizontalSpacing}/>
-            <Icon iconName={IconDistributeVerticalSpacing}/>
-            <Icon iconName={IconDraft}/>
-            <Icon iconName={IconEffects}/>
-            <Icon iconName={IconEllipses}/>
-            <Icon iconName={IconEyedropper}/>
-            <Icon iconName={IconForward}/>
-            <Icon iconName={IconFrame}/>
-            <Icon iconName={IconGroup}/>
-            <Icon iconName={IconHidden}/>
-            <Icon iconName={IconHorizontalPadding}/>
-            <Icon iconName={IconHyperlink}/>
-            <Icon iconName={IconImage}/>
-            <Icon iconName={IconInstance}/>
-            <Icon iconName={IconKey}/>
-            <Icon iconName={IconLayoutAlignBottom}/>
-            <Icon iconName={IconAlignHorizontalCenters}/>
-            <Icon iconName={IconAlignLeft}/>
-            <Icon iconName={IconAlignRight}/>
-            <Icon iconName={IconAlignTop}/>
-            <Icon iconName={IconAlignVerticalCenters}/>
-            <Icon iconName={IconLayoutGridColumns}/>
-            <Icon iconName={IconLayoutGridRows}/>
-            <Icon iconName={IconLayoutGridUniform}/>
-            <Icon iconName={IconLibrary}/>
-            <Icon iconName={IconLinkBroken}/>
-            <Icon iconName={IconLinkConnected}/>
-            <Icon iconName={IconListDetailed}/>
-            <Icon iconName={IconListTile}/>
-            <Icon iconName={IconList}/>
-            <Icon iconName={IconLockOff}/>
-            <Icon iconName={IconLockOn}/>
-            <Icon iconName={IconMinus}/>
-            <Icon iconName={IconPlay}/>
-            <Icon iconName={IconPlus}/>
-            <Icon iconName={IconRandom}/>
-            <Icon iconName={IconRecent}/>
-            <Icon iconName={IconResizeToFit}/>
-            <Icon iconName={IconResolveFilled}/>
-            <Icon iconName={IconResolve}/>
-            <Icon iconName={IconReverse}/>
-            <Icon iconName={IconSearchLarge}/>
-            <Icon iconName={IconSearch}/>
-            <Icon iconName={IconSettings}/>
-            <Icon iconName={IconShare}/>
-            <Icon iconName={IconSmiley}/>
-            <Icon iconName={IconSortAlphaAsc}/>
-            <Icon iconName={IconSortAlphaDsc}/>
-            <Icon iconName={IconSortTopBottom}/>
-            <Icon iconName={IconSpacing}/>
-            <Icon iconName={IconSpinner}/>
-            <Icon iconName={IconStarOff}/>
-            <Icon iconName={IconStarOn}/>
-            <Icon iconName={IconStrokeWeight}/>
-            <Icon iconName={IconStyles}/>
-            <Icon iconName={IconSwap}/>
-            <Icon iconName={IconTheme}/>
-            <Icon iconName={IconTidyUpGrid}/>
-            <Icon iconName={IconTidyUpListHorizontal}/>
-            <Icon iconName={IconTidyUpListVertical}/>
-            <Icon iconName={IconTimer}/>
-            <Icon iconName={IconTrash}/>
-            <Icon iconName={IconVerticalPadding}/>
-            <Icon iconName={IconVisible}/>
-            <Icon iconName={IconWarningLarge}/>
-            <Icon iconName={IconWarning}/>
+            <Icon iconName={IconAdjust} />
+            <Icon iconName={IconAlert} />
+            <Icon iconName={IconAngle} />
+            <Icon iconName={IconArrowLeftRight} />
+            <Icon iconName={IconUpDown} />
+            <Icon iconName={IconAutoLayoutHorizontal} />
+            <Icon iconName={IconAutoLayoutVertical} />
+            <Icon iconName={IconBack} />
+            <Icon iconName={IconBlendEmpty} />
+            <Icon iconName={IconBlend} />
+            <Icon iconName={IconBreak} />
+            <Icon iconName={IconCaretDown} />
+            <Icon iconName={IconCaretLeft} />
+            <Icon iconName={IconCaretRight} />
+            <Icon iconName={IconCaretUp} />
+            <Icon iconName={IconCheck} />
+            <Icon iconName={IconClose} />
+            <Icon iconName={IconComponent} />
+            <Icon iconName={IconCornerRadius} />
+            <Icon iconName={IconCorners} />
+            <Icon iconName={IconDistributeHorizontalSpacing} />
+            <Icon iconName={IconDistributeVerticalSpacing} />
+            <Icon iconName={IconDraft} />
+            <Icon iconName={IconEffects} />
+            <Icon iconName={IconEllipses} />
+            <Icon iconName={IconEyedropper} />
+            <Icon iconName={IconForward} />
+            <Icon iconName={IconFrame} />
+            <Icon iconName={IconGroup} />
+            <Icon iconName={IconHidden} />
+            <Icon iconName={IconHorizontalPadding} />
+            <Icon iconName={IconHyperlink} />
+            <Icon iconName={IconImage} />
+            <Icon iconName={IconInstance} />
+            <Icon iconName={IconKey} />
+            <Icon iconName={IconLayoutAlignBottom} />
+            <Icon iconName={IconAlignHorizontalCenters} />
+            <Icon iconName={IconAlignLeft} />
+            <Icon iconName={IconAlignRight} />
+            <Icon iconName={IconAlignTop} />
+            <Icon iconName={IconAlignVerticalCenters} />
+            <Icon iconName={IconLayoutGridColumns} />
+            <Icon iconName={IconLayoutGridRows} />
+            <Icon iconName={IconLayoutGridUniform} />
+            <Icon iconName={IconLibrary} />
+            <Icon iconName={IconLinkBroken} />
+            <Icon iconName={IconLinkConnected} />
+            <Icon iconName={IconListDetailed} />
+            <Icon iconName={IconListTile} />
+            <Icon iconName={IconList} />
+            <Icon iconName={IconLockOff} />
+            <Icon iconName={IconLockOn} />
+            <Icon iconName={IconMinus} />
+            <Icon iconName={IconPlay} />
+            <Icon iconName={IconPlus} />
+            <Icon iconName={IconRandom} />
+            <Icon iconName={IconRecent} />
+            <Icon iconName={IconResizeToFit} />
+            <Icon iconName={IconResolveFilled} />
+            <Icon iconName={IconResolve} />
+            <Icon iconName={IconReverse} />
+            <Icon iconName={IconSearchLarge} />
+            <Icon iconName={IconSearch} />
+            <Icon iconName={IconSettings} />
+            <Icon iconName={IconShare} />
+            <Icon iconName={IconSmiley} />
+            <Icon iconName={IconSortAlphaAsc} />
+            <Icon iconName={IconSortAlphaDsc} />
+            <Icon iconName={IconSortTopBottom} />
+            <Icon iconName={IconSpacing} />
+            <Icon iconName={IconSpinner} />
+            <Icon iconName={IconStarOff} />
+            <Icon iconName={IconStarOn} />
+            <Icon iconName={IconStrokeWeight} />
+            <Icon iconName={IconStyles} />
+            <Icon iconName={IconSwap} />
+            <Icon iconName={IconTheme} />
+            <Icon iconName={IconTidyUpGrid} />
+            <Icon iconName={IconTidyUpListHorizontal} />
+            <Icon iconName={IconTidyUpListVertical} />
+            <Icon iconName={IconTimer} />
+            <Icon iconName={IconTrash} />
+            <Icon iconName={IconVerticalPadding} />
+            <Icon iconName={IconVisible} />
+            <Icon iconName={IconWarningLarge} />
+            <Icon iconName={IconWarning} />
         </div>
     </section>
 
     <section>
         <h2>Icon Button</h2>
         <div class="flex row">
-            <IconButton iconName={IconVisible} class="mr-xxsmall"/>
-            <IconButton iconName={IconVisible} selected class="mr-xxsmall"/>
-            <IconButton iconText="@"/>
+            <IconButton iconName={IconVisible} class="mr-xxsmall" />
+            <IconButton iconName={IconVisible} selected class="mr-xxsmall" />
+            <IconButton iconText="@" />
+            <IconButton
+                iconName={IconHidden}
+                class="mr-xxsmall"
+                disabled
+                on:click={() => {
+                    console.log('click');
+                }}
+            />
         </div>
     </section>
 
     <section>
         <h2>Input</h2>
-        <Input placeholder="This is an example with a placeholder" class="mb-xsmall"/>
-        <Input value="This is an example with a value" class="mb-xsmall"/>
-        <Input value="This is an example with a value but also disabled" disabled class="mb-xsmall"/>
-        <Input value="This is an example with a forced border" borders class="mb-xsmall"/>
-        <Input value="This is an invalid example" class="mb-xsmall" invalid=true/>
-        <Input iconName={IconVisible} value="This is an example with a value and an icon" class="mb-xsmall"/>
-        <Input iconText="W" value="This is an example with a value and a text icon, for example a width input"/>
+        <Input placeholder="This is an example with a placeholder" class="mb-xsmall" />
+        <Input value="This is an example with a value" class="mb-xsmall" />
+        <Input value="This is an example with a value but also disabled" disabled class="mb-xsmall" />
+        <Input value="This is an example with a forced border" borders class="mb-xsmall" />
+        <Input value="This is an invalid example" class="mb-xsmall" invalid="true" />
+        <Input iconName={IconVisible} value="This is an example with a value and an icon" class="mb-xsmall" />
+        <Input iconText="W" value="This is an example with a value and a text icon, for example a width input" />
     </section>
 
     <section>
@@ -369,20 +379,27 @@
 
     <section>
         <h2>Onboarding Tip</h2>
-        <OnboardingTip iconName={IconStyles}>To create a style, select a layer and click on the style icon in the inspector panel</OnboardingTip>
+        <OnboardingTip iconName={IconStyles}
+            >To create a style, select a layer and click on the style icon in the inspector panel</OnboardingTip
+        >
     </section>
 
     <section>
         <h2>Select Menu</h2>
         <div class="flex row">
-        <SelectMenu bind:menuItems={menuItemsExample0} class="mb-xsmall"/>
-        <Button variant="secondary" class="mr-xxsmall mb-xsmall" on:click={populateMenu}>Populate menu</Button>
+            <SelectMenu bind:menuItems={menuItemsExample0} class="mb-xsmall" />
+            <Button variant="secondary" class="mr-xxsmall mb-xsmall" on:click={populateMenu}>Populate menu</Button>
         </div>
 
-        <SelectMenu placeholder="Please make a selection" bind:menuItems={menuItemsExample1} class="mb-xsmall"/>
-        <SelectMenu bind:menuItems={menuItemsExample2} class="mb-xsmall"/>
-        <SelectMenu bind:menuItems={menuItemsExample3} showGroupLabels class="mb-xsmall"/>
-        <SelectMenu bind:menuItems={menuItemsExample4} iconName={IconBlend}/>
+        <SelectMenu placeholder="Please make a selection" bind:menuItems={menuItemsExample1} class="mb-xsmall" />
+        <SelectMenu bind:menuItems={menuItemsExample2} class="mb-xsmall" />
+        <SelectMenu bind:menuItems={menuItemsExample3} showGroupLabels class="mb-xsmall" />
+        <SelectMenu bind:menuItems={menuItemsExample4} iconName={IconBlend} />
+    </section>
+
+    <section>
+        <h2>Context Menu</h2>
+        <ContextMenu bind:menuItems={menuItemsExample2} class="mb-xsmall" />
     </section>
 
     <section>
@@ -426,9 +443,15 @@
 
                 <div class="mb-xxsmall">
                     <Type weight="medium" inverse>UI1 &mdash; size: xsmall, weight: medium, inverse: true</Type>
-                    <Type size="small" weight="medium" inverse>UI2 &mdash; size: small, weight: medium, inverse: true</Type>
-                    <Type size="large" weight="medium" inverse>UI3 &mdash; size: large, weight: medium, inverse: true</Type>
-                    <Type size="xlarge" weight="medium" inverse>UI4 &mdash; size: xlarge, weight: medium, inverse: true</Type>
+                    <Type size="small" weight="medium" inverse
+                        >UI2 &mdash; size: small, weight: medium, inverse: true</Type
+                    >
+                    <Type size="large" weight="medium" inverse
+                        >UI3 &mdash; size: large, weight: medium, inverse: true</Type
+                    >
+                    <Type size="xlarge" weight="medium" inverse
+                        >UI4 &mdash; size: xlarge, weight: medium, inverse: true</Type
+                    >
                 </div>
 
                 <Type weight="bold" inverse>UI1 &mdash; size: xsmall, weight: bold, inverse: true</Type>
@@ -438,12 +461,9 @@
             </div>
         </div>
     </section>
-
 </div>
 
-
 <style>
-
     .wrapper {
         padding: 24px;
     }
@@ -473,7 +493,7 @@
         display: block;
         text-align: left;
     }
-    
+
     section {
         border-bottom: 1px solid var(--black);
         padding-bottom: var(--size-medium);
@@ -483,5 +503,4 @@
         border-bottom: 1px solid transparent;
         margin-bottom: 0px;
     }
-
 </style>

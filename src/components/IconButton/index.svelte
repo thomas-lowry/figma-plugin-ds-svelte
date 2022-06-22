@@ -12,14 +12,7 @@
     let className = '';
 </script>
 
-<div
-    on:click
-    onclick="this.blur();"
-    class:selected
-    class={className}
-    {tabindex}
-    {disabled}
->
+<div on:click onclick="this.blur();" class:selected class:disabled class={className} {tabindex}>
     {#if selected === true}
         <Icon {iconName} {iconText} {spin} color="white" />
     {:else if disabled == true}
@@ -60,7 +53,7 @@
         border: 2px solid var(--black3);
     }
 
-    div:disabled {
-        opacity: 0.4;
+    div.disabled {
+        pointer-events: none;
     }
 </style>
