@@ -7,7 +7,6 @@
     //Components
     import Button from './components/Button/index.svelte';
     import Checkbox from './components/Checkbox/index.svelte';
-    import ContextMenu from './components/ContextMenu/index.svelte';
     import Switch from './components/Switch/index.svelte';
     import Disclosure from './components/Disclosure/index.svelte';
     import DisclosureItem from './components/DisclosureItem/index.svelte';
@@ -395,11 +394,6 @@
         <SelectMenu bind:menuItems={menuItemsExample2} class="mb-xsmall" />
         <SelectMenu bind:menuItems={menuItemsExample3} showGroupLabels class="mb-xsmall" />
         <SelectMenu bind:menuItems={menuItemsExample4} iconName={IconBlend} />
-    </section>
-
-    <section>
-        <h2>Context Menu</h2>
-        <ContextMenu bind:menuItems={menuItemsExample2} class="mb-xsmall" />
     </section>
 
     <section>
