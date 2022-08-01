@@ -14,6 +14,8 @@
     export let placeholder = 'Please make a selection.';
     export let value = null; //stores the current selection, note, the value will be an object from your array
     export let showGroupLabels = false; //default prop, true will show option group labels
+    export let rounded = false;
+
     export { className as class };
 
     const dispatch = createEventDispatcher();
@@ -232,7 +234,7 @@
             {/if}
         </button>
 
-        <ul class="menu hidden" bind:this={menuList}>
+        <ul class="menu hidden" class:rounded bind:this={menuList}>
             {#if menuItems && menuItems.length > 0}
                 {#each menuItems as item, i}
                     {#if i === 0}
@@ -251,7 +253,8 @@
                         on:click={menuClick}
                         on:mouseenter={removeHighlight}
                         itemId={item.id}
-                        bind:selected={item.selected}>{item.label}</SelectItem
+                        bind:selected={item.selected}
+                        {rounded}>{item.label}</SelectItem
                     >
                 {/each}
             {/if}
@@ -379,5 +382,11 @@
         border-radius: 6px;
         -webkit-box-shadow: inset 0 0 10px 10px rgba(255, 255, 255, 0.4);
         box-shadow: inset 0 0 10px 10px rgba(255, 255, 255, 0.4);
+    }
+
+    .rounded {
+        border-radius: var(--border-radius-large);
+        /* 4px padding, together with .menu border */
+        padding: 3px;
     }
 </style>

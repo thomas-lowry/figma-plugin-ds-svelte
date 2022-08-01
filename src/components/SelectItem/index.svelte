@@ -2,6 +2,7 @@
     export let itemId;
     export let selected = false;
     export { className as class };
+    export let rounded = false;
 
     let className = '';
 </script>
@@ -11,6 +12,7 @@
     tabindex={itemId + 1}
     class:highlight={selected}
     class={className}
+    class:rounded
     on:mouseenter
     on:click
 >
@@ -67,5 +69,10 @@
     .blink,
     .blink:hover {
         background-color: transparent;
+    }
+
+    .rounded {
+        padding: 0 var(--size-xsmall) 0 var(--size-xxxsmall);
+        border-radius: 3px;
     }
 </style>

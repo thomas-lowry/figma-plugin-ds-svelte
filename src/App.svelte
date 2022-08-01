@@ -146,11 +146,11 @@
     ];
     //example with an initial selection and option groups
     let menuItemsExample4 = [
-        { value: 'item1', label: 'Passthrough', group: 'group1', selected: true },
-        { value: 'item2', label: 'Normal ', group: 'group1', selected: false },
-        { value: 'item3', label: 'Darken', group: 'group2', selected: false },
-        { value: 'item4', label: 'Multiply', group: 'group2', selected: false },
-        { value: 'item4', label: 'Color Burn', group: 'group2', selected: false },
+        { value: 'item1', label: 'Passthrough', group: 'group2', selected: true },
+        { value: 'item2', label: 'Normal ', group: 'group2', selected: false },
+        { value: 'item3', label: 'Darken', group: 'group3', selected: false },
+        { value: 'item4', label: 'Multiply', group: 'group3', selected: false },
+        { value: 'item4', label: 'Color Burn', group: 'ASDF', selected: false },
     ];
 </script>
 
@@ -210,8 +210,8 @@
     <section>
         <h2>Radio buttons</h2>
         <Radio bind:group={radioValue} value="a"
-            >Label Label with really long text content Label with really really really really long text content Label
-            with really long text content Label with really long text content</Radio
+            >Label Label with really long text content Label with really really really really long
+            text content Label with really long text content Label with really long text content</Radio
         >
         <Radio bind:group={radioValue} value="b">Label</Radio>
         <Radio bind:group={radioValue} value="c" disabled>Label</Radio>
@@ -230,10 +230,11 @@
         <h2>Icon</h2>
         <h3>Icons and props</h3>
         <caption class="mb-xsmall"
-            >You can import and pass an SVG string to the iconName prop, or you can display text inside an icon by
-            passing a string including a character to the iconText prop. You can pass the name of any color from the
-            Figma DS to the color prop (ex: color="red", color="purple4"). Icons can also accept the spin prop. The
-            IconButton, Input, and OnboardingTip all make use of the Icon component and can accept its props.</caption
+            >You can import and pass an SVG string to the iconName prop, or you can display text
+            inside an icon by passing a string including a character to the iconText prop. You can
+            pass the name of any color from the Figma DS to the color prop (ex: color="red",
+            color="purple4"). Icons can also accept the spin prop. The IconButton, Input, and
+            OnboardingTip all make use of the Icon component and can accept its props.</caption
         >
         <div class="flex row mb-xsmall">
             <Icon iconName={IconVisible} color="black" />
@@ -363,11 +364,22 @@
         <h2>Input</h2>
         <Input placeholder="This is an example with a placeholder" class="mb-xsmall" />
         <Input value="This is an example with a value" class="mb-xsmall" />
-        <Input value="This is an example with a value but also disabled" disabled class="mb-xsmall" />
+        <Input
+            value="This is an example with a value but also disabled"
+            disabled
+            class="mb-xsmall"
+        />
         <Input value="This is an example with a forced border" borders class="mb-xsmall" />
         <Input value="This is an invalid example" class="mb-xsmall" invalid="true" />
-        <Input iconName={IconVisible} value="This is an example with a value and an icon" class="mb-xsmall" />
-        <Input iconText="W" value="This is an example with a value and a text icon, for example a width input" />
+        <Input
+            iconName={IconVisible}
+            value="This is an example with a value and an icon"
+            class="mb-xsmall"
+        />
+        <Input
+            iconText="W"
+            value="This is an example with a value and a text icon, for example a width input"
+        />
     </section>
 
     <section>
@@ -387,13 +399,19 @@
         <h2>Select Menu</h2>
         <div class="flex row">
             <SelectMenu bind:menuItems={menuItemsExample0} class="mb-xsmall" />
-            <Button variant="secondary" class="mr-xxsmall mb-xsmall" on:click={populateMenu}>Populate menu</Button>
+            <Button variant="secondary" class="mr-xxsmall mb-xsmall" on:click={populateMenu}
+                >Populate menu</Button
+            >
         </div>
 
-        <SelectMenu placeholder="Please make a selection" bind:menuItems={menuItemsExample1} class="mb-xsmall" />
+        <SelectMenu
+            placeholder="Please make a selection"
+            bind:menuItems={menuItemsExample1}
+            class="mb-xsmall"
+        />
         <SelectMenu bind:menuItems={menuItemsExample2} class="mb-xsmall" />
         <SelectMenu bind:menuItems={menuItemsExample3} showGroupLabels class="mb-xsmall" />
-        <SelectMenu bind:menuItems={menuItemsExample4} iconName={IconBlend} />
+        <SelectMenu bind:menuItems={menuItemsExample4} rounded iconName={IconBlend} />
     </section>
 
     <section>
@@ -409,34 +427,62 @@
             <div class="p-xsmall mr-xxsmall" style="border: 1px solid var(--black1)">
                 <div class="mb-xxsmall">
                     <Type>UI11 &mdash; size: xsmall, weight: normal, inverse: false</Type>
-                    <Type size="small">UI12 &mdash; size: small, weight: normal, inverse: false</Type>
-                    <Type size="large">UI13 &mdash; size: large, weight: normal, inverse: false</Type>
-                    <Type size="xlarge">UI14 &mdash; size: xlarge, weight: normal, inverse: false</Type>
+                    <Type size="small"
+                        >UI12 &mdash; size: small, weight: normal, inverse: false</Type
+                    >
+                    <Type size="large"
+                        >UI13 &mdash; size: large, weight: normal, inverse: false</Type
+                    >
+                    <Type size="xlarge"
+                        >UI14 &mdash; size: xlarge, weight: normal, inverse: false</Type
+                    >
                 </div>
 
                 <div class="mb-xxsmall">
-                    <Type weight="medium">UI1 &mdash; size: xsmall, weight: medium, inverse: false</Type>
-                    <Type size="small" weight="medium">UI2 &mdash; size: small, weight: medium, inverse: false</Type>
-                    <Type size="large" weight="medium">UI3 &mdash; size: large, weight: medium, inverse: false</Type>
-                    <Type size="xlarge" weight="medium">UI4 &mdash; size: xlarge, weight: medium, inverse: false</Type>
+                    <Type weight="medium"
+                        >UI1 &mdash; size: xsmall, weight: medium, inverse: false</Type
+                    >
+                    <Type size="small" weight="medium"
+                        >UI2 &mdash; size: small, weight: medium, inverse: false</Type
+                    >
+                    <Type size="large" weight="medium"
+                        >UI3 &mdash; size: large, weight: medium, inverse: false</Type
+                    >
+                    <Type size="xlarge" weight="medium"
+                        >UI4 &mdash; size: xlarge, weight: medium, inverse: false</Type
+                    >
                 </div>
 
                 <Type weight="bold">UI1 &mdash; size: xsmall, weight: bold, inverse: false</Type>
-                <Type size="small" weight="bold">UI2 &mdash; size: small, weight: bold, inverse: false</Type>
-                <Type size="large" weight="bold">UI3 &mdash; size: large, weight: bold, inverse: false</Type>
-                <Type size="xlarge" weight="bold">UI4 &mdash; size: xlarge, weight: bold, inverse: false</Type>
+                <Type size="small" weight="bold"
+                    >UI2 &mdash; size: small, weight: bold, inverse: false</Type
+                >
+                <Type size="large" weight="bold"
+                    >UI3 &mdash; size: large, weight: bold, inverse: false</Type
+                >
+                <Type size="xlarge" weight="bold"
+                    >UI4 &mdash; size: xlarge, weight: bold, inverse: false</Type
+                >
             </div>
 
             <div class="p-xsmall" style="background-color: var(--black)">
                 <div class="mb-xxsmall">
                     <Type inverse>UI1 &mdash; size: xsmall, weight: normal, inverse: true</Type>
-                    <Type size="small" inverse>UI2 &mdash; size: small, weight: normal, inverse: true</Type>
-                    <Type size="large" inverse>UI3 &mdash; size: large, weight: normal, inverse: true</Type>
-                    <Type size="xlarge" inverse>UI4 &mdash; size: xlarge, weight: normal, inverse: true</Type>
+                    <Type size="small" inverse
+                        >UI2 &mdash; size: small, weight: normal, inverse: true</Type
+                    >
+                    <Type size="large" inverse
+                        >UI3 &mdash; size: large, weight: normal, inverse: true</Type
+                    >
+                    <Type size="xlarge" inverse
+                        >UI4 &mdash; size: xlarge, weight: normal, inverse: true</Type
+                    >
                 </div>
 
                 <div class="mb-xxsmall">
-                    <Type weight="medium" inverse>UI1 &mdash; size: xsmall, weight: medium, inverse: true</Type>
+                    <Type weight="medium" inverse
+                        >UI1 &mdash; size: xsmall, weight: medium, inverse: true</Type
+                    >
                     <Type size="small" weight="medium" inverse
                         >UI2 &mdash; size: small, weight: medium, inverse: true</Type
                     >
@@ -448,10 +494,18 @@
                     >
                 </div>
 
-                <Type weight="bold" inverse>UI1 &mdash; size: xsmall, weight: bold, inverse: true</Type>
-                <Type size="small" weight="bold" inverse>UI2 &mdash; size: small, weight: bold, inverse: true</Type>
-                <Type size="large" weight="bold" inverse>UI3 &mdash; size: large, weight: bold, inverse: true</Type>
-                <Type size="xlarge" weight="bold" inverse>UI4 &mdash; size: xlarge, weight: bold, inverse: true</Type>
+                <Type weight="bold" inverse
+                    >UI1 &mdash; size: xsmall, weight: bold, inverse: true</Type
+                >
+                <Type size="small" weight="bold" inverse
+                    >UI2 &mdash; size: small, weight: bold, inverse: true</Type
+                >
+                <Type size="large" weight="bold" inverse
+                    >UI3 &mdash; size: large, weight: bold, inverse: true</Type
+                >
+                <Type size="xlarge" weight="bold" inverse
+                    >UI4 &mdash; size: xlarge, weight: bold, inverse: true</Type
+                >
             </div>
         </div>
     </section>
