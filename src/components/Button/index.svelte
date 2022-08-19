@@ -4,8 +4,9 @@
     export let variant = 'primary';
     export let disabled = false;
     export let destructive = false;
-    export { className as class };
+    export let rounded = false;
 
+    export { className as class };
     let className = '';
 </script>
 
@@ -16,6 +17,7 @@
     {variant}
     {disabled}
     class:destructive
+    class:rounded
     class="{variant} {className}"
 >
     <slot />
@@ -65,8 +67,7 @@
         background-color: var(--white);
         border: 1px solid var(--black8);
         color: var(--black8);
-        padding: 0 calc(var(--size-xsmall) + 1px) 0
-            calc(var(--size-xsmall) + 1px);
+        padding: 0 calc(var(--size-xsmall) + 1px) 0 calc(var(--size-xsmall) + 1px);
         letter-spacing: var(--font-letter-spacing-pos-small);
     }
     .secondary:enabled:active,
@@ -115,5 +116,9 @@
     }
     .tertiary.destructive:disabled {
         opacity: 0.4;
+    }
+
+    .rounded {
+        border-radius: 6px;
     }
 </style>

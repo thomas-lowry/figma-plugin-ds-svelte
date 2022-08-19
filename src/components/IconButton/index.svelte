@@ -7,12 +7,13 @@
     export let spin = false;
     export let tabindex = 0;
     export let disabled = false;
-    export { className as class };
+    export let rounded = false
 
+    export { className as class };
     let className = '';
 </script>
 
-<div on:click onclick="this.blur();" class:selected class:disabled class={className} {tabindex}>
+<div on:click onclick="this.blur();" class:selected class:disabled class:rounded class={className} {tabindex}>
     {#if selected === true}
         <Icon {iconName} {iconText} {spin} color="white" />
     {:else if disabled == true}
@@ -51,6 +52,10 @@
     .selected:active,
     .selected:focus {
         border: 2px solid var(--black3);
+    }
+
+    .rounded {
+        border-radius: 6px;
     }
 
     div.disabled {

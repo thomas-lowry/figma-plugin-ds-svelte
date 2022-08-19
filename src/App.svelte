@@ -348,7 +348,7 @@
         <div class="flex row">
             <IconButton iconName={IconVisible} class="mr-xxsmall" />
             <IconButton iconName={IconVisible} selected class="mr-xxsmall" />
-            <IconButton iconText="@" />
+            <IconButton iconText="@" rounded />
             <IconButton
                 iconName={IconHidden}
                 class="mr-xxsmall"
