@@ -51,7 +51,7 @@
         margin: 0;
         padding: 0;
         list-style-type: none;
-        border-bottom: 1px solid var(--silver);
+        border-bottom: 1px solid var(--figma-color-border);
     }
     li:last-child {
         border-bottom: 1px solid transparent;
@@ -65,10 +65,10 @@
         font-weight: var(--font-weight-normal);
         letter-spacing: var( --font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
-        color: var(--black8);
+        color: var(--figma-color-text);
     }
     .header:hover .icon {
-        opacity: 0.8;
+        opacity: 0.9;
     }
 
     .title {
@@ -93,7 +93,7 @@
         font-weight: var(--font-weight-normal);
         letter-spacing: var( --font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
-        color: var(--black8);
+        color: var(--figma-color-text);
         padding: var(--size-xxsmall) var(--size-xxsmall) var(--size-xxsmall) var(--size-small);
         display: none;
         user-select: none;

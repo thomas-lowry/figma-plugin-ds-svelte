@@ -1,10 +1,11 @@
 <script>
 
+    export { className as class };
     let className = '';
 
 </script>
 
-<div>
+<div class="{className}">
     <slot></slot>
 </div>
 
@@ -15,7 +16,7 @@
         font-weight: var(--font-weight-normal);
         letter-spacing: var( --font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
-        color: var(--black3);
+        color: var(--figma-color-text-secondary);
         height: var(--size-medium);
         width: 100%;
         display: flex;

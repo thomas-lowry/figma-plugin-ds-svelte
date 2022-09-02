@@ -311,7 +311,7 @@
         font-weight: var(--font-weight-normal);
         letter-spacing: var( --font-letter-spacing-neg-xsmall);
         line-height: var(--line-height);
-        color: var(--black8);
+        color: var(--figma-color-text);
         margin-right: 6px;
         margin-top: -3px;
         white-space: nowrap;
@@ -320,7 +320,7 @@
     }
 
     .placeholder {
-        color: var(--black3);
+        color: var(--figma-color-text-tertiary);
     }
 
     .caret {
@@ -329,7 +329,7 @@
     }
 
     .caret svg path {
-        fill: var(--black3);
+        fill: var(--figma-color-icon-tertiary);
     }
 
     .icon {
@@ -343,7 +343,7 @@
         top:32px;
         left:0;
         width: 100%;
-        background-color: var(--hud);
+        background-color: var(--color-bg-menu);
         box-shadow: var(--shadow-hud);
         padding: var(--size-xxsmall) 0 var(--size-xxsmall) 0;
         border-radius: var(--border-radius-small);

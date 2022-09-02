@@ -4,11 +4,12 @@
     export let size = 'xsmall';
     export let weight = 'normal';
     export let inverse = false; //this prop uses different letterspacing values for inversed type (light on dark)
-    export let color = 'black8';
+    export let color = '--figma-color-text';
     export let inline = false;
     export { className as class };
     
     let className = '';
+    let cssColorVar; 
 
     onMount(async () => {
         if (color = 'black8' && inverse) {
@@ -16,7 +17,8 @@
         }
     });
 
-    let cssColorVar = 'var(--' + color + ')';
+
+    cssColorVar = 'var(' + color + ')';
 
 </script>
 

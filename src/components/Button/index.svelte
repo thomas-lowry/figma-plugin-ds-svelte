@@ -27,7 +27,7 @@
         display: flex;
         align-items: center;
         border-radius: var(--border-radius-large);
-        color: var(--white);
+        color: var(--figma-color-text-onbrand);
         flex-shrink: 0;
         font-family: var(--font-stack);
         font-size: var(--font-size-xsmall);
@@ -44,44 +44,48 @@
 
     /* Primary styles */
     .primary {
-        background-color: var(--blue);
-        color: var(--white);
+        background-color: var(--figma-color-bg-brand);
+        color: var(--figma-color-text-onbrand);
     }
     .primary:enabled:active, .primary:enabled:focus {
-        border: 2px solid var(--black3);
+        border: 2px solid var(--figma-color-border-brand-strong);
     }
     .primary:disabled {
-        background-color: var(--black3);
+        background-color: var(--figma-color-bg-disabled);
     }
     .primary.destructive {
-        background-color: var(--red);
+        background-color: var(--figma-color-bg-danger);
+    }
+    .primary.destructive:active, .primary.destructive:focus {
+        background-color: var(--figma-color-border-danger);
     }
     .primary.destructive:disabled  {
-        opacity: 0.4;
+        background-color: var(--figma-color-bg-disabled);
     }
 
     /* Secondary styles */
     .secondary {
-        background-color: var(--white);
-        border: 1px solid var(--black8);
-        color: var(--black8);
+        background-color: none;
+        border: 1px solid var(--figma-color-border-strong);
+        color: var(--figma-color-text);
         padding: 0 calc(var(--size-xsmall) + 1px) 0 calc(var(--size-xsmall) + 1px);
         letter-spacing: var(--font-letter-spacing-pos-small);
     }
     .secondary:enabled:active, .secondary:enabled:focus {
-        border: 2px solid var(--blue);
+        border: 2px solid var(--figma-color-border-selected);
         padding: 0 var(--size-xsmall) 0 var(--size-xsmall);
     }
     .secondary:disabled {
-        border: 1px solid var(--black3);
-        color: var(--black3);
+        border: 1px solid var(--figma-color-border-disabled-strong);
+        color: var(--figma-color-text-disabled);
     }
     .secondary.destructive {
-       border-color: var(--red);
-       color: var(--red);
+       /* this should be deprecated */ 
+       border-color: var(--figma-color-border-danger-strong);
+       color: var(--figma-color-text-danger);
     }
     .secondary.destructive:enabled:active, .secondary.destructive:enabled:focus {
-       border: 2px solid var(--red);
+       border: 2px solid var(--figma-color-border-danger-strong);
         padding: 0 var(--size-xsmall) 0 var(--size-xsmall);
     }
     .secondary.destructive:disabled {
@@ -91,7 +95,7 @@
     /* tertiary styles */
     .tertiary {
         border: 1px solid transparent;
-        color: var(--blue);
+        color: var(--figma-color-text-brand);
         background: initial;
         padding: 0;
         font-weight: var(--font-weight-normal);
@@ -102,10 +106,10 @@
         text-decoration: underline;
     }
     .tertiary:disabled {
-        color: var(--black3);
+        color: var(--figma-color-text-disabled);
     }
     .tertiary.destructive {
-       color: var(--red);
+       color: var(--figma-color-text-danger);
     }
     .tertiary.destructive:enabled:focus {
         text-decoration: underline;

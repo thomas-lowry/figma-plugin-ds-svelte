@@ -14,9 +14,9 @@
 
 <div on:click onclick="this.blur();" class:selected={selected} class="{className}" tabindex={tabindex}>
     {#if selected === true}
-        <Icon {iconName} {iconText} {spin} color="white"/>
+        <Icon {iconName} {iconText} {spin} color="--figma-color-icon-onbrand"/>
     {:else}
-        <Icon {iconName} {iconText} {spin} color="black8"/>
+        <Icon {iconName} {iconText} {spin} color="--figma-color-icon"/>
     {/if}
 </div>
 
@@ -33,21 +33,21 @@
         border: 2px solid transparent;
     }
     div:hover {
-        background: var(--hover-fill);
+        background: var(--figma-color-bg-hover);
     }
     div:active, div:focus {
-        border: 2px solid var(--blue);
+        border: 2px solid var(--figma-color-border-brand-strong);
         outline: none;
     }
 
     .selected {
-        background-color: var(--blue);
+        background-color: var(--figma-color-bg-selected-strong);
     }
     .selected:hover {
-        background-color: var(--blue);
+        background-color: var(--figma-color-bg-selected-strong);
     }
     .selected:active, .selected:focus {
-        border: 2px solid var(--black3);
+        border: 2px solid var(--figma-color-border-selected-strong);
     }
 
 </style>

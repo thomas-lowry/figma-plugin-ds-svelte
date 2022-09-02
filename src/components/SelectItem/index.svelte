@@ -18,7 +18,7 @@
 
     li {
         align-items: center;
-        color: var(--white);
+        color: var(--color-text-menu-text);
         cursor: default;
         display: flex;
         font-family: var(--font-stack);
@@ -42,7 +42,7 @@
     }
 
     .highlight, li:hover, li:focus {
-        background-color: var(--blue);
+        background-color: var(--figma-color-text-brand);
     }
 
     .icon {

@@ -22,7 +22,7 @@
 		height: var(--size-small);
 		margin-top: var(--size-xxsmall);
 		padding: 0 var(--size-xxsmall) 0 var(--size-medium);
-		color: var(--white4);
+		color: var( --color-text-menu-secondary);
     }
     .label:first-child {
         border-top: none;
@@ -30,7 +30,7 @@
     }
 
     .divider {
-        background-color: var(--white2);
+        background-color: var(--color-border-menu);
         display: block;
 		height: 1px;
 		margin: 8px 0 7px 0;

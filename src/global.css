@@ -2,38 +2,59 @@
 :root {
 	/* COLORS */
 
+    /*
+    This has been updated to work with Figma's color tokens.
+    The following variables are included for legacy support, 
+    where they may be referenced in your own custom components.
+
+    All of these variables (where possible) will now map to 
+    Figma's color variables.
+
+    Components part of this package will directly consume
+    Figma's variables to support light and dark mode.
+    */
+
+
+
     /* Accent */
-    --blue: #18a0fb; 
-    --purple: #7b61ff; 
+    --blue: var(--figma-color-bg-brand); 
+    --purple: var(--figma-color-bg-component); 
     --hot-pink: #ff00ff;
     --green: #1bc47d;
-    --red: #f24822;
-    --yellow: #ffeb00;
+    --red: var(--figma-color-bg-danger);
+    --yellow: var(--figma-color-bg-warning);
 
     /* Basic foreground */
     --black: #000000;
-    --black8: rgba(0, 0, 0, .8); 
+    --black8: var(--figma-color-text); 
     --black8-opaque: #333333; 
-    --black3: rgba(0, 0, 0, .3);
-    --black3-opaque: #B3B3B3; 
-    --white: #ffffff; 
-    --white8: rgba(255, 255, 255, .8); 
-    --white4: rgba(255, 255, 255, .4); 
+    --black3: var(--figma-color-text-secondary);
+    --black3-opaque: #7A7A7A; 
+    --white: var(--figma-color-bg); 
+    --white8: var(--figma-color-text-onbrand-secondary); 
+    --white4: var(--figma-color-text-onbrand-tertiary); 
 
     /* Basic background */
     --grey: #f0f0f0; 
-    --silver: #e5e5e5; 
+    --silver: var(--figma-color-border); 
     --hud: #222222;
-    --toolbar: #2c2c2c;
+    --toolbar: var(--figma-color-bg-inverse);
 
     /* Special */
     --black1: rgba(0, 0, 0, .1); 
     --blue3: rgba(24, 145, 251, .3); 
-    --purple4: rgba(123, 97, 255, .4);
-    --hover-fill: rgba(0, 0, 0, .06);
-    --selection-a: #daebf7;
-    --selection-b: #edf5fa;
-    --white2: rgba(255, 255, 255, .2); 
+    --purple4: var(--figma-color-text-component-secondary);
+    --hover-fill: var(--figma-color-bg-hover);
+    --selection-a: var(--figma-color-bg-selected);
+    --selection-b: var(--figma-color-bg-selected-secondary);
+    --white2: var(--figma-color-text-onbrand-tertiary); 
+
+    /* SHIM */
+    --color-bg-menu: #1e1e1e; /* to update */
+    --color-text-menu-text: #FFFFFF;
+    --color-text-menu-secondary: rgba(255, 255, 255, 0.7);
+    --color-border-menu: #383838;
+    --text-highlight: rgba(13, 153, 255, 0.4);
 
 
     /* TYPOGRAPHY */

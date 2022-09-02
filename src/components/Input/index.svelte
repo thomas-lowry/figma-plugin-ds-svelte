@@ -92,33 +92,33 @@
         height: 30px;
         margin: 1px 0 1px 0;
         padding: var(--size-xxsmall) var(--size-xxxsmall) var(--size-xxsmall) var(--size-xxsmall);
-        color: var(--black8);
+        color: var(--figma-color-text);
         border: 1px solid transparent;
         border-radius: var(--border-radius-small);
         outline: none;
-        background-color: var(--white);
+        background-color: var(--figma-color-bg);
     }
     input:hover, input:placeholder-shown:hover {
-		color: var(--black8);
-		border: 1px solid var(--black1);
+		color: var(--figma-color-text-hover);
+		border: 1px solid var(--figma-color-border);
         background-image: none;
 	}
 	input::selection {
 		color: var(--black);
-		background-color: var(--blue3);
+		background-color: var(--text-highlight); 
 	}
 	input::placeholder {
-		color: var(--black3);
+		color: var(--figma-color-text-tertiary);
 		border: 1px solid transparent;
 	}
 	input:placeholder-shown {
-		color: var(--black8);
-        border: 1px solid var(--black1);
+		color: var(--figma-color-text);
+        border: 1px solid var(--figma-color-border);
         background-image: none;
 	}
     input:focus:placeholder-shown {
-        border: 1px solid var(--blue);
-        outline: 1px solid var(--blue);
+        border: 1px solid var(--figma-color-border-selected);
+        outline: 1px solid var(--figma-color-border-selected);
         outline-offset: -2px;
     }
 	input:disabled:hover {
@@ -127,13 +127,13 @@
 	input:active, input:focus {
 
 		color: var(--black);
-        border: 1px solid var(--blue);
-        outline: 1px solid var(--blue);
+        border: 1px solid var(--figma-color-border-selected);
+        outline: 1px solid var(--figma-color-border-selected);
         outline-offset: -2px;
 	}
 	input:disabled {
 		position: relative;
-		color: var(--black3);
+		color: var(--figma-color-text-disabled);
         background-image: none;
 	}
 	input:disabled:active {
@@ -141,7 +141,7 @@
     }
 
     .borders {
-        border: 1px solid var(--black1);
+        border: 1px solid var(--figma-color-border);
         background-image: none;
     }
     .borders:disabled {
@@ -157,7 +157,7 @@
         outline: none;
     }
     .borders:placeholder-shown {
-        border: 1px solid var(--black1);
+        border: 1px solid var(--figma-color-border);
         background-image: none;
     }
     
@@ -166,8 +166,8 @@
     }
 
     .invalid, .invalid:hover, .invalid:focus {
-        border: 1px solid var(--red);
-        outline: 1px solid var(--red);
+        border: 1px solid var(--figma-color-border-danger-strong);
+        outline: 1px solid var(--figma-color-border-danger-strong);
         outline-offset: -2px;
     }
 
@@ -181,7 +181,7 @@
     }
 
     .error {
-        color: var(--red);
+        color: var(--figma-color-text-danger);
         font-size: var(--font-size-xsmall);
         font-weight: var(--font-weight-normal);
         letter-spacing: var( --font-letter-spacing-neg-xsmall);

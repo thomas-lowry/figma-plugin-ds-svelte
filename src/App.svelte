@@ -158,7 +158,7 @@
 </script>
 
 
-<div class="wrapper">
+<div class="wrapper" style="background-color: var(--figma-color-bg)">
 
 <h1>Figma Plugin UI Svelte</h1>
 

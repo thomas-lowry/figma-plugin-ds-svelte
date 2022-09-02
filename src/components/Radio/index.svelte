@@ -56,11 +56,11 @@
         opacity: 0.3;
     }
     input:checked:disabled + label:before {
-        border: 1px solid var(--black);
+        border: 1px solid var(--figma-color-icon);
     }
 
     label {
-        color: var(--black8);
+        color: var(--figma-color-text);
         display: flex;
         font-family: var(--font-stack);
         font-size: var(--font-size-xsmall);
@@ -72,7 +72,7 @@
         user-select: none;
     }
     label:before {
-        border: 1px solid var(--black8);
+        border: 1px solid var(--figma-color-icon);
 		border-radius: var(--border-radius-small);
         content: '';
         display: block;
@@ -84,15 +84,15 @@
     }
 
     input:enabled:checked:focus + label:before {
-        border: 1px solid var(--blue);
-        box-shadow: 0 0 0 1px var(--blue);
+        border: 1px solid var(--figma-color-border-selected);
+        box-shadow: 0 0 0 1px var(--figma-color-border-selected);
         border-radius: var(--border-radius-small);
         border-radius: 50%;
     }
 
     input:enabled:focus + label:before {
-        border: 1px solid var(--blue);
-        box-shadow: 0 0 0 1px var(--blue);
+        border: 1px solid var(--figma-color-border-selected);
+        box-shadow: 0 0 0 1px var(--figma-color-border-selected);
     }
 
 </style>
