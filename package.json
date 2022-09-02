@@ -12,7 +12,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-livereload": "^1.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-postcss": "^2.9.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-svelte": "^5.1.1",
     "rollup-plugin-svg": "^2.0.0",
