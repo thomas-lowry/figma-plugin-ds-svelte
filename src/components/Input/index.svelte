@@ -22,7 +22,7 @@
 {#if iconName || iconText}
     <div class="input {className}">
         <div class="icon">
-            <Icon {iconName} {iconText} {spin} color="black3"/>
+            <Icon {iconName} {iconText} {spin} color="--figma-color-icon"/>
         </div>
         <input 
             type="input"
@@ -104,7 +104,7 @@
         background-image: none;
 	}
 	input::selection {
-		color: var(--black);
+		color: var(--figma-color-text);
 		background-color: var(--text-highlight); 
 	}
 	input::placeholder {
@@ -126,7 +126,7 @@
 	}
 	input:active, input:focus {
 
-		color: var(--black);
+		color: var(--figma-color-text);
         border: 1px solid var(--figma-color-border-selected);
         outline: 1px solid var(--figma-color-border-selected);
         outline-offset: -2px;

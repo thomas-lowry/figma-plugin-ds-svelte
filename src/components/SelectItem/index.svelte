@@ -42,7 +42,7 @@
     }
 
     .highlight, li:hover, li:focus {
-        background-color: var(--figma-color-text-brand);
+        background-color: var(--figma-color-bg-brand);
     }
 
     .icon {

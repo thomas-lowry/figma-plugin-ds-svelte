@@ -57,7 +57,7 @@
         background-color: var(--figma-color-bg-danger);
     }
     .primary.destructive:active, .primary.destructive:focus {
-        background-color: var(--figma-color-border-danger);
+        border: 2px solid var(--figma-color-border-disabled-strong);
     }
     .primary.destructive:disabled  {
         background-color: var(--figma-color-bg-disabled);
@@ -65,7 +65,7 @@
 
     /* Secondary styles */
     .secondary {
-        background-color: none;
+        background-color: transparent;
         border: 1px solid var(--figma-color-border-strong);
         color: var(--figma-color-text);
         padding: 0 calc(var(--size-xsmall) + 1px) 0 calc(var(--size-xsmall) + 1px);

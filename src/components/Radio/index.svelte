@@ -47,10 +47,8 @@
         padding: 0;
         flex-shrink: 0;
     }
-    input:checked + label:before {
-        background-image: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="6" height="6" rx="3" fill="black" fill-opacity="0.8"/%3E%3C/svg%3E%0A');
-        background-repeat: no-repeat;
-        background-position: 2px 2px;
+    input:checked + label:after {
+        background-color: var(--figma-color-icon);
     }
     input:disabled + label {
         opacity: 0.3;
@@ -71,8 +69,21 @@
         padding: var(--size-xxsmall) var(--size-xsmall) var(--size-xxsmall) var(--size-small);
         user-select: none;
     }
+    /* checked dot */
+    label:after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        background-color: transparent;
+        border-radius: 50%;
+        position: absolute;
+        top: 13px;
+        left: 13px;
+    }
+
+    /* circle */
     label:before {
-        border: 1px solid var(--figma-color-icon);
+        border: 1px solid var(--figma-color-icon); 
 		border-radius: var(--border-radius-small);
         content: '';
         display: block;

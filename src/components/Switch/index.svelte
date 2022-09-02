@@ -42,7 +42,7 @@
     }
     input:checked + label:before {
         color: var(--figma-color-icon);
-        background-color: var(--figma-color-icon);
+        background-color: var(--figma-color-bg-brand);
     }
 
     input:checked + label:after {
@@ -75,29 +75,27 @@
     }
     /* track */
     label:before {
-        background-color: var(--figma-color-bg);
-        border: 1px solid var(--figma-color-icon);
+        background-color: var(--figma-color-icon-tertiary);
         border-radius: 6px;
         content: '';
         display: block;
-        height: 10px;
+        height: 12px;
         left: 8px;
         position: absolute;
         top: 10px;
         transition: background-color 0.2s 0.1s;
-        width: 22px;
+        width: 24px;
     }
     /* slider */
     label:after {
-        background-color: var(--figma-color-bg);
-        border: 1px solid var(--figma-color-icon);
+        background-color: var(--figma-color-icon-onbrand);
         border-radius: 50%;
         content: '';
         display: block;
         height: 10px;
-        left: 8px;
+        left: 9px;
         position: absolute;
-        top: 10px;
+        top: 11px;
         transition: transform 0.2s;
         width: 10px;
 

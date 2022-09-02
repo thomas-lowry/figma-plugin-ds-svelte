@@ -76,7 +76,7 @@
 	textarea:active, textarea:focus {
 		padding: 7px 4px 9px 7px;
 
-		color: var(--black);
+		color: var(--figma-color-text);
         border: 1px solid var(--figma-color-border-selected);
         outline: 1px solid var(--figma-color-border-selected);
         outline-offset: -2px;

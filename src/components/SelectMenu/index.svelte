@@ -264,12 +264,12 @@
         height: 30px;
         width: 100%;
         margin: 1px 0 1px 0;
-        padding: 0px var(--size-xxsmall) 0px var(--size-xxsmall);   
+        padding: 4px var(--size-xxsmall) 0px var(--size-xxsmall);   
         overflow-y: hidden;
         border-radius: var(--border-radius-small);
         background-color: var(--white);
     }
-    button:hover {
+    button:hover, button:active {
         border-color: var(--black1);
     }
     button:hover .placeholder {
@@ -285,6 +285,7 @@
         border: 1px solid var(--blue);
         outline: 1px solid var(--blue);
         outline-offset: -2px;
+        padding-left: calc(var(--size-xxsmall) + 1px);
     }
     button:focus .placeholder {
         color: var(--black8);
