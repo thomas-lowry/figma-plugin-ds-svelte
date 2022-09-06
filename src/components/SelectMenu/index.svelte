@@ -216,13 +216,7 @@
 
             {#if !disabled}
                 <span class="caret">
-                    <svg
-                        width="8"
-                        height="8"
-                        viewBox="0 0 8 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             fill-rule="evenodd"
                             clip-rule="evenodd"
@@ -274,12 +268,13 @@
         height: 30px;
         width: 100%;
         margin: 1px 0 1px 0;
-        padding: 0px var(--size-xxsmall) 0px var(--size-xxsmall);
+        padding: 4px var(--size-xxsmall) 0px var(--size-xxsmall);
         overflow-y: hidden;
         border-radius: var(--border-radius-small);
         background-color: var(--white);
     }
-    button:hover {
+    button:hover,
+    button:active {
         border-color: var(--black1);
     }
     button:hover .placeholder {
@@ -297,6 +292,7 @@
         border: 1px solid var(--blue);
         outline: 1px solid var(--blue);
         outline-offset: -2px;
+        padding-left: calc(var(--size-xxsmall) + 1px);
     }
     button:focus .placeholder {
         color: var(--black8);
@@ -324,7 +320,7 @@
         font-weight: var(--font-weight-normal);
         letter-spacing: var(--font-letter-spacing-neg-xsmall);
         line-height: var(--line-height);
-        color: var(--black8);
+        color: var(--figma-color-text);
         margin-right: 6px;
         margin-top: -3px;
         white-space: nowrap;
@@ -333,7 +329,7 @@
     }
 
     .placeholder {
-        color: var(--black3);
+        color: var(--figma-color-text-tertiary);
     }
 
     .caret {
@@ -342,7 +338,7 @@
     }
 
     .caret svg path {
-        fill: var(--black3);
+        fill: var(--figma-color-icon-tertiary);
     }
 
     .icon {
@@ -356,7 +352,7 @@
         top: 32px;
         left: 0;
         width: 100%;
-        background-color: var(--hud);
+        background-color: var(--color-bg-menu);
         box-shadow: var(--shadow-hud);
         padding: var(--size-xxsmall) 0 var(--size-xxsmall) 0;
         border-radius: var(--border-radius-small);

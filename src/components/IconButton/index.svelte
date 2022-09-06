@@ -7,7 +7,7 @@
     export let spin = false;
     export let tabindex = 0;
     export let disabled = false;
-    export let rounded = false
+    export let rounded = false;
 
     export { className as class };
     let className = '';
@@ -15,11 +15,11 @@
 
 <div on:click onclick="this.blur();" class:selected class:disabled class:rounded class={className} {tabindex}>
     {#if selected === true}
-        <Icon {iconName} {iconText} {spin} color="white" />
+        <Icon {iconName} {iconText} {spin} color="--figma-color-icon-onbrand" />
     {:else if disabled == true}
-        <Icon {iconName} {iconText} {spin} color="black3-opaque" />
+        <Icon {iconName} {iconText} {spin} color="--color-icon-disabled" />
     {:else}
-        <Icon {iconName} {iconText} {spin} color="black8" />
+        <Icon {iconName} {iconText} {spin} color="--figma-color-icon" />
     {/if}
 </div>
 
@@ -35,7 +35,7 @@
         border: 2px solid transparent;
     }
     div:hover {
-        background: var(--hover-fill);
+        background: var(--figma-color-bg-hover);
     }
     div:active,
     div:focus {
@@ -44,10 +44,10 @@
     }
 
     .selected {
-        background-color: var(--blue);
+        background-color: var(--figma-color-bg-selected-strong);
     }
     .selected:hover {
-        background-color: var(--blue);
+        background-color: var(--figma-color-bg-selected-strong);
     }
     .selected:active,
     .selected:focus {

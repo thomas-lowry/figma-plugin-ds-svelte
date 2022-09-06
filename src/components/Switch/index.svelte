@@ -39,27 +39,28 @@
         opacity: 0;
     }
     input:checked + label:before {
-        color: var(--black8);
-        background-color: var(--black8-opaque);
+        color: var(--figma-color-icon);
+        background-color: var(--figma-color-bg-brand);
     }
+
     input:checked + label:after {
         transform: translateX(12px);
     }
     input:disabled + label {
-        color: var(--black);
+        color: var(--figma-color-icon-disabled);
         opacity: 0.3;
     }
     input:checked:disabled + label:before {
-        border: 1px solid var(--black);
-        background-color: var(--black);
+        border: 1px solid var(--figma-color-icon);
+        background-color: var(--figma-color-icon);
     }
 
     input:focus + label:before {
-        box-shadow: 0 0 0 2px var(--blue);
+        box-shadow: 0 0 0 2px var(--figma-color-border-selected);
     }
 
     label {
-        color: var(--black8);
+        color: var(--figma-color-text);
         display: flex;
         font-family: var(--font-stack);
         font-size: var(--font-size-xsmall);
@@ -73,29 +74,27 @@
     }
     /* track */
     label:before {
-        background-color: var(--white);
-        border: 1px solid var(--black8-opaque);
+        background-color: var(--figma-color-icon-tertiary);
         border-radius: 6px;
         content: '';
         display: block;
-        height: 10px;
+        height: 12px;
         left: 8px;
         position: absolute;
         top: 10px;
         transition: background-color 0.2s 0.1s;
-        width: 22px;
+        width: 24px;
     }
     /* slider */
     label:after {
-        background-color: var(--white);
-        border: 1px solid var(--black8-opaque);
+        background-color: var(--figma-color-icon-onbrand);
         border-radius: 50%;
         content: '';
         display: block;
         height: 10px;
-        left: 8px;
+        left: 9px;
         position: absolute;
-        top: 10px;
+        top: 11px;
         transition: transform 0.2s;
         width: 10px;
     }

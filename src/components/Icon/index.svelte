@@ -2,7 +2,7 @@
     export let iconName = null; //pass svg data into this var by importing an svg in parent
     export let spin = false;
     export let iconText = null;
-    export let color = 'black8';
+    export let color = '--figma-color-icon';
     export let size = 32;
 
     export { className as class };
@@ -13,7 +13,7 @@
 <div
     class:spin
     class="icon-component {className}"
-    style="color: var(--{color}); fill: var(--{color}); width: {size}px; height: {size}px"
+    style="color: var({color}); fill: var({color}); width: {size}px; height: {size}px"
     on:click
 >
     {#if iconText}

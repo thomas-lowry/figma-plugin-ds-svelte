@@ -38,7 +38,7 @@
         font-weight: var(--font-weight-normal);
         letter-spacing: var(--font-letter-spacing-pos-xsmall);
         line-height: var(--line-height);
-        color: var(--black8);
+        color: var(--figma-color-text);
         margin: 0;
     }
 </style>
