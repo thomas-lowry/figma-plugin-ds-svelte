@@ -228,25 +228,29 @@
             {/if}
         </button>
 
-        <ul class="menu hidden" bind:this={menuList}>
-        {#if menuItems && menuItems.length > 0}
-            {#each menuItems as item, i}
-                {#if i === 0}
-                    {#if item.group && showGroupLabels}
-                        <SelectDivider label>{item.group}</SelectDivider>
+        <div style="overflow: hidden">
+            <ul class="menu hidden" bind:this={menuList}>
+                <div class="menu-inner">
+                    {#if menuItems && menuItems.length > 0}
+                        {#each menuItems as item, i}
+                            {#if i === 0}
+                                {#if item.group && showGroupLabels}
+                                    <SelectDivider label>{item.group}</SelectDivider>
+                                {/if}
+                            {:else if i > 0 && item.group && menuItems[i - 1].group != item.group}
+                                {#if showGroupLabels}
+                                    <SelectDivider />
+                                    <SelectDivider label>{item.group}</SelectDivider>
+                                {:else}
+                                    <SelectDivider />
+                                {/if}
+                            {/if}
+                            <SelectItem on:click={menuClick} on:mouseenter={removeHighlight} itemId={item.id} bind:selected={item.selected}>{item.label}</SelectItem>
+                        {/each}
                     {/if}
-                {:else if i > 0 && item.group && menuItems[i - 1].group != item.group}
-                    {#if showGroupLabels}
-                        <SelectDivider />
-                        <SelectDivider label>{item.group}</SelectDivider>
-                    {:else}
-                        <SelectDivider />
-                    {/if}
-                {/if}
-                <SelectItem on:click={menuClick} on:mouseenter={removeHighlight} itemId={item.id} bind:selected={item.selected}>{item.label}</SelectItem>
-            {/each}
-        {/if}
-        </ul>
+                </div>
+            </ul>
+        </div>
     </div>
 </ClickOutside>
 
@@ -341,13 +345,9 @@
 
     .menu {
         position: absolute;
-        top:32px;
-        left:0;
+        top: 32px;
+        left: 0;
         width: 100%;
-        background-color: var(--color-bg-menu);
-        box-shadow: var(--shadow-hud);
-        padding: var(--size-xxsmall) 0 var(--size-xxsmall) 0;
-        border-radius: var(--border-radius-small);
         margin: 0;
         z-index: 50;
         overflow-x: overlay;
@@ -372,5 +372,12 @@
         box-shadow:inset 0 0 10px 10px rgba(255,255,255,.4);
     }
         
+    .menu-inner {
+        position: fixed;
+        padding: var(--size-xxsmall) 0 var(--size-xxsmall) 0;
+        background-color: var(--hud);
+        border-radius: var(--border-radius-small);
+        box-shadow: var(--shadow-hud);
+    }
 
 </style>
