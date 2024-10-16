@@ -20,6 +20,12 @@ import { GlobalCSS } from 'figma-plugin-ds-svelte';
 import { Button, Input, SelectMenu } from 'figma-plugin-ds-svelte';
 ```
 
+Alternatively, if your tooling fails to find `GlobalCSS` but supports CSS file imports (e.g. Vite), you can import the global CSS this way:
+
+```javascript
+import 'figma-plugin-ds-svelte/css';
+```
+
 ---
 
 ## Components
